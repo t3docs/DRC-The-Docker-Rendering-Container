@@ -6,7 +6,7 @@ This is documentation for the GitHub repository `t3docs/render-documentation`_.
 
 .. _t3docs/render-documentation: https://github.com/t3docs/render-documentation
 
-How to render TYPO3 Documentation the official way using Docker
+   Render TYPO3 Documentation the official way.
 
 The Docker image *t3docs/render-documentation* is used for building TYPO3
 documentation. Such documentation is organized in Sphinx projects with
@@ -15,9 +15,16 @@ such a source project to produce the final documentation (a "manual"). Various
 output formats like HTML or PDF are avaiable. A ready-to-use image is
 available from Docker.
 
-:Branch:          main
-:Repository:      https://github.com/t3docs/rendering-container-documentation
-:Rendered at:     https://docs.typo3.org/m/typo3/T3DocsRenderingContainer/draft/en-us/
+This is:
+
+:Repository:  https://github.com/t3docs/rendering-container-documentation
+:Rendered at: https://docs.typo3.org/m/typo3/T3DocsRenderingContainer/draft/en-us/
+
+This is documentation about:
+
+:Container repository: https://github.com/t3docs/docker-render-documentation
+:Docker image:         t3docs/render-documentation
+:Docker hub:           https://hub.docker.com/r/t3docs/render-documentation/
 
 
 See also
