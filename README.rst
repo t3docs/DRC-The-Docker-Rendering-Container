@@ -2,7 +2,7 @@
 The Docker rendering container for TYPO3
 ========================================
 
-   Render TYPO3 Documentation the official way!
+Render TYPO3 Documentation the official way!
 
 The Docker image *t3docs/render-documentation* is used for building TYPO3
 documentation. Such documentation is organized in Sphinx projects with
@@ -19,7 +19,7 @@ This is:
 
 Describing:
 
-:Image repository: https://github.com/t3docs/docker-render-documentation
+:Image repository: https://github.com/t3docs/docker-render-documentationq
 :Docker hub:       https://hub.docker.com/r/t3docs/render-documentation/
 :Get Docker image: `docker pull t3docs/render-documentation`
 
