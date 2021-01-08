@@ -1,6 +1,10 @@
-=========================================================
-How to use the Docker image 't3docs/render-documentation'
-=========================================================
+========================================
+The Docker rendering container for TYPO3
+========================================
+
+This is documentation for the GitHub repository `t3docs/render-documentation`_.
+
+.. _t3docs/render-documentation: https://github.com/t3docs/render-documentation
 
 How to render TYPO3 Documentation the official way using Docker
 
