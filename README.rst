@@ -2,10 +2,6 @@
 The Docker rendering container for TYPO3
 ========================================
 
-This is documentation for the GitHub repository `t3docs/render-documentation`_.
-
-.. _t3docs/render-documentation: https://github.com/t3docs/render-documentation
-
    Render TYPO3 Documentation the official way!
 
 The Docker image *t3docs/render-documentation* is used for building TYPO3
@@ -20,11 +16,12 @@ This is:
 :Repository:  https://github.com/t3docs/rendering-container-documentation
 :Rendered at: https://docs.typo3.org/m/typo3/T3DocsRenderingContainer/draft/en-us/
 
+
 Describing:
 
-:Container repository: https://github.com/t3docs/docker-render-documentation
-:Docker image:         t3docs/render-documentation
-:Docker hub:           https://hub.docker.com/r/t3docs/render-documentation/
+:Image repository: https://github.com/t3docs/docker-render-documentation
+:Docker hub:       https://hub.docker.com/r/t3docs/render-documentation/
+:Get Docker image: `docker pull t3docs/render-documentation`
 
 
 See also
