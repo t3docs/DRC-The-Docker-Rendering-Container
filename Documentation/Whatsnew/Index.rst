@@ -1,8 +1,8 @@
 .. include:: /Includes.rst.txt
 
-==========
-What's new
-==========
+========
+Releases
+========
 
 Pages:
 
