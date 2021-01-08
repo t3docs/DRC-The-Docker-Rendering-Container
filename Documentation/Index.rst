@@ -237,6 +237,5 @@ available from https://typo3.org/.
    Solutions/Index
    Whatsnew/Index
    Glossary
-   Targets
    Sitemap
    genindex
