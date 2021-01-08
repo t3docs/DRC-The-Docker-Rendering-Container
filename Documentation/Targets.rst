@@ -1,5 +1,6 @@
 .. include:: Includes.rst.txt
-
+.. index:: Link targets
+.. _Link-targets:
 
 Link targets
 ============
