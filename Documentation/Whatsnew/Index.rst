@@ -9,6 +9,7 @@ Pages:
 .. rst-class:: compact-list
 .. toctree::
    :glob:
+   :reversed:
    :titlesonly:
 
    *
