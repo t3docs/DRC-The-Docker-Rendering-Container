@@ -15,7 +15,9 @@ This is:
 
 :Repository:  https://github.com/t3docs/rendering-container-documentation
 :Rendered at: https://docs.typo3.org/m/typo3/T3DocsRenderingContainer/draft/en-us/
+:Intercept:   status__
 
+__ https://intercept.typo3.com/admin/docs/deployments?docs_deployment_filter[search]=T3DocsRenderingContainer&docs_deployment_filter[type]=&docs_deployment_filter[status]=&docs_deployment_filter[trigger]=
 
 Describing:
 
