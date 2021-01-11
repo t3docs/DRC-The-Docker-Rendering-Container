@@ -1,10 +1,8 @@
 .. include:: /Includes.rst.txt
 
-========
-Releases
-========
-
-Pages:
+===========
+What's new?
+===========
 
 .. rst-class:: compact-list
 .. toctree::

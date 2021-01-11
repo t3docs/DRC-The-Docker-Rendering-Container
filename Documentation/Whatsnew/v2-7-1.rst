@@ -1,52 +1,79 @@
 .. include:: /Includes.rst.txt
-.. index:: Releases; v2.7.1
+.. index:: Releases; v2.7
 
-==============
-Release v2.7.1
-==============
+=============
+Releases v2.7
+=============
 
-Released Jan 6, 2021
 
-*  Use sphinx_typo3_theme v4.4.2 with styled Index page
+.. contents::
+   :backlinks: top
+   :class: compact-list
+   :local:
 
 
 .. index:: Releases; v2.7.0
 
-Release v2.7.0
-==============
+Release overview v2.7.0
+=======================
 
 December 16, 2020
 
 New
 ---
 
-*  42e0120 Show OS_NAME and OS_VERSION in versioninfo
-*  111c165 Use Ubuntu 20.04
-*  f5efcb3 Add Graphviz
-*  8b81f71 Add PlantUML
-*  1eb5b7a `exclude_patterns` can be specified in Defaults.cfg, Settings.cfg,
+*  Show OS_NAME and OS_VERSION in versioninfo
+*  Use Ubuntu 20.04
+*  Add Graphviz
+*  Add PlantUML
+*  `exclude_patterns` can be specified in Defaults.cfg, Settings.cfg,
    Overrides.cfg
 
 
 Removed
 -------
 
-*  7fcc524 Remove sphinxcontrib.googlemaps - doesn't work any more
-*  c074131 Drop Sphinx extension googlechart - Google stopped service
+*  Remove sphinxcontrib.googlemaps - doesn't work any more
+*  Drop Sphinx extension googlechart - Google stopped service
 
 
 Important commits
 -----------------
 
-*  e5165c2 Use Toolchain v2.11.0
-*  e15ff08 Add Sphinx extension sphinx-tabs
-*  74c96c8 Update dockrun_t3rd.bat - Tested batch file for Windows
-*  f0758b7 Add dockrun_t3rd.bat for Windows users
-*  7fcc524 Remove sphinxcontrib.googlemaps
-*  42e0120 Show OS_NAME and OS_VERSION in versioninfo
-*  c074131 Drop Sphinx extension googlechart
-*  111c165 Use Ubuntu 20.04
-*  f5efcb3 Add Defaults.cfg, update conf.py, add Graphviz - Martin Bless
-*  8b81f71 Merge pull request #97 from alexander-nitsche/feature/sphinx-plantuml
-*  1eb5b7a [FEATURE] Implement Issue 98, exclude_patterns
+*  Use Toolchain v2.11.0
+*  Add Sphinx extension sphinx-tabs
+*  Update dockrun_t3rd.bat - Tested batch file for Windows
+*  Add dockrun_t3rd.bat for Windows users
+*  Remove sphinxcontrib.googlemaps
+*  Show OS_NAME and OS_VERSION in versioninfo
+*  Drop Sphinx extension googlechart
+*  Use Ubuntu 20.04
+*  Add Defaults.cfg, update conf.py, add Graphviz - Martin Bless
+*  Merge pull request #97 from alexander-nitsche/feature/sphinx-plantuml
+*  [FEATURE] Implement Issue 98, exclude_patterns
+
+
+.. index:: Releases; v2.7.1
+
+Release overview v2.7.1
+=======================
+
+Released Jan 6, 2021
+
+*  Use sphinx_typo3_theme v4.4.2 with `styled index page`_
+
+
+
+Styled index page
+=================
+
+The list items on the index page :file:`genindex.html` are shown top-left
+aligned without list symbols. The layout works well on small display like
+cell phones:
+
+.. figure:: Files/v2-7-1-index-page.png
+   :class: with-border with-shadow
+   :alt: Screenshot showing part of the index page
+
+
 
