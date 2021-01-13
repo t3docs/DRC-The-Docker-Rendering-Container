@@ -35,17 +35,16 @@ work any more.
 Removed: googlechart
 ====================
 
-The Sphinx extension `sphinxcontrib.googlechart`was removed because Google has
+The Sphinx extension `sphinxcontrib.googlechart` was removed because Google has
 stopped that charting service.
 
 
 Updated: Ubuntu 20.04
 =====================
 
-The container is now based on Ubuntu 20.04 LTS.
-
-When asked about versions the container now also displays the OS_NAME and the
-OS_VERSION:
+The container is now based on Ubuntu 20.04 LTS. The OS name and version is now
+part of the 'versioninfo' output. When called with the `--version` option the
+values for OS_NAME and OS_VERSION are shown as well:
 
 .. figure:: Files/v2-7-1-version-output.png
    :class: with-border with-shadow
