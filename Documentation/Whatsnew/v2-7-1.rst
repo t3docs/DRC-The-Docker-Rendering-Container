@@ -1,9 +1,9 @@
 .. include:: /Includes.rst.txt
 .. index:: Releases; v2.7
 
-=============
-Releases v2.7
-=============
+==========================
+Releases v2.7: What's new?
+==========================
 
 
 .. contents::
@@ -14,15 +14,46 @@ Releases v2.7
 
 .. index:: Releases; v2.7.0
 
-Release overview v2.7.0
-=======================
+**************
+Release v2.7.0
+**************
 
 December 16, 2020
 
-New
----
 
-*  Show OS_NAME and OS_VERSION in versioninfo
+.. index:: Sphinx extension; googlemaps
+
+Removed: googlemaps
+===================
+
+The Sphinx extension `sphinxcontrib.googlemaps` was removed because it didn't
+work any more.
+
+
+.. index:: Sphinx extension; googlechart
+
+Removed: googlechart
+====================
+
+The Sphinx extension `sphinxcontrib.googlechart`was removed because Google has
+stopped that charting service.
+
+
+Updated: Ubuntu 20.04
+=====================
+
+The container is now based on Ubuntu 20.04 LTS.
+
+When asked about versions the container now also displays the OS_NAME and the
+OS_VERSION:
+
+.. figure:: Files/v2-7-1-version-output.png
+   :class: with-border with-shadow
+   :alt: Screenshot of the text output when called with the --version option
+
+
+CONTINUE WITH THIS:
+
 *  Use Ubuntu 20.04
 *  Add Graphviz
 *  Add PlantUML
@@ -30,11 +61,6 @@ New
    Overrides.cfg
 
 
-Removed
--------
-
-*  Remove sphinxcontrib.googlemaps - doesn't work any more
-*  Drop Sphinx extension googlechart - Google stopped service
 
 
 Important commits
@@ -55,13 +81,13 @@ Important commits
 
 .. index:: Releases; v2.7.1
 
-Release overview v2.7.1
-=======================
+**************
+Release v2.7.1
+**************
 
 Released Jan 6, 2021
 
-*  Use sphinx_typo3_theme v4.4.2 with `styled index page`_
-
+*  Use sphinx_typo3_theme v4.4.2 having the `styled index page`_
 
 
 Styled index page
@@ -74,6 +100,4 @@ cell phones:
 .. figure:: Files/v2-7-1-index-page.png
    :class: with-border with-shadow
    :alt: Screenshot showing part of the index page
-
-
 
