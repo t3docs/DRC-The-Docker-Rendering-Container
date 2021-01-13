@@ -21,6 +21,168 @@ Release v2.7.0
 December 16, 2020
 
 
+
+
+CONTINUE WITH THIS:
+
+*  Add Graphviz
+*  Add PlantUML
+*  `exclude_patterns` can be specified in Defaults.cfg, Settings.cfg,
+   Overrides.cfg
+
+
+
+
+Important commits
+-----------------
+
+*  Add Sphinx extension sphinx-tabs
+*  Update dockrun_t3rd.bat - Tested batch file for Windows
+*  Add dockrun_t3rd.bat for Windows users
+*  Add Defaults.cfg, update conf.py, add Graphviz - Martin Bless
+*  [FEATURE] Implement Issue 98, exclude_patterns
+*  styles "versionadded"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. index:: HTML styling; Version hints
+
+Improved: Styling of version hints
+==================================
+
+**Updated:** Versions hints are better visible now.
+
+Exampls:
+
+.. figure:: Files/v2-7-1-versionadded.png
+   :class: with-border with-shadow
+   :alt: Screenshot of various version hints
+
+
+
+
+
+
+.. index:: HTML styling; line blocks
+
+Improved: Styling of line blocks
+================================
+
+**New:** Indentation levels are now shown correctly.
+
+See the `reStructuredText Markup Specification`__ for a technical description
+of `line blocks`__.
+
+__ https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html
+__ https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#line-blocks
+
+See `line blocks`__ in the `Demo docs`__.
+
+__ https://docs.typo3.org/m/typo3/demo-t3SphinxThemeRtd/master/en-us/Lineblocks/Index.html
+__ https://docs.typo3.org/m/typo3/demo-t3SphinxThemeRtd/master/en-us/
+
+Example: "Crazy" indentation levels
+-----------------------------------
+
+.. image:: Files/v2-7-1-crazy-indentation-1-406.png
+   :class: with-border with-shadow
+   :alt: reST source of line block example
+
+.. image:: Files/v2-7-1-crazy-indentation-2-406.png
+   :class: with-border with-shadow
+   :alt: HTML view of line block example
+
+
+
+
+.. index:: HTML styling; block quotes
+
+Improved: Styling of block quotes
+=================================
+
+**Improved:**
+The attribution now appears aligned right and with a larger font size.
+
+See the `reStructuredText Markup Specification`__ for a technical description
+of `block quotes`__.
+
+__ https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html
+__ https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#block-quotes
+
+See `block quotes`__ in the `Demo docs`__.
+
+__ https://docs.typo3.org/m/typo3/demo-t3SphinxThemeRtd/master/en-us/Blockquotes/Index.html
+__ https://docs.typo3.org/m/typo3/demo-t3SphinxThemeRtd/master/en-us/
+
+
+Example: Block quote
+--------------------
+
+.. image:: Files/v2-7-1-block-quote-1.png
+   :class: with-border with-shadow
+   :alt: reST source of block quote example
+
+.. image:: Files/v2-7-1-block-quote-2.png
+   :class: with-border with-shadow
+   :alt: HTML view of block quote example
+
+
+
+
+
+
+.. index:: HTML styling; full width display
+
+New: Use full width of large screens
+====================================
+
+For the sake of good readability and "beauty" the HTML theme is limiting the
+width of the content area to a certain maximum:
+
+.. figure:: Files/v2-7-1-full-width-500-1.png
+   :class: with-border with-shadow
+   :alt: Screenshot of HTML page layout with limited content width
+
+However, the larger your screen is the more space is wasted, which can be
+annoying if you want to see extra wide tables or code blocks.
+
+**New:** You can now make your browser window really wide (>1.800px) to trigger
+a mode switch. With that all of your window will be used for content:
+
+.. figure:: Files/v2-7-1-full-width-708-2.png
+   :class: with-border with-shadow
+   :alt: Screenshot of HTML page layout with full width content
+
+
+
+
+
+
+Updated: Ubuntu 20.04
+=====================
+
+The container is now based on Ubuntu 20.04 LTS. The OS name and version is now
+part of the 'versioninfo' output. When called with the `--version` option the
+values for OS_NAME and OS_VERSION are shown as well:
+
+.. figure:: Files/v2-7-1-version-output.png
+   :class: with-border with-shadow
+   :alt: Screenshot of the text output when called with the --version option
+
+
+
+
 .. index:: Sphinx extension; googlemaps
 
 Removed: googlemaps
@@ -39,43 +201,6 @@ The Sphinx extension `sphinxcontrib.googlechart` was removed because Google has
 stopped that charting service.
 
 
-Updated: Ubuntu 20.04
-=====================
-
-The container is now based on Ubuntu 20.04 LTS. The OS name and version is now
-part of the 'versioninfo' output. When called with the `--version` option the
-values for OS_NAME and OS_VERSION are shown as well:
-
-.. figure:: Files/v2-7-1-version-output.png
-   :class: with-border with-shadow
-   :alt: Screenshot of the text output when called with the --version option
-
-
-CONTINUE WITH THIS:
-
-*  Use Ubuntu 20.04
-*  Add Graphviz
-*  Add PlantUML
-*  `exclude_patterns` can be specified in Defaults.cfg, Settings.cfg,
-   Overrides.cfg
-
-
-
-
-Important commits
------------------
-
-*  Use Toolchain v2.11.0
-*  Add Sphinx extension sphinx-tabs
-*  Update dockrun_t3rd.bat - Tested batch file for Windows
-*  Add dockrun_t3rd.bat for Windows users
-*  Remove sphinxcontrib.googlemaps
-*  Show OS_NAME and OS_VERSION in versioninfo
-*  Drop Sphinx extension googlechart
-*  Use Ubuntu 20.04
-*  Add Defaults.cfg, update conf.py, add Graphviz - Martin Bless
-*  Merge pull request #97 from alexander-nitsche/feature/sphinx-plantuml
-*  [FEATURE] Implement Issue 98, exclude_patterns
 
 
 .. index:: Releases; v2.7.1
@@ -86,11 +211,15 @@ Release v2.7.1
 
 Released Jan 6, 2021
 
-*  Use sphinx_typo3_theme v4.4.2 having the `styled index page`_
+*  Use sphinx_typo3_theme v4.4.2 which has styles for the index page
 
 
-Styled index page
-=================
+.. index:: HTML styling; Index page
+
+New: Styled index page
+======================
+
+**New:** The index page now has CSS styling.
 
 The list items on the index page :file:`genindex.html` are shown top-left
 aligned without list symbols. The layout works well on small display like
