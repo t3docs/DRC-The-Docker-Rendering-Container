@@ -1,9 +1,9 @@
 .. include:: /Includes.rst.txt
 .. index:: Releases; v2.7
 
-==========================
-Releases v2.7: What's new?
-==========================
+=============
+Releases v2.7
+=============
 
 
 .. contents::
