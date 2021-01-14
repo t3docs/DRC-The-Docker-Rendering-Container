@@ -33,17 +33,19 @@ New: objects.inv.json
 
 ((to be written))
 
-Each manual now has a :file:`objects.inv.json` as a sibling of the HTML start
+**Each manual** now has a :file:`objects.inv.json` as a sibling of the HTML start
 page.
 
 Example:
 
 A start page: https://docs.typo3.org/m/typo3/T3DocsRenderingContainer/draft/en-us/Index.html
 
-Sphinx creates a cryptic binary file with link information there:
+Sphinx creates a cryptic binary file :file:`objects.inv`with link information in the manual's root
+folder:
 https://docs.typo3.org/m/typo3/T3DocsRenderingContainer/draft/en-us/objects.inv
 
-The rendering container now provides that information as a JSON file as well:
+The rendering container now provides that information as a
+:file:`objects.inv.json` JSON file as well:
 https://docs.typo3.org/m/typo3/T3DocsRenderingContainer/draft/en-us/objects.inv.json
 
 
