@@ -12,21 +12,17 @@ Comprehensive manual
 
 .. tip:: What's new in the latest release?
 
-   LATEST RELEASE Jan 6, 2020: v2.7.1
-
-   :ref:`What's new? <Releases-v2-7>`
+   :ref:`LATEST RELEASE Jan 6, 2020: v2.7.1 <Releases-v2-7>`
 
 
 .. attention::
 
-   THE REST OF THIS PAGE is WIP
+   THIS PAGE IS WORK IN PROGRESS (WIP)
 
 .. comment
-
    **NEW:** `Documentation about the container
    <https://docs.typo3.org/m/typo3/t3docs-docker-render-documentation/draft/en-us/>`__
-
-.. comment
+   .. comment
    If you encounter problems please `create an issue at github
    <https://github.com/t3docs/docker-render-documentation/issues/>`__.
 
@@ -36,7 +32,7 @@ Comprehensive manual
 
 See also
 
-See chapter `How to render documentation`__ of `Writing documentation`__.
+See chapter `How to render documentation`__ in `Writing documentation`__.
 
 __ https://docs.typo3.org/m/typo3/docs-how-to-document/master/en-us/RenderingDocs/
 __ https://docs.typo3.org/m/typo3/docs-how-to-document/master/en-us/
