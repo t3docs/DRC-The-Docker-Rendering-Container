@@ -6,18 +6,21 @@
 Rendering container documentation
 =================================
 
---------------------
-Comprehensive manual
---------------------
+.. --------------------
+   Comprehensive manual
+   --------------------
+
+
+.. attention::
+
+   THIS IS WORK IN PROGRESS (WIP)
+
 
 .. tip:: What's new in the latest release?
 
    :ref:`LATEST RELEASE Jan 6, 2020: v2.7.1 <Releases-v2-7>`
 
 
-.. attention::
-
-   THIS PAGE IS WORK IN PROGRESS (WIP)
 
 .. comment
    **NEW:** `Documentation about the container
