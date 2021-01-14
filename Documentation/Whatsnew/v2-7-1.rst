@@ -6,6 +6,7 @@
 Releases v2.7
 =============
 
+Rendered: |today|
 
 .. contents::
    :backlinks: top
