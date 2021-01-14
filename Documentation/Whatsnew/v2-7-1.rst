@@ -1,5 +1,6 @@
 .. include:: /Includes.rst.txt
 .. index:: Releases; v2.7
+.. _Releases-v2-7:
 
 =============
 Releases v2.7
@@ -21,35 +22,53 @@ Release v2.7.0
 December 16, 2020
 
 
+.. attention::
 
-
-CONTINUE WITH THIS:
-
-*  Add Graphviz
-*  Add PlantUML
-*  `exclude_patterns` can be specified in Defaults.cfg, Settings.cfg,
-   Overrides.cfg
+   THIS IS STILL WORK IN PROGRESS
 
 
 
+New: Helper script dockrun_t3rd.bat for Windows
+===============================================
 
-Important commits
------------------
+((to be written))
 
-*  Add Sphinx extension sphinx-tabs
-*  Update dockrun_t3rd.bat - Tested batch file for Windows
-*  Add dockrun_t3rd.bat for Windows users
-*  Add Defaults.cfg, update conf.py, add Graphviz - Martin Bless
-*  [FEATURE] Implement Issue 98, exclude_patterns
-*  styles "versionadded"
+Windows users now can use the helper script :file:`dockrun_t3rd.bat` similar
+to the `dockrun_t3rd.sh` script for Linux and Mac users.
 
 
 
 
+.. index:: Sphinx extension; sphinx.ext.graphviz
+
+New: Graphviz
+=============
+
+((to be written))
+
+Example: https://docs.typo3.org/m/typo3/demo-t3SphinxThemeRtd/master/en-us/Directives/sphinx_ext_graphviz.html
 
 
 
+.. index:: Sphinx extension; sphinxcontrib-plantuml
 
+New: Plantuml
+=============
+
+((to be written))
+
+Examples: https://docs.typo3.org/m/typo3/demo-t3SphinxThemeRtd/master/en-us/Directives/sphinxcontrib-plantuml.html
+
+
+
+.. index:: Sphinx extension; sphinx-tabs
+
+New: sphinx-tabs
+================
+
+((to be written))
+
+Examples: https://docs.typo3.org/m/typo3/demo-t3SphinxThemeRtd/master/en-us/Directives/sphinx-tabs.html
 
 
 
@@ -63,13 +82,13 @@ Improved: Styling of version hints
 
 **Updated:** Versions hints are better visible now.
 
-Exampls:
+Example:
 
 .. figure:: Files/v2-7-1-versionadded.png
    :class: with-border with-shadow
    :alt: Screenshot of various version hints
 
-
+See https://docs.typo3.org/m/typo3/demo-t3SphinxThemeRtd/master/en-us/Directives/versionadded.html
 
 
 
@@ -182,6 +201,30 @@ values for OS_NAME and OS_VERSION are shown as well:
 
 
 
+Updated: exclude_patterns
+=========================
+
+((to be written))
+
+`exclude_patterns` can be specified in Defaults.cfg, Settings.cfg, Overrides.cfg
+
+
+
+
+Updated: Better explanations in console output
+==============================================
+
+((to be written))
+
+The container now does a better job in explaining at the end of the run why the
+job has succeeded or failed.
+
+
+
+
+
+
+
 
 .. index:: Sphinx extension; googlemaps
 
@@ -210,8 +253,6 @@ Release v2.7.1
 **************
 
 Released Jan 6, 2021
-
-*  Use sphinx_typo3_theme v4.4.2 which has styles for the index page
 
 
 .. index:: HTML styling; Index page
