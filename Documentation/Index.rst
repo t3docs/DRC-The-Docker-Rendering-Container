@@ -113,17 +113,11 @@ available from https://typo3.org/.
 .. rubric:: Content
 .. rst-class:: compact-list
 .. toctree::
+   :glob:
 
    Usage/Index
    Usage-Windows/Index
-   Structures/Index
-   Rendering/Index
-   Building/Index
-   Explanation/Index
-   Inspection/Index
-   Development/Index
-   Solutions/Index
-   Whatsnew/Index
+   */Index
    Glossary
    Sitemap
    genindex
