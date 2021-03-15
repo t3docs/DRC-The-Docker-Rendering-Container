@@ -9,3 +9,7 @@
 
 .. highlight:: shell
 .. default-role:: code
+
+
+.. _sphinx-typo3-theme: https://github.com/TYPO3-Documentation/sphinx_typo3_theme/
+.. _Docker Rendering Container: https://github.com/t3docs/docker-render-documentation/

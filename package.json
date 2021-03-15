@@ -1,7 +1,15 @@
 {
-  "dependencies": {
-    "gulp": "^4.0.2",
-    "gulp-livereload": "^4.0.1",
-    "gulp-load-plugins": "^2.0.1"
+  "name": "rendering-container-documentation",
+  "version": "1.0.0",
+  "private": false,
+  "license": "MIT",
+  "scripts": {
+    "makehtml": "yarn gulp makehtml"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2"
   }
 }

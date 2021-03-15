@@ -1,6 +1,6 @@
-========================================
-The Docker rendering container for TYPO3
-========================================
+==========================================
+Docker Rendering Container (DRC) for TYPO3
+==========================================
 
 Render TYPO3 Documentation the official way!
 
@@ -10,6 +10,8 @@ reStructuredText files. The Docker container knows how to transform ("render")
 such a source project to produce the final documentation (a "manual"). Various
 output formats like HTML or PDF are avaiable. A ready-to-use image is
 available from Docker.
+
+The DRC can be use with different themes for other projects as well.
 
 This is:
 

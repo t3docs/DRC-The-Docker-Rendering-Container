@@ -14,6 +14,11 @@ Glossary
 
       Installation: Get Docker from https://docs.docker.com/install/
 
+
+   DCR
+      `Docker Rendering Container`_
+
+
    Docutils
       See http://docutils.sourceforge.net/rst.html and
       chapter :ref:`About-docutils`.

@@ -1,0 +1,99 @@
+.. include:: /Includes.rst.txt
+.. index:: Releases; v2.8
+.. _Releases-v2-8:
+
+=============
+Releases v2.8
+=============
+
+*  v2.8.0, March 16, 2021
+
+.. contents::
+   :backlinks: top
+   :class: compact-list
+   :local:
+
+
+#############
+NEW
+#############
+
+NEW: Collapsed menu for TYPO3 Exceptions
+========================================
+
+.. versionadded:: 2.8.0
+
+When TYPO3 throws an exception it often points to a page that is dealing with
+that exception. See exceptions `1460976566
+<https://docs.typo3.org/typo3cms/exceptions/master/en-us/Exceptions/1460976566.html>`__
+for example. Usually the main menu at the left of the page is expanded to show
+the menu item for the current page.
+The theme.js that comes with `sphinx-typo3-theme`_ v4.5 has code that looks for
+the 'TYPO3 Exceptions' item and collapses the submenu on page load.
+
+Old: |expanded-menu|
+New: |collapsed-menu|
+
+.. |expanded-menu| image:: Files/v2-8-0-Exceptions-menu-expanded.png
+   :alt:   Screenshot of the expanded menu with many items
+   :class: with-border with-shadow
+
+.. |collapsed-menu| image:: Files/v2-8-0-Exceptions-menu-collapsed.png
+   :alt:   Screenshot of the expanded menu with many items
+   :class: with-border with-shadow
+
+
+NEW: How to edit button
+=======================
+
+.. versionadded:: 2.8.0
+
+v2.8 of the :term:`DRC` is using v4.5 of the `sphinx-typo3-theme`_. The actual changes
+are made in the theme.
+
+At the top right of our pages we usually show the "Edit on GitHub" and "Show
+source" buttons:
+
+.. image:: Files/v2-8-0-Edit-on-GitHub-button.png
+   :class: with-border with-shadow
+   :alt:   Screenshot of the 'Edit on GitHub' button
+
+It is desirable to give users help about what they have to expect when they
+click the edit button. On the other hand we don't want to overload the
+layout. As a solution there now is a third button which only appears while
+hovering over the edit button:
+
+.. image:: Files/v2-8-0-How-to-edit-button.png
+   :class: with-border with-shadow
+   :alt:   Screenshot of the 'How to edit' button
+
+The "How to edit" button will take users to the `How to work with
+GitHub <https://docs.typo3.org/m/typo3/docs-how-to-document/master/en-us/GitHub/>`__
+page of the "Writing documentation" manual.
+
+At the moment the link is hardcoded within the `sphinx-typo3-theme`_.
+
+
+NEW: Sphinx can use parallel processes
+======================================
+
+We updated several Sphinx extensions. They now return the so called "extension
+metadata" from their setup routine. They now signal True for "parallel_read_safe"
+and "parallel_write_safe". We could verify that Sphinx now uses parallel
+processes for writing. The extension `sphinxcontrib.t3targets` wasn't compatibel
+with this change and got fixed.
+
+
+
+#############
+REMOVED
+#############
+
+
+REMOVED: Full content width for extra wide screens
+==================================================
+
+.. versionchanged:: 2.8.0
+
+Feature :ref:`NEW-Making-use-of-extra-wide-screens` was removed.
+Instead, a better solution will be introduced in one of the next versions.

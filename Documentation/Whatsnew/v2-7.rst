@@ -6,7 +6,9 @@
 Releases v2.7
 =============
 
-Rendered: |today|
+*  v2.7.0, December 16, 2020
+*  v2.7.1, Jan 6, 2021
+*  v2.7.2, ...
 
 .. contents::
    :backlinks: top
@@ -14,25 +16,14 @@ Rendered: |today|
    :local:
 
 
-.. index:: Releases; v2.7.0
+#############
+NEW
+#############
 
-**************
-Release v2.7.0
-**************
-
-December 16, 2020
-
-
-.. attention::
-
-   THIS PAGE IS WORK IN PROGRESS (WIP)
-
-
-
-New: objects.inv.json
+NEW: objects.inv.json
 =====================
 
-((to be written))
+.. versionadded:: 2.7.0
 
 **Each manual** now has a :file:`objects.inv.json` in its start folder.
 
@@ -52,10 +43,10 @@ https://docs.typo3.org/m/typo3/T3DocsRenderingContainer/draft/en-us/objects.inv.
 
 
 
-New: Helper script dockrun_t3rd.bat for Windows
+NEW: Helper script dockrun_t3rd.bat for Windows
 ===============================================
 
-((to be written))
+.. versionadded:: 2.7.0
 
 Windows users now can use the helper script :file:`dockrun_t3rd.bat` similar
 to the `dockrun_t3rd.sh` script for Linux and Mac users.
@@ -65,10 +56,10 @@ to the `dockrun_t3rd.sh` script for Linux and Mac users.
 
 .. index:: Sphinx extension; sphinx.ext.graphviz
 
-New: Graphviz
+NEW: Graphviz
 =============
 
-((to be written))
+.. versionadded:: 2.7.0
 
 Example: https://docs.typo3.org/m/typo3/demo-t3SphinxThemeRtd/master/en-us/Directives/sphinx_ext_graphviz.html
 
@@ -76,10 +67,10 @@ Example: https://docs.typo3.org/m/typo3/demo-t3SphinxThemeRtd/master/en-us/Direc
 
 .. index:: Sphinx extension; sphinxcontrib-plantuml
 
-New: Plantuml
+NEW: Plantuml
 =============
 
-((to be written))
+.. versionadded:: 2.7.0
 
 Examples: https://docs.typo3.org/m/typo3/demo-t3SphinxThemeRtd/master/en-us/Directives/sphinxcontrib-plantuml.html
 
@@ -87,24 +78,77 @@ Examples: https://docs.typo3.org/m/typo3/demo-t3SphinxThemeRtd/master/en-us/Dire
 
 .. index:: Sphinx extension; sphinx-tabs
 
-New: sphinx-tabs
+NEW: sphinx-tabs
 ================
 
-((to be written))
+.. versionadded:: 2.7.0
 
 Examples: https://docs.typo3.org/m/typo3/demo-t3SphinxThemeRtd/master/en-us/Directives/sphinx-tabs.html
 
 
 
+.. index:: HTML styling; extra wide screen
+.. _NEW-Making-use-of-extra-wide-screens:
 
+NEW: Making use of extra wide screens
+=====================================
+
+.. versionadded:: 2.7.0
+.. versionchanged:: 2.8.0
+   This feature was removed. We are awaiting a better solution.
+
+For the sake of good readability and "beauty" the HTML theme is limiting the
+width of the content area to a certain maximum:
+
+.. figure:: Files/v2-7-1-full-width-500-1.png
+   :class: with-border with-shadow
+   :alt: Screenshot of HTML page layout with limited content width
+
+However, the larger your screen is the more space is wasted, which can be
+annoying if you want to see extra wide tables or code blocks.
+
+**NEW:** You can now make your browser window really wide (>1.800px) to trigger
+a mode switch. With that all of your window will be used for content:
+
+.. figure:: Files/v2-7-1-full-width-708-2.png
+   :class: with-border with-shadow
+   :alt: Screenshot of HTML page layout with full width content
+
+
+
+
+
+.. index:: HTML styling; Index page
+
+NEW: Styled index page
+======================
+
+.. versionadded:: 2.7.1
+
+The index page now has CSS styling.
+
+The list items on the index page :file:`genindex.html` are shown top-left
+aligned without list symbols. The layout works well on small display like
+cell phones:
+
+.. figure:: Files/v2-7-1-index-page.png
+   :class: with-border with-shadow
+   :alt: Screenshot showing part of the index page
+
+
+#############
+IMPROVED
+#############
 
 
 .. index:: HTML styling; Version hints
 
-Improved: Styling of version hints
+IMPROVED: Styling of version hints
 ==================================
 
-**Updated:** Versions hints are better visible now.
+.. versionadded:: 2.7.0
+
+Version hints are better visible now.
 
 Example:
 
@@ -119,10 +163,12 @@ See https://docs.typo3.org/m/typo3/demo-t3SphinxThemeRtd/master/en-us/Directives
 
 .. index:: HTML styling; line blocks
 
-Improved: Styling of line blocks
+IMPROVED: Styling of line blocks
 ================================
 
-**New:** Indentation levels are now shown correctly.
+.. versionadded:: 2.7.0
+
+Indentation levels are now shown correctly. The rendering is feature complete.
 
 See the `reStructuredText Markup Specification`__ for a technical description
 of `line blocks`__.
@@ -151,10 +197,11 @@ Example: "Crazy" indentation levels
 
 .. index:: HTML styling; block quotes
 
-Improved: Styling of block quotes
+IMPROVED: Styling of block quotes
 =================================
 
-**Improved:**
+.. versionadded:: 2.7.0
+
 The attribution now appears aligned right and with a larger font size.
 
 See the `reStructuredText Markup Specification`__ for a technical description
@@ -185,35 +232,17 @@ Example: Block quote
 
 
 
-.. index:: HTML styling; extra wide screen
 
-New: Making use of extra wide screens
-=====================================
-
-For the sake of good readability and "beauty" the HTML theme is limiting the
-width of the content area to a certain maximum:
-
-.. figure:: Files/v2-7-1-full-width-500-1.png
-   :class: with-border with-shadow
-   :alt: Screenshot of HTML page layout with limited content width
-
-However, the larger your screen is the more space is wasted, which can be
-annoying if you want to see extra wide tables or code blocks.
-
-**New:** You can now make your browser window really wide (>1.800px) to trigger
-a mode switch. With that all of your window will be used for content:
-
-.. figure:: Files/v2-7-1-full-width-708-2.png
-   :class: with-border with-shadow
-   :alt: Screenshot of HTML page layout with full width content
+#############
+UPDATED
+#############
 
 
 
+UPDATED: Base image Ubuntu 20.04
+================================
 
-
-
-Updated: Ubuntu 20.04
-=====================
+.. versionadded:: 2.7.0
 
 The container is now based on Ubuntu 20.04 LTS. The OS name and version is now
 part of the 'versioninfo' output. When called with the `--version` option the
@@ -225,20 +254,20 @@ values for OS_NAME and OS_VERSION are shown as well:
 
 
 
-Updated: exclude_patterns
+UPDATED: exclude_patterns
 =========================
 
-((to be written))
+.. versionadded:: 2.7.0
 
 `exclude_patterns` can be specified in Defaults.cfg, Settings.cfg, Overrides.cfg
 
 
 
 
-Updated: Better explanations in console output
+UPDATED: Better explanations in console output
 ==============================================
 
-((to be written))
+.. versionadded:: 2.7.0
 
 The container now does a better job in explaining at the end of the run why the
 job has succeeded or failed.
@@ -247,13 +276,18 @@ job has succeeded or failed.
 
 
 
+#############
+REMOVED
+#############
 
 
 
 .. index:: Sphinx extension; googlemaps
 
-Removed: googlemaps
+REMOVED: googlemaps
 ===================
+
+.. versionchanged:: 2.7.0 removed Sphinx extension
 
 The Sphinx extension `sphinxcontrib.googlemaps` was removed because it didn't
 work any more.
@@ -261,8 +295,10 @@ work any more.
 
 .. index:: Sphinx extension; googlechart
 
-Removed: googlechart
+REMOVED: googlechart
 ====================
+
+.. versionchanged:: 2.7.0 removed Sphinx extension
 
 The Sphinx extension `sphinxcontrib.googlechart` was removed because Google has
 stopped that charting service.
@@ -270,27 +306,5 @@ stopped that charting service.
 
 
 
-.. index:: Releases; v2.7.1
 
-**************
-Release v2.7.1
-**************
-
-Released Jan 6, 2021
-
-
-.. index:: HTML styling; Index page
-
-New: Styled index page
-======================
-
-**New:** The index page now has CSS styling.
-
-The list items on the index page :file:`genindex.html` are shown top-left
-aligned without list symbols. The layout works well on small display like
-cell phones:
-
-.. figure:: Files/v2-7-1-index-page.png
-   :class: with-border with-shadow
-   :alt: Screenshot showing part of the index page
 
