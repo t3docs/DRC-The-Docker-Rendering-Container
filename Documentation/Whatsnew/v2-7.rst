@@ -6,9 +6,10 @@
 Releases v2.7
 =============
 
-*  v2.7.0, December 16, 2020
-*  v2.7.1, Jan 6, 2021
-*  v2.7.2, ...
+*  v2.7.0, December 16, 2020, lots of improvements
+*  v2.7.1, Jan 6, 2021, style index page
+*  v2.7.2, Jan 21, 2021, bugfix
+
 
 .. contents::
    :backlinks: top
@@ -19,6 +20,25 @@ Releases v2.7
 #############
 NEW
 #############
+
+
+.. index:: HTML styling; Index page
+
+NEW: Styled index page
+======================
+
+.. versionadded:: 2.7.1
+
+The index page now has CSS styling.
+
+The list items on the index page :file:`genindex.html` are shown top-left
+aligned without list symbols. The layout works well on small display like
+cell phones:
+
+.. figure:: Files/v2-7-1-index-page.png
+   :class: with-border with-shadow
+   :alt: Screenshot showing part of the index page
+
 
 NEW: objects.inv.json
 =====================
@@ -41,8 +61,6 @@ https://docs.typo3.org/m/typo3/T3DocsRenderingContainer/draft/en-us/objects.inv.
 
 
 
-
-
 NEW: Helper script dockrun_t3rd.bat for Windows
 ===============================================
 
@@ -50,7 +68,6 @@ NEW: Helper script dockrun_t3rd.bat for Windows
 
 Windows users now can use the helper script :file:`dockrun_t3rd.bat` similar
 to the `dockrun_t3rd.sh` script for Linux and Mac users.
-
 
 
 
@@ -118,33 +135,15 @@ a mode switch. With that all of your window will be used for content:
 
 
 
-.. index:: HTML styling; Index page
-
-NEW: Styled index page
-======================
-
-.. versionadded:: 2.7.1
-
-The index page now has CSS styling.
-
-The list items on the index page :file:`genindex.html` are shown top-left
-aligned without list symbols. The layout works well on small display like
-cell phones:
-
-.. figure:: Files/v2-7-1-index-page.png
-   :class: with-border with-shadow
-   :alt: Screenshot showing part of the index page
-
-
 #############
-IMPROVED
+UPDATED
 #############
 
 
 .. index:: HTML styling; Version hints
 
-IMPROVED: Styling of version hints
-==================================
+UPDATED: Improve styling of version hints
+=========================================
 
 .. versionadded:: 2.7.0
 
@@ -163,8 +162,8 @@ See https://docs.typo3.org/m/typo3/demo-t3SphinxThemeRtd/master/en-us/Directives
 
 .. index:: HTML styling; line blocks
 
-IMPROVED: Styling of line blocks
-================================
+UPDATED: Improve styling of line blocks
+=======================================
 
 .. versionadded:: 2.7.0
 
@@ -197,8 +196,8 @@ Example: "Crazy" indentation levels
 
 .. index:: HTML styling; block quotes
 
-IMPROVED: Styling of block quotes
-=================================
+UPDATED: Improve styling of block quotes
+========================================
 
 .. versionadded:: 2.7.0
 
@@ -229,18 +228,8 @@ Example: Block quote
 
 
 
-
-
-
-
-#############
-UPDATED
-#############
-
-
-
-UPDATED: Base image Ubuntu 20.04
-================================
+UPDATED: Use Ubuntu 20.04 as base image
+=======================================
 
 .. versionadded:: 2.7.0
 
@@ -254,8 +243,8 @@ values for OS_NAME and OS_VERSION are shown as well:
 
 
 
-UPDATED: exclude_patterns
-=========================
+UPDATED: Allow exclude_patterns in settings files
+=================================================
 
 .. versionadded:: 2.7.0
 
@@ -263,17 +252,18 @@ UPDATED: exclude_patterns
 
 
 
-
-UPDATED: Better explanations in console output
-==============================================
+UPDATED: Show better explanations in console output
+===================================================
 
 .. versionadded:: 2.7.0
 
 The container now does a better job in explaining at the end of the run why the
 job has succeeded or failed.
 
-
-
+The final exit result will either be 0 or 255. The rendering is considered
+successful if the main :file:`Index.html` file of the html-build exists. So in
+this case the Docker container finishes with `exitCode=0`. Otherwise the final
+result will be `exitCode=255` to signal failure.
 
 
 #############
@@ -281,13 +271,12 @@ REMOVED
 #############
 
 
-
 .. index:: Sphinx extension; googlemaps
 
-REMOVED: googlemaps
-===================
+REMOVED: Sphinx extension googlemaps
+====================================
 
-.. versionchanged:: 2.7.0 removed Sphinx extension
+.. versionchanged:: 2.7.0 Sphinx extension removed
 
 The Sphinx extension `sphinxcontrib.googlemaps` was removed because it didn't
 work any more.
@@ -295,16 +284,10 @@ work any more.
 
 .. index:: Sphinx extension; googlechart
 
-REMOVED: googlechart
-====================
+REMOVED: Sphinx extension googlechart
+=====================================
 
-.. versionchanged:: 2.7.0 removed Sphinx extension
+.. versionchanged:: 2.7.0 Sphinx extension removed
 
 The Sphinx extension `sphinxcontrib.googlechart` was removed because Google has
 stopped that charting service.
-
-
-
-
-
-

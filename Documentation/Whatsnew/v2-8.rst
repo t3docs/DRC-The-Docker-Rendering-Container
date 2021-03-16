@@ -6,9 +6,9 @@
 Releases v2.8
 =============
 
-*  v2.8.0, March 16, 2021
+Release date v2.8.0: March 16, 2021
 
-.. contents::
+.. contents:: Page contents:
    :backlinks: top
    :class: compact-list
    :local:
@@ -17,30 +17,6 @@ Releases v2.8
 #############
 NEW
 #############
-
-NEW: Collapsed menu for TYPO3 Exceptions
-========================================
-
-.. versionadded:: 2.8.0
-
-When TYPO3 throws an exception it often points to a page that is dealing with
-that exception. See exceptions `1460976566
-<https://docs.typo3.org/typo3cms/exceptions/master/en-us/Exceptions/1460976566.html>`__
-for example. Usually the main menu at the left of the page is expanded to show
-the menu item for the current page.
-The theme.js that comes with `sphinx-typo3-theme`_ v4.5 has code that looks for
-the 'TYPO3 Exceptions' item and collapses the submenu on page load.
-
-Old: |expanded-menu|
-New: |collapsed-menu|
-
-.. |expanded-menu| image:: Files/v2-8-0-Exceptions-menu-expanded.png
-   :alt:   Screenshot of the expanded menu with many items
-   :class: with-border with-shadow
-
-.. |collapsed-menu| image:: Files/v2-8-0-Exceptions-menu-collapsed.png
-   :alt:   Screenshot of the expanded menu with many items
-   :class: with-border with-shadow
 
 
 NEW: How to edit button
@@ -83,6 +59,30 @@ and "parallel_write_safe". We could verify that Sphinx now uses parallel
 processes for writing. The extension `sphinxcontrib.t3targets` wasn't compatibel
 with this change and got fixed.
 
+
+NEW: Collapsed menu for TYPO3 Exceptions
+========================================
+
+.. versionadded:: 2.8.0
+
+When TYPO3 throws an exception it often points to a page that is dealing with
+that exception. See exceptions `1460976566
+<https://docs.typo3.org/typo3cms/exceptions/master/en-us/Exceptions/1460976566.html>`__
+for example. Usually the main menu at the left of the page is expanded to show
+the menu item for the current page.
+The theme.js that comes with `sphinx-typo3-theme`_ v4.5 has code that looks for
+the 'TYPO3 Exceptions' item and collapses the submenu on page load.
+
+Old: |expanded-menu|
+New: |collapsed-menu|
+
+.. |expanded-menu| image:: Files/v2-8-0-Exceptions-menu-expanded.png
+   :alt:   Screenshot of the expanded menu with many items
+   :class: with-border with-shadow
+
+.. |collapsed-menu| image:: Files/v2-8-0-Exceptions-menu-collapsed.png
+   :alt:   Screenshot of the expanded menu with many items
+   :class: with-border with-shadow
 
 
 #############

@@ -1,10 +1,16 @@
 const browserSync = require('browser-sync');
 const del = require('del');
 const util = require('util');
-const { decodePackageJsonTask } = require('./gulp/ourutil.js');
+const { decodePackageJsonTask } = require('./gulp/our_util.js');
 const { src, dest, series, parallel, watch } = require('gulp');
 //
 const execFile = util.promisify(require('child_process').execFile);
+
+function cleanTask(done) {
+  'use strict';
+  del.sync(['Documentation-GENERATED-temp']);
+  done();
+}
 
 function startServerTask(done) {
   'use strict';
@@ -26,12 +32,6 @@ function startServerTask(done) {
 function reloadBrowser(done) {
   'use strict';
   browserSync.reload();
-  done();
-}
-
-function cleanTask(done) {
-  'use strict';
-  del.sync(['Documentation-GENERATED-temp']);
   done();
 }
 
@@ -70,12 +70,10 @@ function makehtmlNoCacheTask(done) {
   return child_console_log(promise);
 }
 
-exports.default = function(done) { 'use strict'; console.log('run: gulp --tasks-simple'); done(); };
-exports.decodePackageJson = util.decodePackageJsonTask;
-exports.watch = series(startServerTask, watchSourceTask);
 exports.clean = cleanTask;
 exports.decodePackageJson = decodePackageJsonTask;
+exports.default = function(done) { 'use strict'; console.log('run: gulp --tasks-simple'); done(); };
 exports.makehtml = makehtmlTask;
 exports.makehtmlNoCache = makehtmlNoCacheTask;
-exports.startServer = startServerTask
+exports.startServer = startServerTask;
 exports.watch = series(cleanTask, makehtmlTask, startServerTask, watchSourceTask)
