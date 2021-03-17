@@ -1,4 +1,5 @@
 .. include:: /Includes.rst.txt
+.. _What-s-new:
 
 ===========
 What's new?

@@ -11,5 +11,10 @@
 .. default-role:: code
 
 
-.. _sphinx-typo3-theme: https://github.com/TYPO3-Documentation/sphinx_typo3_theme/
 .. _Docker Rendering Container: https://github.com/t3docs/docker-render-documentation/
+.. _How to render documentation: https://docs.typo3.org/m/typo3/docs-how-to-document/master/en-us/RenderingDocs/
+.. _sphinx-typo3-theme: https://github.com/TYPO3-Documentation/sphinx_typo3_theme/
+.. _Writing documentation: https://docs.typo3.org/m/typo3/docs-how-to-document/master/en-us/
+.. _Martin Bless: mailto:martin.bless@mbless.de
+
+

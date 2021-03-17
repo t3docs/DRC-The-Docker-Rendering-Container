@@ -2,9 +2,9 @@
 .. index:: Releases; v2.7
 .. _Releases-v2-7:
 
-=============
-Releases v2.7
-=============
+==========================
+Releases v2.7 (2021-01-21)
+==========================
 
 *  v2.7.0, December 16, 2020, lots of improvements
 *  v2.7.1, Jan 6, 2021, style index page

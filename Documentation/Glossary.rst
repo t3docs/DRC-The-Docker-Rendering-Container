@@ -15,7 +15,7 @@ Glossary
       Installation: Get Docker from https://docs.docker.com/install/
 
 
-   DCR
+   DRC
       `Docker Rendering Container`_
 
 

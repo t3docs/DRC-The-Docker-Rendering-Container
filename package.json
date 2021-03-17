@@ -4,9 +4,10 @@
   "private": false,
   "license": "MIT",
   "scripts": {
-    "makehtml": "yarn gulp makehtml",
     "list-gulp-tasks": "yarn gulp --tasks",
-    "list-gulp-tasks-simple": "yarn gulp --tasks-simple"
+    "list-gulp-tasks-simple": "yarn gulp --tasks-simple",
+    "makehtml": "yarn gulp makehtml",
+    "watch": "yarn gulp watch"
   },
   "dependencies": {},
   "devDependencies": {
