@@ -1,5 +1,6 @@
 .. include:: /Includes.rst.txt
 .. _For-contributors:
+
 ================
 For contributors
 ================
@@ -9,6 +10,7 @@ Helper links
 ============
 
 :Describing:    Container version >=v2.8.0
+:What's new?:   https://docs.typo3.org/m/typo3/T3DocsRenderingContainer/draft/en-us/Whatsnew/
 :Github:        \• `Github documentation-draft <https://github.com/t3docs/docker-render-documentation/tree/documentation-draft>`__ •
 :Public draft:  \• https://docs.typo3.org/m/typo3/t3docs-docker-render-documentation/draft/en-us/ •
 :Private draft: \• `symlinked.local.mbless.de <http://symlinked.local.mbless.de/docker-render-documentation-draft/>`__ •
