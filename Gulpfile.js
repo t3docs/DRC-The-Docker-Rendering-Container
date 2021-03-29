@@ -1,14 +1,14 @@
 const browserSync = require('browser-sync');
 const del = require('del');
 const util = require('util');
-const { decodePackageJsonTask } = require('./gulp/our_util.js');
+const { decodePackageJsonTask } = require('./gulp/utilityfns.js');
 const { src, dest, series, parallel, watch } = require('gulp');
 //
 const execFile = util.promisify(require('child_process').execFile);
 
 function cleanTask(done) {
   'use strict';
-  del.sync(['Documentation-GENERATED-temp']);
+  del.sync(['Documentation-GENERATED-temp/Result', 'Documentation-GENERATED-temp/Cache']);
   done();
 }
 
@@ -60,13 +60,15 @@ function child_console_log(promise) {
 
 function makehtmlTask(done) {
   'use strict';
-  const promise = execFile('gulp/run_dockrun_t3rd.sh', ['makehtml']);
+  const promise = execFile('gulp/run_sphinx_build.sh',
+    ['makehtml', '-c', 'jobfile', '/PROJECT/jobfile.json']);
   return child_console_log(promise);
 }
 
 function makehtmlNoCacheTask(done) {
   'use strict';
-  const promise = execFile('gulp/run_dockrun_t3rd.sh', ['makehtml-no-cache']);
+  const promise = execFile('gulp/run_sphinx_build.sh',
+     ['makehtml-no-cache', '-c', 'jobfile', '/PROJECT/jobfile.json']);
   return child_console_log(promise);
 }
 
