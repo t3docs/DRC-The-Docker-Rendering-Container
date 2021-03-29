@@ -3,10 +3,8 @@
 .. _Releases-v2-8:
 
 ==========================
-Releases v2.8 (2021-03-27)
+Releases v2.8 (2021-03-29)
 ==========================
-
-Release date v2.8.2: March 27, 2021
 
 .. contents:: Page contents:
    :backlinks: top
@@ -14,13 +12,11 @@ Release date v2.8.2: March 27, 2021
    :local:
 
 
-###############################################
-v2.8.3 (to be released, available as 'develop')
-###############################################
+######
+v2.8.3
+######
 
-Release date v2.8.3: To be released
-
-Already available as `docker pull t3docs/render-documentation:develop`.
+Release date v2.8.3: 2021-03-29
 
 
 NEW: just1sphinxbuild functionality (speed!)
@@ -29,14 +25,14 @@ NEW: just1sphinxbuild functionality (speed!)
 .. versionadded:: 2.8.3
 
 According to TYPO3 conventions the documentation of a project should start with
-file
-:file:`./Documentation/Index.rst`. In this case and for a local rendering
+file :file:`./Documentation/Index.rst`. In this case and for a local rendering
 ("render while you type") it would be sufficient to just run a `sphinx-build`
 command within the container and skip all the steps of the rendering tool chain.
 When you start thinking in fractions of a second of rendering time this makes
 a difference. You can now do that::
 
    dockrun_t3rd  just1sphinxbuild
+
 
 This will trigger one `docker run` with all the necessary parameters for your
 situation and then run a `sphinx-build` command within the container::
@@ -66,7 +62,7 @@ Another way to use individual parameters would be this.
 
 Run `makehtml` once to garantee that folders exist::
 
-   dockrun_t3rd makehtml
+   dockrun_t3rd  makehtml
 
 Then directly run docker and the `sphinx-build` command - again and again::
 
@@ -85,48 +81,95 @@ Then directly run docker and the `sphinx-build` command - again and again::
          '
 
 
-UPDATE: serve4build functionality (speed!)
-==========================================
+UPDATED: serve4build functionality (speed!)
+===========================================
 
-.. versionchanged:: 2.8.3 Code changes
+.. versionadded:: 2.8.3
 
-`serve4build` takes the `just1sphinxbuild` functionality a step further. While
-`just1sphinxbuild` does a complete container run for each call, `serve4build`
-starts the container only once thereby launching a little webserver.
+`serve4build` takes the `just1sphinxbuild` functionality even a step further.
 
-The webserver is mainly waiting for a rebuild request or for the shutdown
-request. Some more helper actions are available.
+`just1sphinxbuild` does a complete container run for each. This means, a copy
+of the Docker image is made, the copy is run and afterwards deleted again by
+your :term:`OS`.
 
-1. Start the :term:`DRC` as build server:
+In contrast, `serve4build` is starting the container only once and keeps it
+running as a little service. The service is provided by a little webserver that
+is mainly waiting for a rebuild request (`makehtml`) or for the shutdown
+request. Some more actions are also available.
+
+1. START SERVER
+
+   Start the :term:`DRC` as build server::
+
+      dockrun_t3rd serve4build
+
+
+   Looks like:
 
    .. image:: Files/v2-8-3-Start-serve4build.png
       :class: with-border with-shadow
       :alt:   Starting serve4build
 
+   |
 
-2. Then use your browser:
+   To use a port of your choice, for example 8989, do::
+
+      dockrun_t3rd serve4build 8989
+
+   |
+   |
+
+
+2. BROWSER
+
+   Go to `http://127.0.0.1:9999/makehtml <http://127.0.0.1:9999/makehtml>`__:
 
    .. image:: Files/v2-8-3-serve4build-browser.png
       :class: with-border with-shadow
       :alt:   serve4build in the browser
 
-3. Or, instead of using this browser, issue a web request by some tool like
-   *wget* or *curl*:
+   |
+   |
+
+
+3. HTTP-REQUEST
+
+   Or, just issue a HTTP request by some tool like *wget* or *curl*::
+
+      wget --no-cache -q -O /dev/null http://127.0.0.1:9999/makehtml
+
+   For example, you could create a file `run_sphinx_build.sh` having this
+   content:
 
    .. image:: Files/v2-8-3-serve4build-wget.png
       :class: with-border with-shadow
       :alt:   serve4build via wget web request
 
+   |
+
+   If you then set up a file watcher and run that file on changes there will be
+   a very quick re-rendering.
+
+   |
 
 
+4. SHUTDOWN
 
+   To shutdown the server, do a
+   `http://127.0.0.1:9999/shutdown <http://127.0.0.1:9999/shutdown>`__
+   request.
 
+   Or, if you find out later that port 9999 is still in use and the docker
+   container is still running, look for running containers::
 
+      docker ps
 
+   To stop a container immediately::
 
+      docker stop -t0 95d43292f285   # <- fill in correct name or id
 
-
-
+   |
+   |
 
 
 
@@ -140,7 +183,7 @@ Release date v2.8.2: March 27, 2021
 NEW: serve4build
 ================
 
-See v2.8.3.
+See description in chapter v2.8.3.
 
 
 #############
@@ -151,13 +194,16 @@ Release date v2.8.2: March 26, 2021
 
 *  The :term:`DRC` v2.8.1 uses v4.5.2 of the `sphinx-typo3-theme`_.
 
-*  The target of the 'How to edit' button is now a theme configuration value
-   `h2edit_url` and thus can be set in :file:`conf.py`. We are using
-   :file:`Defaults.cfg`, :file:`Settings.cfg`, :file:`Overrides.cfg` and
-   :file:`jobfile.json` to compose :file:`conf.py`. In official renderings for
-   the TYPO3 docs server the value :file:`Overrides.cfg` defines this value as
-   `h2edit_url =
-   https://docs.typo3.org/m/typo3/docs-how-to-document/master/en-us/WritingDocsOfficial/GithubMethod.html`.
+
+BUGFIX: Sphinx search autocompletion
+====================================
+
+The setting for the autocompletion of the built in Sphinx offline search no is
+`disableAutoSelect = true`. This means, that the search will be done for
+exactly the content of the search field when you press enter.
+
+Before, the most adjacent item from the proposal list was picked which could
+give surprising results.
 
 
 BUGFIX: Logo link area
@@ -178,12 +224,20 @@ UPDATE: How to edit button
 
 .. versionchanged:: 2.8.1 Show constantly
 
-   The button is now shown constantly and not as an "on hovering" effect. It is
-   not shown though if there is no "Edit on GitHub"-like button.
+   The button is now shown constantly and not as an "on hover" effect. It is
+   not shown though if there is no "Edit on GitHub"-like button at all.
 
 .. image:: Files/v2-8-1-How-to-edit-button.png
    :class: with-border with-shadow
    :alt:   Show the 'How to edit' button constantly
+
+The target of the 'How to edit' button is now a theme configuration value
+`h2edit_url` and thus can be set in :file:`conf.py`. We are using
+:file:`Defaults.cfg`, :file:`Settings.cfg`, :file:`Overrides.cfg` and
+:file:`jobfile.json` to compose :file:`conf.py`. In official renderings for
+the TYPO3 docs server the value :file:`Overrides.cfg` defines this value as
+`h2edit_url =
+https://docs.typo3.org/m/typo3/docs-how-to-document/master/en-us/WritingDocsOfficial/GithubMethod.html`.
 
 
 #############

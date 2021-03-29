@@ -42,6 +42,9 @@ Glossary
       file. It can have any name. That file is in the hands of the system
       administrator or operator.
 
+   OS
+      Operating system, such as Windows, Linux or macOS.
+
    RenderDocumentation
       This is the specific :term:`toolchain` that we are using.
 
