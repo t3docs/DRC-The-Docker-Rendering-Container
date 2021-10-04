@@ -35,4 +35,4 @@ See chapter
 in `Writing documentation
 <https://docs.typo3.org/m/typo3/docs-how-to-document/master/en-us/>`_.
 
-.. dummy - trigger rendering
+.. dummy - trigger rendering .
