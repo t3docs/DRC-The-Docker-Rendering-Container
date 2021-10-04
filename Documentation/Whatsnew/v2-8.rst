@@ -108,7 +108,7 @@ request. Some more actions are also available.
 
    Looks like:
 
-   .. image:: Files/v2-8-3-Start-serve4build.png
+   .. image:: Files/v2-8/v2-8-3-Start-serve4build.png
       :class: with-border with-shadow
       :alt:   Starting serve4build
 
@@ -126,7 +126,7 @@ request. Some more actions are also available.
 
    Go to `http://127.0.0.1:9999/makehtml <http://127.0.0.1:9999/makehtml>`__:
 
-   .. image:: Files/v2-8-3-serve4build-browser.png
+   .. image:: Files/v2-8/v2-8-3-serve4build-browser.png
       :class: with-border with-shadow
       :alt:   serve4build in the browser
 
@@ -143,7 +143,7 @@ request. Some more actions are also available.
    For example, you could create a file `run_sphinx_build.sh` having this
    content:
 
-   .. image:: Files/v2-8-3-serve4build-wget.png
+   .. image:: Files/v2-8/v2-8-3-serve4build-wget.png
       :class: with-border with-shadow
       :alt:   serve4build via wget web request
 
@@ -220,7 +220,7 @@ BUGFIX: Logo link area
    The link area of the logo does not stretch into the shaded area past the
    actual image any more.
 
-.. image:: Files/v2-8-1-Logo-link-area.png
+.. image:: Files/v2-8/v2-8-1-Logo-link-area.png
    :class: with-border with-shadow
    :alt:   Show the logo link area
 
@@ -233,7 +233,7 @@ UPDATE: How to edit button
    The button is now shown constantly and not as an "on hover" effect. It is
    not shown though if there is no "Edit on GitHub" button at all.
 
-.. image:: Files/v2-8-1-How-to-edit-button.png
+.. image:: Files/v2-8/v2-8-1-How-to-edit-button.png
    :class: with-border with-shadow
    :alt:   Show the 'How to edit' button constantly
 
@@ -266,7 +266,7 @@ are made in the theme.
 At the top right of our pages we usually show the "Edit on GitHub" and "Show
 source" buttons:
 
-.. image:: Files/v2-8-0-Edit-on-GitHub-button.png
+.. image:: Files/v2-8/v2-8-0-Edit-on-GitHub-button.png
    :class: with-border with-shadow
    :alt:   Screenshot of the 'Edit on GitHub' button
 
@@ -275,7 +275,7 @@ click the edit button. On the other hand we don't want to overload the
 layout. As a solution there now is a third button which only appears while
 hovering over the edit button:
 
-.. image:: Files/v2-8-0-How-to-edit-button.png
+.. image:: Files/v2-8/v2-8-0-How-to-edit-button.png
    :class: with-border with-shadow
    :alt:   Screenshot of the 'How to edit' button
 
@@ -318,11 +318,11 @@ the 'TYPO3 Exceptions' item and collapses the submenu on page load.
 Old: |expanded-menu|
 New: |collapsed-menu|
 
-.. |expanded-menu| image:: Files/v2-8-0-Exceptions-menu-expanded.png
+.. |expanded-menu| image:: Files/v2-8/v2-8-0-Exceptions-menu-expanded.png
    :alt:   Screenshot of the expanded menu with many items
    :class: with-border with-shadow
 
-.. |collapsed-menu| image:: Files/v2-8-0-Exceptions-menu-collapsed.png
+.. |collapsed-menu| image:: Files/v2-8/v2-8-0-Exceptions-menu-collapsed.png
    :alt:   Screenshot of the expanded menu with many items
    :class: with-border with-shadow
 

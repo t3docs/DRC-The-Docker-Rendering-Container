@@ -35,7 +35,7 @@ The list items on the index page :file:`genindex.html` are shown top-left
 aligned without list symbols. The layout works well on small display like
 cell phones:
 
-.. figure:: Files/v2-7-1-index-page.png
+.. figure:: Files/v2-7/v2-7-1-index-page.png
    :class: with-border with-shadow
    :alt: Screenshot showing part of the index page
 
@@ -117,7 +117,7 @@ NEW: Making use of extra wide screens
 For the sake of good readability and "beauty" the HTML theme is limiting the
 width of the content area to a certain maximum:
 
-.. figure:: Files/v2-7-1-full-width-500-1.png
+.. figure:: Files/v2-7/v2-7-1-full-width-500-1.png
    :class: with-border with-shadow
    :alt: Screenshot of HTML page layout with limited content width
 
@@ -127,7 +127,7 @@ annoying if you want to see extra wide tables or code blocks.
 **NEW:** You can now make your browser window really wide (>1.800px) to trigger
 a mode switch. With that all of your window will be used for content:
 
-.. figure:: Files/v2-7-1-full-width-708-2.png
+.. figure:: Files/v2-7/v2-7-1-full-width-708-2.png
    :class: with-border with-shadow
    :alt: Screenshot of HTML page layout with full width content
 
@@ -151,7 +151,7 @@ Version hints are better visible now.
 
 Example:
 
-.. figure:: Files/v2-7-1-versionadded.png
+.. figure:: Files/v2-7/v2-7-1-versionadded.png
    :class: with-border with-shadow
    :alt: Screenshot of various version hints
 
@@ -183,11 +183,11 @@ __ https://docs.typo3.org/m/typo3/demo-t3SphinxThemeRtd/master/en-us/
 Example: "Crazy" indentation levels
 -----------------------------------
 
-.. image:: Files/v2-7-1-crazy-indentation-1-406.png
+.. image:: Files/v2-7/v2-7-1-crazy-indentation-1-406.png
    :class: with-border with-shadow
    :alt: reST source of line block example
 
-.. image:: Files/v2-7-1-crazy-indentation-2-406.png
+.. image:: Files/v2-7/v2-7-1-crazy-indentation-2-406.png
    :class: with-border with-shadow
    :alt: HTML view of line block example
 
@@ -218,11 +218,11 @@ __ https://docs.typo3.org/m/typo3/demo-t3SphinxThemeRtd/master/en-us/
 Example: Block quote
 --------------------
 
-.. image:: Files/v2-7-1-block-quote-1.png
+.. image:: Files/v2-7/v2-7-1-block-quote-1.png
    :class: with-border with-shadow
    :alt: reST source of block quote example
 
-.. image:: Files/v2-7-1-block-quote-2.png
+.. image:: Files/v2-7/v2-7-1-block-quote-2.png
    :class: with-border with-shadow
    :alt: HTML view of block quote example
 
@@ -237,7 +237,7 @@ The container is now based on Ubuntu 20.04 LTS. The OS name and version is now
 part of the 'versioninfo' output. When called with the `--version` option the
 values for OS_NAME and OS_VERSION are shown as well:
 
-.. figure:: Files/v2-7-1-version-output.png
+.. figure:: Files/v2-7/v2-7-1-version-output.png
    :class: with-border with-shadow
    :alt: Screenshot of the text output when called with the --version option
 
