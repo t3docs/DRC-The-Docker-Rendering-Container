@@ -15,7 +15,7 @@ The DRC can be use with different themes for other projects as well.
 
 This is:
 
-:Repository:       https://github.com/t3docs/rendering-container-documentation
+:Repository:       https://github.com/t3docs/rendering-container-documentation/tree/documentation-draft
 :Rendered at:      https://docs.typo3.org/m/typo3/T3DocsRenderingContainer/draft/en-us/
 :What's new?:      https://docs.typo3.org/m/typo3/T3DocsRenderingContainer/draft/en-us/Whatsnew/
 :Rendering status: View Intercept__ (click search button!)
