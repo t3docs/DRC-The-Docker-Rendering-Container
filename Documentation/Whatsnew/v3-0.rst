@@ -141,6 +141,6 @@ Example of the new appearance:
 More changes
 ============
 
-*  There now is a `make buildall` command.
+*  There now is a `make help` and `make build` command.
 *  …
 
