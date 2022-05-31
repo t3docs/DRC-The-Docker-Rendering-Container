@@ -3,7 +3,8 @@
    },
    "tctconfig": {
      "disable_include_files_check": 0,
-     "make_singlehtml": 1
+     "make_singlehtml": 0,
+     "allow_unsafe": 1
    },
    "buildsettings_sh": {
    }

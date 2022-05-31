@@ -14,6 +14,11 @@ Glossary
 
       Installation: Get Docker from https://docs.docker.com/install/
 
+
+   DRC
+      `Docker Rendering Container`_
+
+
    Docutils
       See http://docutils.sourceforge.net/rst.html and
       chapter :ref:`About-docutils`.
@@ -36,6 +41,9 @@ Glossary
       make all possible settings and options configurable in that one single
       file. It can have any name. That file is in the hands of the system
       administrator or operator.
+
+   OS
+      Operating system, such as Windows, Linux or macOS.
 
    RenderDocumentation
       This is the specific :term:`toolchain` that we are using.

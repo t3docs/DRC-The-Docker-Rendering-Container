@@ -1,15 +1,15 @@
 .. include:: /Includes.rst.txt
+.. _What-s-new:
 
-==========
-What's new
-==========
+===========
+What's new?
+===========
 
-Pages:
 
 .. rst-class:: compact-list
 .. toctree::
    :glob:
-   :titlesonly:
+   :reversed:
 
    *
 

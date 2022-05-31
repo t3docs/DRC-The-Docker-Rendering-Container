@@ -1,5 +1,8 @@
-.. include:: Includes.rst.txt
+:orphan:
 
+.. include:: Includes.rst.txt
+.. index:: Link targets
+.. _Link-targets:
 
 Link targets
 ============
