@@ -18,6 +18,8 @@ different theme can be configured to achieve this.
 :Rendered at:  https://t3docs.github.io/DRC-The-Docker-Rendering-Container/
 :Describing:   https://github.com/t3docs/docker-render-documentation
 :Download as:  `docker pull ghcr.io/t3docs/render-documentation`
+:See demo:     `Sphinx TYPO3 Theme Rendering Test
+               <https://typo3-documentation.github.io/sphinx_typo3_theme_rendering_test/>`__
 
 
 Getting ready for rendering
