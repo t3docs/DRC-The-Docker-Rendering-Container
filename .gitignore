@@ -1,9 +1,0 @@
-*.log
-*.log.txt
-*.pyc
-*GENERATED*
-*NOT_VERSIONED*
-.idea
-/**/node_modules
-/ALL-for-build/venv/Pipfile.lock
-

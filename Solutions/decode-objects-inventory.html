@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="docsearch:name" content="DRC - The Docker Rendering Container" />
+    <meta name="docsearch:package_type" content="" />
+    <meta name="docsearch:release" content="0.0.0" />
+    <meta name="docsearch:version" content="0.0" />
+    <meta name="docsearch:modified" content="2022-06-01T18:04:27+00:00" />
+    <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />
+    <meta name="dc.modified" content="2022-06-01T18:04:27+00:00" />
+    <meta property="article:modified_time" content="2022-06-01T18:04:27+00:00" />
+
+    <title>Decode Sphinx crossreferencing inventories &#39;objects.inv&#39; &mdash; DRC - The Docker Rendering Container 0.0.0 documentation</title>
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/fontawesome.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/webfonts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+<!-- linktags -->
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="DRC - The Docker Rendering Container 0.0.0 documentation" href="#" />
+    <link rel="up" title="Solutions" href="Index.html" />
+    <link rel="next" title="Drop the usual Includes.rst.txt file" href="drop-includes-txt.html" />
+    <link rel="prev" title="Individual Python packages" href="PDF-generation.html" />
+<!-- /linktags -->
+<!-- extrahead --><!-- /extrahead -->
+    <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="page">
+
+        <div class="page-header">
+            <div class="page-header-inner">
+<!--block pageheader-->
+<div class="row">
+    <div class="col-sm-6 col-lg-7">
+
+        <div class="logo">
+
+            <img src="../_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" title="TYPO3 Documentation" class="logo-image" />
+        </div>
+    </div><!--/.col-x-->
+    <div class="col-sm-6 col-lg-5">
+        <div role="search">
+            
+            <!--form global search-->
+        </div>
+    </div><!--/.col-x-->
+</div><!--/.row-->
+<!--/block pageheader-->
+            </div><!--/.page-header-inner-->
+        </div><!--/.page-header-->
+
+        
+
+        <div class="page-main">
+            <div class="page-main-inner">
+                <div class="page-main-navigation">
+                    <nav>
+                        <input type="checkbox" id="toggleToc" class="toc-checkbox">
+                        <div class="toc-header"><div class="toc-title">
+                                    <a class="toc-title-project" href="../Index.html">DRC - The Docker Rendering Container</a></div><div class="toc-actions">
+                                <label for="toggleToc" class="toc-toggle">
+                                    Menu
+                                </label>
+                            </div>
+                        </div>
+                        <div class="toc-collapse">
+<!-- searchbox.html -->
+<div id="searchbox" class="toc-search" role="search">
+    <form id="search-form" action="../search.html" autocomplete="off" method="get">
+        <input class="form-control" type="text" name="q" placeholder="Search this project" aria-label="Search this project" id="searchinput" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<!-- /searchbox.html -->
+                            <div class="toc" role="navigation" aria-label="main navigation">
+<!-- menu -->
+                                        <p class="caption" role="heading"><span class="caption-text">BASICS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Basics/Readme/Index.html">README</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Basics/Introduction/Index.html">About the DRC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Basics/About/Index.html">About this manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sitemap.html">Sitemap</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USAGE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Usage/Index.html">Usage (Linux, Mac)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Usage/quickstart.html">Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Usage/dockrun.html">Using 'dockrun_t3rd'</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Usage/docker-run.html">Using 'docker run'</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Usage/caching.html">SPEED and caching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Usage/advanced.html">Advanced usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Usage-Windows/Index.html">Usage (Windows)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Usage-Windows/quickstart-windows.html">Quickstart (Windows)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Usage-Windows/windows-users.html">Windows users</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">MORE</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Building/Index.html">Container building</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Building/automated-builds.html">Automated builds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Building/building-locally.html">Building locall</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Development/Index.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Development/roadmap.html">Container development roadmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Development/menu-development.html">Menu development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Development/t3docs_userhome.html">Use local 'userhome'</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Development/theme-development.html">Theme development</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Explanation/Index.html">Explaining</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Explanation/ReST/Index.html">Writing ReST for Sphinx</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Explanation/ReST/About-docutils.html">About Docutils: The basics of ReST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Explanation/ReST/About-includes.html">About includes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Explanation/Toolchain/Index.html">Toolchain</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Explanation/Toolchain/define-docfiles.html">Specify documentation files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Explanation/Dockerfile.html">Dockerfile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Explanation/Security.html">Security</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Inspection/Index.html">Inspection</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Inspection/what-is-installed.html">What is installed?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Inspection/dockrun_t3rd.html">The 'dockrun' function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Inspection/pygments.html">Syntax highlighting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Inspection/toolchain.html">Toolchain inspection</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Rendering/Index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Rendering/make-html.html">Creating html</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Rendering/make-singlehtml.html">Creating singlehtml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Rendering/make-package.html">Creating packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Rendering/make-latex.html">Creating latex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Rendering/make-pdf.html">Creating pdf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Rendering/run-parameters.html">Run parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="Index.html">Solutions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Livereload/Index.html">Livereload</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Livereload/Livereload-using-Python.html">Livereload using Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Livereload/Livereload-using-Gulp.html">Livereload using Gulp (WIP)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gitlab-ci/Index.html">Render with Gitlab CI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PDF-generation.html">Individual Python packages</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Decode Sphinx crossreferencing inventories 'objects.inv'</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drop-includes-txt.html">Drop the usual Includes.rst.txt file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="individual-python-packages.html">PDF-generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="non-typo3-usage.html">Non TYPO3 usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pull-from-docker-hub.html">Pull and use 'develop' from Docker hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage-at-the-build-server.html">Usage at the build server</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Structures/Index.html">File structures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Structures/types.html">Documentation types</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Index.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Usage-Windows/Index.html">Usage (Windows)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Usage-Windows/quickstart-windows.html">Quickstart (Windows)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Usage-Windows/windows-users.html">Windows users</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Usage/Index.html">Usage (Linux, Mac)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Usage/quickstart.html">Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Usage/dockrun.html">Using 'dockrun_t3rd'</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Usage/docker-run.html">Using 'docker run'</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Usage/caching.html">SPEED and caching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Usage/advanced.html">Advanced usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Whatsnew/Index.html">What's new?</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Whatsnew/v3-0.html">Releases v3.0.dev1 (2021-10-03)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Whatsnew/v2-8.html">Releases v2.8 (2021-03-29)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Whatsnew/v2-7.html">Releases v2.7 (2021-01-21)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Whatsnew/v0-0.html">Releases v0.0 to v2.6.1 (2020-05-27)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ForContributors.html">For contributors</a></li>
+</ul>
+
+                                    <p class="caption"><span class="caption-text">PAGE CONTENTS</span></p>
+                                    <ul>
+<li><a class="reference internal" href="#">Decode Sphinx crossreferencing inventories 'objects.inv'</a><ul>
+<li><a class="reference internal" href="#what-is-this-about">What is this about?</a></li>
+<li><a class="reference internal" href="#what-link-targets-are-out-there">What link targets are out there?</a></li>
+<li><a class="reference internal" href="#how-to-decode-objects-inv">How to decode <cite>objects.inv</cite>?</a></li>
+<li><a class="reference internal" href="#about-inventories">About inventories</a><ul>
+<li><a class="reference internal" href="#example-looking-for-75625">Example: Looking for '75625'</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#see-also">See also</a></li>
+</ul>
+</li>
+</ul>
+<!-- /menu -->
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="page-main-content">
+                    <div class="rst-content">
+<!-- pager-hidden.html -->
+
+        <a class="no-focus" accesskey="p" href="PDF-generation.html" tabindex="-1"></a>
+        <a class="no-focus" accesskey="n" href="drop-includes-txt.html" tabindex="-1"></a>
+<!-- /pager-hidden.html -->
+<!-- breadcrumbs.html -->
+<div class="breadcrumb-bar" role="navigation" aria-label="breadcrumbs navigation">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../Index.html">Start</a></li>
+            <li class="breadcrumb-item"><a href="Index.html">Solutions</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Decode Sphinx crossreferencing inventories &#39;objects.inv&#39;</li>
+    </ol>
+    <div class="breadcrumb-additions">
+        <a class="btn btn-sm btn-light" href="../_sources/Solutions/decode-objects-inventory.rst.txt" rel="nofollow">
+            <span class="btn-icon"><span class="fas fa-code"></span></span>
+            <span class="btn-text">View source</span>
+        </a>
+        <a class="btn btn-sm btn-light" id="btnHowToEdit"
+           href="https://docs.typo3.org/m/typo3/docs-how-to-document/master/en-us/WritingDocsOfficial/GithubMethod.html"
+           rel="nofollow noopener" target="_blank">
+            <span class="btn-icon"><span class="fas fa-info-circle"></span></span>
+            <span class="btn-text">How to edit</span>
+        </a>
+        <a class="btn btn-sm btn-primary" id="btnEditOnGitHub" href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container/edit/main/Documentation/Solutions/decode-objects-inventory.rst">
+            <span class="btn-icon"><span class="fab fa-github"></span></span>
+            <span class="btn-text">Edit on GitHub</span>
+        </a>
+    </div>
+</div>
+<!-- /breadcrumbs.html -->
+<!-- displaysettingsui.html -->
+<div id="displaysettingsui" class="displaysettingsui">
+<div class="dsDivCogwheel"><i id="dsCogwheel" class="fas fa-cog" title="Display settings"></i></div>
+<div id="dsPanel" class="dsPanel" ><p><b>Display settings</b></p>
+<input type="checkbox" id="cbFullWidth"><label for="cbFullWidth">Use full width</label><br>
+<input type="checkbox" id="cbPermanent"><label for="cbPermanent">Make settings permanent</label><br>
+</div><!--/.dsPanel-->
+</div><!--/.displaysettingsui-->
+<!-- /displaysettingsui.html -->
+<!-- versionhints.html -->
+<div class="version-hints">
+
+    <div class="version-hints-inner" data-run-ajax="no">
+<!--filled from _static/ajax-version-hints.html-->
+</div><!--/.version-hints-inner-->
+</div><!--/.version-hints-->
+<!-- /versionhints.html -->
+                        <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                            <div itemprop="articleBody">
+<!-- body -->
+    <div class="section" id="decode-sphinx-crossreferencing-inventories-objects-inv">
+<h1>Decode Sphinx crossreferencing inventories 'objects.inv'<a class="headerlink" href="#decode-sphinx-crossreferencing-inventories-objects-inv" title="Permalink to this headline">¶</a></h1>
+<div class="contents compact-list local topic" id="this-page">
+<p class="topic-title">This page</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#what-is-this-about" id="id1">What is this about?</a></p></li>
+<li><p><a class="reference internal" href="#what-link-targets-are-out-there" id="id2">What link targets are out there?</a></p></li>
+<li><p><a class="reference internal" href="#how-to-decode-objects-inv" id="id3">How to decode <cite>objects.inv</cite>?</a></p></li>
+<li><p><a class="reference internal" href="#about-inventories" id="id4">About inventories</a></p>
+<ul>
+<li><p><a class="reference internal" href="#example-looking-for-75625" id="id5">Example: Looking for '75625'</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#see-also" id="id6">See also</a></p></li>
+</ul>
+</div>
+<div class="section" id="what-is-this-about">
+<h2><a class="toc-backref" href="#this-page">What is this about?</a><a class="headerlink" href="#what-is-this-about" title="Permalink to this headline">¶</a></h2>
+<p>Most Sphinx documentation projects offer an inventory of link targets in a file
+named <code class="file docutils literal notranslate"><span class="pre">objects.inv</span></code>. It is usually locate in the root folder and can be
+downloaded via <cite>https://www.project-domain.tld/objects.inv</cite>.
+<a class="reference external" href="https://docs.typo3.org/c/typo3/cms-core/master/en-us/">TYPO3 CMS Core ChangeLog documentation</a> has such an
+inventory: <a class="reference external" href="https://docs.typo3.org/c/typo3/cms-core/master/en-us/objects.inv">https://docs.typo3.org/c/typo3/cms-core/master/en-us/objects.inv</a>
+The purpose of such an inventory is to allow symbolic linking from another
+Sphinx project. Note that the target documentation has no idea about who in the
+world is linking to it. The Sphinx &quot;Intersphinx&quot;
+mechanism provides that possibility. To use that in an arbitrary Sphinx project
+you define an &quot;intersphinx mapping&quot;, which could be <cite>t3changelog =
+https://docs.typo3.org/c/typo3/cms-core/master/en-us/</cite> in this case. Afterwards
+you can pick one of the target labels and link to that spot in the changelog
+manual without caring about URLs. And, if the authors of the changelog
+decide to move things around your link will still be valid once your manual
+received a new rendering&quot;. A link to a target would be written as:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="o">:</span><span class="nx">ref</span><span class="o">:</span><span class="sb">`t3changelog:THE-LABEL`</span>
+</pre></div>
+</div>
+<p>The amazing thing is, that the link text, that is shown, automatically will be
+that of the headline in the destination manual.</p>
+</div>
+<div class="section" id="what-link-targets-are-out-there">
+<h2><a class="toc-backref" href="#this-page">What link targets are out there?</a><a class="headerlink" href="#what-link-targets-are-out-there" title="Permalink to this headline">¶</a></h2>
+<p>In order create a reference to a spot in another manual you need to know about
+the possible link targets. And that may be a problem, if the target site
+doesn't make obvious what targets exist.
+The solution sounds easy and would be: &quot;Have a look into the other manual's
+<code class="file docutils literal notranslate"><span class="pre">objects.inv</span></code> file. But that's a problem: it is a binary file.</p>
+</div>
+<div class="section" id="how-to-decode-objects-inv">
+<h2><a class="toc-backref" href="#this-page">How to decode <cite>objects.inv</cite>?</a><a class="headerlink" href="#how-to-decode-objects-inv" title="Permalink to this headline">¶</a></h2>
+<p>This is Sphinx know-how to decode and read that file. So let's directly use
+Sphinx for that purpose. Read about this in the Sphinx docs:
+<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#showing-all-links-of-an-intersphinx-mapping-file)">Showing all links of an Intersphinx mapping file</a></p>
+<p>Here is a sample command that does the trick:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="nx">OBJECTS_INV_URL</span><span class="o">=</span><span class="nx">https</span><span class="o">://</span><span class="nx">docs</span><span class="o">.</span><span class="nx">typo3</span><span class="o">.</span><span class="nx">org</span><span class="o">/</span><span class="nx">c</span><span class="o">/</span><span class="nx">typo3</span><span class="o">/</span><span class="nx">cms</span><span class="o">-</span><span class="nx">core</span><span class="o">/</span><span class="nx">master</span><span class="o">/</span><span class="nx">en</span><span class="o">-</span><span class="nx">us</span><span class="o">/</span><span class="nx">objects</span><span class="o">.</span><span class="nx">inv</span>
+<span class="nx">docker</span> <span class="nx">run</span> <span class="o">--</span><span class="nx">rm</span> <span class="o">-</span><span class="nx">t</span> <span class="o">--</span><span class="nx">entrypoint</span> <span class="o">/</span><span class="nx">bin</span><span class="o">/</span><span class="nx">bash</span> <span class="nx">\</span>
+   <span class="nx">t3docs</span><span class="o">/</span><span class="nx">render</span><span class="o">-</span><span class="nx">documentation</span> <span class="nx">\</span>
+   <span class="o">-</span><span class="nx">c</span> <span class="s2">&quot;source /ALL/userhome/.bashrc;python -m sphinx.ext.intersphinx </span><span class="si">$OBJECTS_INV_URL</span><span class="s2">&quot;</span>
+
+<span class="c1"># Result is a long list in text format shown in the terminal.</span>
+</pre></div>
+</div>
+<p>What's going on here? Explanation:</p>
+<dl class="simple">
+<dt><cite>docker run t3docs/render-documentation</cite></dt><dd><p>We are running our Docker container.</p>
+</dd>
+<dt><cite>--rm</cite></dt><dd><p>We want to have that container removed right after finishing.</p>
+</dd>
+<dt><cite>-t</cite></dt><dd><p>Connect the output to our tty (terminal).</p>
+</dd>
+<dt><cite>--entrypoint /bin/bash</cite></dt><dd><p>We specify the bash as shell. Don't put the command to execute here!</p>
+</dd>
+<dt><cite>-c</cite></dt><dd><p>For the bash we specify that the following is a command to be executed.</p>
+</dd>
+<dt><cite>source /ALL/userhome/.bashrc</cite></dt><dd><p>Inside the container <code class="file docutils literal notranslate"><span class="pre">/ALL/venv</span></code> is our current folder. A Python
+virtual environment is prepared in the container, but it isn't activated.
+<cite>source /ALL/userhome/.bashrc</cite> activates that environment.</p>
+</dd>
+<dt><cite>;</cite></dt><dd><p>Join two commands.</p>
+</dd>
+<dt><cite>python -m sphinx.ext.intersphinx</cite></dt><dd><p>Have Python run the intersphinx module as a &quot;__main__&quot; program. In that case
+the module provides code that does a very simple dump of an link inventory.
+Not sophisticated, but works.</p>
+</dd>
+<dt><cite>https://docs.typo3.org/c/typo3/cms-core/master/en-us/objects.inv</cite></dt><dd><p>This is the inventory we want to have downloaded and queried. In TYPO3 we
+are following the usual convention that it's named <code class="file docutils literal notranslate"><span class="pre">objects.inv</span></code> and
+is located in the root path of a manual.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="about-inventories">
+<h2><a class="toc-backref" href="#this-page">About inventories</a><a class="headerlink" href="#about-inventories" title="Permalink to this headline">¶</a></h2>
+<p>Watch out: There are at least two lists of labels. One is for <code class="docutils literal notranslate"><span class="pre">:doc:…</span></code>
+linking and one is for <code class="docutils literal notranslate"><span class="pre">:ref:…</span></code> linking.</p>
+<div class="section" id="example-looking-for-75625">
+<h3><a class="toc-backref" href="#this-page">Example: Looking for '75625'</a><a class="headerlink" href="#example-looking-for-75625" title="Permalink to this headline">¶</a></h3>
+<p>Q: How do I know whether there is a label containing '75625' in the core
+changelog?</p>
+<p>A: The docker container can answer that:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="nx">docker</span> <span class="nx">run</span> <span class="o">--</span><span class="nx">rm</span> <span class="o">-</span><span class="nx">t</span> <span class="o">--</span><span class="nx">entrypoint</span> <span class="o">/</span><span class="nx">bin</span><span class="o">/</span><span class="nx">bash</span> <span class="nx">\</span>
+   <span class="nx">t3docs</span><span class="o">/</span><span class="nx">render</span><span class="o">-</span><span class="nx">documentation</span> <span class="nx">\</span>
+   <span class="o">-</span><span class="nx">c</span> <span class="s2">&quot;source /ALL/userhome/.bashrc;python -m sphinx.ext.intersphinx  \</span>
+<span class="s2">   https://docs.typo3.org/c/typo3/cms-core/master/en-us/objects.inv&quot;</span>  <span class="nx">\</span>
+   <span class="o">|</span> <span class="nx">grep</span> <span class="mi">75625</span>
+</pre></div>
+</div>
+<p>Shows <cite>Changelog/8.1/Deprecation-75625-DeprecatedCacheClearingOptions
+Deprecation: #75625 - Deprecated cache clearing options:
+Changelog/8.1/Deprecation-75625-DeprecatedCacheClearingOptions.html</cite></p>
+<p>So the answer is: <cite>Changelog/8.1/Deprecation-75625-DeprecatedCacheClearingOptions</cite></p>
+<p>The following command finds this in one go. It finds the line, removes tabs
+and returns the first word (non-blank string):</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="nx">docker</span> <span class="nx">run</span> <span class="o">--</span><span class="nx">rm</span> <span class="o">-</span><span class="nx">t</span> <span class="o">--</span><span class="nx">entrypoint</span> <span class="o">/</span><span class="nx">bin</span><span class="o">/</span><span class="nx">bash</span> <span class="nx">\</span>
+   <span class="nx">t3docs</span><span class="o">/</span><span class="nx">render</span><span class="o">-</span><span class="nx">documentation</span> <span class="nx">\</span>
+   <span class="o">-</span><span class="nx">c</span> <span class="s2">&quot;source /ALL/userhome/.bashrc;python -m sphinx.ext.intersphinx  \</span>
+<span class="s2">   https://docs.typo3.org/c/typo3/cms-core/master/en-us/objects.inv&quot;</span>  <span class="nx">\</span>
+   <span class="o">|</span> <span class="nx">grep</span> <span class="mi">75625</span> <span class="o">|</span> <span class="nx">sed</span> <span class="s1">&#39;s/\t//&#39;</span> <span class="o">|</span> <span class="nx">grep</span> <span class="o">-</span><span class="nx">Eo</span> <span class="s2">&quot;^[^ ]*&quot;</span>
+
+<span class="c1"># shows:</span>
+<span class="nx">Changelog</span><span class="o">/</span><span class="mf">8.1</span><span class="o">/</span><span class="nx">Deprecation</span><span class="o">-</span><span class="mi">75625</span><span class="o">-</span><span class="nx">DeprecatedCacheClearingOptions</span>
+</pre></div>
+</div>
+<p>Now you can use this string for symbolic linking. The file is the target of
+the link:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="o">:</span><span class="nx">doc</span><span class="o">:</span><span class="sb">`t3changelog:Changelog/8.1/Deprecation-75625-DeprecatedCacheClearingOptions`</span>
+</pre></div>
+</div>
+<p>This target key is made up of: ⓐ url-mapping-key ⓑ ':' ⓒ relative path ⓓ
+slug of the document title</p>
+<p>The slug is [A-Za-z0-9-_] only. It is case sensitive but forgiving. That means,
+Sphinx is looking for an exact match and if there isn't on it looks again,
+this time case insensitive. The first title in a reST file is its document
+title, which is transformed into the slug (=key). The document title of the
+target page is used as link text in the created link:</p>
+<div class="figure align-default">
+<img alt="../_images/decode-01.png" class="with-shadow" src="../_images/decode-01.png" />
+</div>
+</div>
+</div>
+<div class="section" id="see-also">
+<h2><a class="toc-backref" href="#this-page">See also</a><a class="headerlink" href="#see-also" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/TYPO3-Documentation/TYPO3CMS-Guide-HowToDocument/issues/110">TYPO3CMS-Guide-HowToDocument/issues/110</a></p>
+</div>
+</div>
+
+<!-- /body -->
+                            </div>
+                        </div>
+<!-- pager.html -->
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <li class="page-item">
+            <a class="page-link" href="PDF-generation.html" title="Accesskey Alt(+Shift)+p">
+                Previous
+            </a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="drop-includes-txt.html" title="Accesskey Alt(+Shift)+n">
+                Next
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+<!-- /pager.html -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="page-footer">
+<!-- footer.html -->
+<footer>
+    <div class="frame frame-ruler-before frame-background-dark">
+        <div class="frame-container">
+            <div class="frame-inner">
+                <ul class="footer-simplemenu">
+                    <li><a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container/issues/" title="Issues"><span>Issues</span></a></li>
+                    <li><a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container/" title="Repository"><span>Repository</span></a></li>
+                </ul>
+                <div class="footer-additional">
+                    <p class="text-center">
+                        Last updated: <a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container//commit/4f1b5dd8d6c59518f172cc095f9115a94811346c" rel="nofollow" target="_blank" title="Last commit">
+                           Jun 01, 2022 18:04
+                        </a>
+                    </p>
+                    <p class="text-center">Last rendered: Jun 01, 2022 18:05</p>
+                    <ul class="footer-simplemenu">
+                        <li><a href="https://github.com/TYPO3-Documentation/sphinx_typo3_theme" title="sphinx_typo3_theme" target="_blank">
+                        <span>TYPO3 Theme 4.7.4</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-meta">
+                    <div class="footer-meta-copyright">
+                        &copy; Copyright TYPO3 Documentation Team
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- /footer.html -->
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT: '../',
+            VERSION: '0.0.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE: true
+        };
+    </script>
+    <script type="text/javascript" src="../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/js/underscore.min.js"></script>
+    <script type="text/javascript" src="../_static/js/doctools.min.js"></script>
+    <script type="text/javascript" src="../_static/js/popper.min.js"></script>
+    <script type="text/javascript" src="../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/js/theme.min.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/js/searchtools.min.js"></script>
+    <script type="text/javascript" src="../_static/js/autocomplete.min.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script type="text/javascript">
+        jQuery(function() { Search.loadIndex("../searchindex.js"); });
+    </script>
+    <script type="text/javascript" id="searchindexloader"></script>
+<!-- scripts2 --><!-- /scripts2 -->
+<!-- footer2 --><!-- /footer2 -->
+
+</body>
+</html>

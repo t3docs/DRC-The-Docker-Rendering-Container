@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="docsearch:name" content="DRC - The Docker Rendering Container" />
+    <meta name="docsearch:package_type" content="" />
+    <meta name="docsearch:release" content="0.0.0" />
+    <meta name="docsearch:version" content="0.0" />
+    <meta name="docsearch:modified" content="2022-06-01T18:04:27+00:00" />
+    <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />
+    <meta name="dc.modified" content="2022-06-01T18:04:27+00:00" />
+    <meta property="article:modified_time" content="2022-06-01T18:04:27+00:00" />
+
+    <title>Toolchain inspection &mdash; DRC - The Docker Rendering Container 0.0.0 documentation</title>
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/fontawesome.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/webfonts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+<!-- linktags -->
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="DRC - The Docker Rendering Container 0.0.0 documentation" href="#" />
+    <link rel="up" title="Inspection" href="Index.html" />
+    <link rel="next" title="Rendering" href="../Rendering/Index.html" />
+    <link rel="prev" title="Syntax highlighting" href="pygments.html" />
+<!-- /linktags -->
+<!-- extrahead --><!-- /extrahead -->
+    <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="page">
+
+        <div class="page-header">
+            <div class="page-header-inner">
+<!--block pageheader-->
+<div class="row">
+    <div class="col-sm-6 col-lg-7">
+
+        <div class="logo">
+
+            <img src="../_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" title="TYPO3 Documentation" class="logo-image" />
+        </div>
+    </div><!--/.col-x-->
+    <div class="col-sm-6 col-lg-5">
+        <div role="search">
+            
+            <!--form global search-->
+        </div>
+    </div><!--/.col-x-->
+</div><!--/.row-->
+<!--/block pageheader-->
+            </div><!--/.page-header-inner-->
+        </div><!--/.page-header-->
+
+        
+
+        <div class="page-main">
+            <div class="page-main-inner">
+                <div class="page-main-navigation">
+                    <nav>
+                        <input type="checkbox" id="toggleToc" class="toc-checkbox">
+                        <div class="toc-header"><div class="toc-title">
+                                    <a class="toc-title-project" href="../Index.html">DRC - The Docker Rendering Container</a></div><div class="toc-actions">
+                                <label for="toggleToc" class="toc-toggle">
+                                    Menu
+                                </label>
+                            </div>
+                        </div>
+                        <div class="toc-collapse">
+<!-- searchbox.html -->
+<div id="searchbox" class="toc-search" role="search">
+    <form id="search-form" action="../search.html" autocomplete="off" method="get">
+        <input class="form-control" type="text" name="q" placeholder="Search this project" aria-label="Search this project" id="searchinput" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<!-- /searchbox.html -->
+                            <div class="toc" role="navigation" aria-label="main navigation">
+<!-- menu -->
+                                        <p class="caption" role="heading"><span class="caption-text">BASICS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Basics/Readme/Index.html">README</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Basics/Introduction/Index.html">About the DRC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Basics/About/Index.html">About this manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sitemap.html">Sitemap</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USAGE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Usage/Index.html">Usage (Linux, Mac)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Usage/quickstart.html">Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Usage/dockrun.html">Using 'dockrun_t3rd'</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Usage/docker-run.html">Using 'docker run'</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Usage/caching.html">SPEED and caching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Usage/advanced.html">Advanced usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Usage-Windows/Index.html">Usage (Windows)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Usage-Windows/quickstart-windows.html">Quickstart (Windows)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Usage-Windows/windows-users.html">Windows users</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">MORE</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Building/Index.html">Container building</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Building/automated-builds.html">Automated builds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Building/building-locally.html">Building locall</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Development/Index.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Development/roadmap.html">Container development roadmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Development/menu-development.html">Menu development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Development/t3docs_userhome.html">Use local 'userhome'</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Development/theme-development.html">Theme development</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Explanation/Index.html">Explaining</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Explanation/ReST/Index.html">Writing ReST for Sphinx</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Explanation/ReST/About-docutils.html">About Docutils: The basics of ReST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Explanation/ReST/About-includes.html">About includes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Explanation/Toolchain/Index.html">Toolchain</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Explanation/Toolchain/define-docfiles.html">Specify documentation files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Explanation/Dockerfile.html">Dockerfile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Explanation/Security.html">Security</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="Index.html">Inspection</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="what-is-installed.html">What is installed?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dockrun_t3rd.html">The 'dockrun' function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pygments.html">Syntax highlighting</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Toolchain inspection</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Rendering/Index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Rendering/make-html.html">Creating html</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Rendering/make-singlehtml.html">Creating singlehtml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Rendering/make-package.html">Creating packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Rendering/make-latex.html">Creating latex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Rendering/make-pdf.html">Creating pdf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Rendering/run-parameters.html">Run parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Solutions/Index.html">Solutions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Solutions/Livereload/Index.html">Livereload</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Solutions/Livereload/Livereload-using-Python.html">Livereload using Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Solutions/Livereload/Livereload-using-Gulp.html">Livereload using Gulp (WIP)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Solutions/gitlab-ci/Index.html">Render with Gitlab CI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Solutions/PDF-generation.html">Individual Python packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Solutions/decode-objects-inventory.html">Decode Sphinx crossreferencing inventories 'objects.inv'</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Solutions/drop-includes-txt.html">Drop the usual Includes.rst.txt file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Solutions/individual-python-packages.html">PDF-generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Solutions/non-typo3-usage.html">Non TYPO3 usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Solutions/pull-from-docker-hub.html">Pull and use 'develop' from Docker hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Solutions/usage-at-the-build-server.html">Usage at the build server</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Structures/Index.html">File structures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Structures/types.html">Documentation types</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Index.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Usage-Windows/Index.html">Usage (Windows)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Usage-Windows/quickstart-windows.html">Quickstart (Windows)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Usage-Windows/windows-users.html">Windows users</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Usage/Index.html">Usage (Linux, Mac)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Usage/quickstart.html">Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Usage/dockrun.html">Using 'dockrun_t3rd'</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Usage/docker-run.html">Using 'docker run'</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Usage/caching.html">SPEED and caching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Usage/advanced.html">Advanced usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Whatsnew/Index.html">What's new?</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Whatsnew/v3-0.html">Releases v3.0.dev1 (2021-10-03)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Whatsnew/v2-8.html">Releases v2.8 (2021-03-29)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Whatsnew/v2-7.html">Releases v2.7 (2021-01-21)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Whatsnew/v0-0.html">Releases v0.0 to v2.6.1 (2020-05-27)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ForContributors.html">For contributors</a></li>
+</ul>
+
+                                    <p class="caption"><span class="caption-text">PAGE CONTENTS</span></p>
+                                    <ul>
+<li><a class="reference internal" href="#">Toolchain inspection</a><ul>
+<li><a class="reference internal" href="#toolchain-runner-tct">Toolchain runner TCT</a><ul>
+<li><a class="reference internal" href="#method-1-using-enironment-variable">Method 1: Using enironment variable</a></li>
+<li><a class="reference internal" href="#method-2-using-a-folder">Method 2: Using a folder</a></li>
+<li><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#toolchain-renderdocumentation">Toolchain 'RenderDocumentation'</a></li>
+<li><a class="reference internal" href="#conf-py">conf.py</a></li>
+<li><a class="reference internal" href="#jobfile-json-in-v2-3-0">jobfile.json in v2.3.0</a></li>
+<li><a class="reference internal" href="#jobfile-json-in-v2-4-plan-idea">jobfile.json in v2.4 - plan, idea</a></li>
+</ul>
+</li>
+</ul>
+<!-- /menu -->
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="page-main-content">
+                    <div class="rst-content">
+<!-- pager-hidden.html -->
+
+        <a class="no-focus" accesskey="p" href="pygments.html" tabindex="-1"></a>
+        <a class="no-focus" accesskey="n" href="../Rendering/Index.html" tabindex="-1"></a>
+<!-- /pager-hidden.html -->
+<!-- breadcrumbs.html -->
+<div class="breadcrumb-bar" role="navigation" aria-label="breadcrumbs navigation">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../Index.html">Start</a></li>
+            <li class="breadcrumb-item"><a href="Index.html">Inspection</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Toolchain inspection</li>
+    </ol>
+    <div class="breadcrumb-additions">
+        <a class="btn btn-sm btn-light" href="../_sources/Inspection/toolchain.rst.txt" rel="nofollow">
+            <span class="btn-icon"><span class="fas fa-code"></span></span>
+            <span class="btn-text">View source</span>
+        </a>
+        <a class="btn btn-sm btn-light" id="btnHowToEdit"
+           href="https://docs.typo3.org/m/typo3/docs-how-to-document/master/en-us/WritingDocsOfficial/GithubMethod.html"
+           rel="nofollow noopener" target="_blank">
+            <span class="btn-icon"><span class="fas fa-info-circle"></span></span>
+            <span class="btn-text">How to edit</span>
+        </a>
+        <a class="btn btn-sm btn-primary" id="btnEditOnGitHub" href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container/edit/main/Documentation/Inspection/toolchain.rst">
+            <span class="btn-icon"><span class="fab fa-github"></span></span>
+            <span class="btn-text">Edit on GitHub</span>
+        </a>
+    </div>
+</div>
+<!-- /breadcrumbs.html -->
+<!-- displaysettingsui.html -->
+<div id="displaysettingsui" class="displaysettingsui">
+<div class="dsDivCogwheel"><i id="dsCogwheel" class="fas fa-cog" title="Display settings"></i></div>
+<div id="dsPanel" class="dsPanel" ><p><b>Display settings</b></p>
+<input type="checkbox" id="cbFullWidth"><label for="cbFullWidth">Use full width</label><br>
+<input type="checkbox" id="cbPermanent"><label for="cbPermanent">Make settings permanent</label><br>
+</div><!--/.dsPanel-->
+</div><!--/.displaysettingsui-->
+<!-- /displaysettingsui.html -->
+<!-- versionhints.html -->
+<div class="version-hints">
+
+    <div class="version-hints-inner" data-run-ajax="no">
+<!--filled from _static/ajax-version-hints.html-->
+</div><!--/.version-hints-inner-->
+</div><!--/.version-hints-->
+<!-- /versionhints.html -->
+                        <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                            <div itemprop="articleBody">
+<!-- body -->
+    <div class="section" id="toolchain-inspection">
+<h1>Toolchain inspection<a class="headerlink" href="#toolchain-inspection" title="Permalink to this headline">¶</a></h1>
+<p>DRAFT • WIP • DRAFT • WIP • DRAFT • WIP • DRAFT • WIP • DRAFT • WIP •
+DRAFT • WIP • DRAFT • WIP • DRAFT • WIP • DRAFT • WIP • DRAFT • WIP •
+DRAFT • WIP • DRAFT • WIP • DRAFT • WIP • DRAFT • WIP • DRAFT • WIP •</p>
+<p><strong>On this page:</strong></p>
+<div class="contents compact-list local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#toolchain-runner-tct" id="id1">Toolchain runner TCT</a></p>
+<ul>
+<li><p><a class="reference internal" href="#method-1-using-enironment-variable" id="id2">Method 1: Using enironment variable</a></p></li>
+<li><p><a class="reference internal" href="#method-2-using-a-folder" id="id3">Method 2: Using a folder</a></p></li>
+<li><p><a class="reference internal" href="#example" id="id4">Example</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#toolchain-renderdocumentation" id="id5">Toolchain 'RenderDocumentation'</a></p></li>
+<li><p><a class="reference internal" href="#conf-py" id="id6">conf.py</a></p></li>
+<li><p><a class="reference internal" href="#jobfile-json-in-v2-3-0" id="id7">jobfile.json in v2.3.0</a></p></li>
+<li><p><a class="reference internal" href="#jobfile-json-in-v2-4-plan-idea" id="id8">jobfile.json in v2.4 - plan, idea</a></p></li>
+</ul>
+</div>
+<div class="section" id="toolchain-runner-tct">
+<h2><a class="toc-backref" href="#contents">Toolchain runner TCT</a><a class="headerlink" href="#toolchain-runner-tct" title="Permalink to this headline">¶</a></h2>
+<p>((toolchain, lots of intermediate files, in temp area, can be externalized for
+later expection))</p>
+<p>What happened when, all the different states,</p>
+<p>For each run: one milestones file, one facts file.</p>
+<p>The facts file is assembled once before running the first tool. It is the same
+for alle tools, immutable, not changed.</p>
+<p>The milestones file is empty at the beginning and starts growing.</p>
+<p>Usually key values pairs don't change. Except some.</p>
+<p>A milestone recorded means a milestone does exist.</p>
+<p>The toolchain runner provides a lot of information. For each individual step
+we always have:</p>
+<ul class="simple">
+<li><p>the parameters provided to that tool when it was run</p></li>
+<li><p>the milestones that were known when the tool was run</p></li>
+<li><p>the result produces by that tool</p></li>
+</ul>
+<p>For some tools there also are</p>
+<ul class="simple">
+<li><p>stdout-logs and stderr-logs of each shell call the tool made</p></li>
+</ul>
+<p>Some tools create some extra result files.</p>
+<div class="section" id="method-1-using-enironment-variable">
+<h3><a class="toc-backref" href="#contents">Method 1: Using enironment variable</a><a class="headerlink" href="#method-1-using-enironment-variable" title="Permalink to this headline">¶</a></h3>
+<p>T3DOCS_TMP</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># define temp folder</span>
+<span class="nv">T3DOCS_TMP</span><span class="o">=</span>/tmp/t3docs-temp
+
+<span class="c1"># make sure the temp folder exists</span>
+mkdir -p <span class="nv">$T3DOCS_TMP</span>
+
+<span class="c1"># run the container</span>
+dockrun_t3rd makeall
+
+<span class="c1"># explore the temp folder</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="method-2-using-a-folder">
+<h3><a class="toc-backref" href="#contents">Method 2: Using a folder</a><a class="headerlink" href="#method-2-using-a-folder" title="Permalink to this headline">¶</a></h3>
+<p>tmp-GENERATED-temp</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># create folder tmp-GENERATED-temp at project root</span>
+mkdir -p ~/project/tmp-GENERATED-temp
+
+<span class="c1"># go to project root</span>
+<span class="nb">cd</span> ~/project
+
+<span class="c1"># run the container</span>
+dockrun_t3rd makeall
+
+<span class="c1"># explore folder ~/project/gmp-GENERATED-temp</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example">
+<h3><a class="toc-backref" href="#contents">Example</a><a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default">
+<img alt="../_images/268.png" class="with-shadow" src="../_images/268.png" />
+</div>
+<div class="figure align-default">
+<img alt="../_images/269.png" class="with-shadow" src="../_images/269.png" />
+</div>
+</div>
+</div>
+<div class="section" id="toolchain-renderdocumentation">
+<h2><a class="toc-backref" href="#contents">Toolchain 'RenderDocumentation'</a><a class="headerlink" href="#toolchain-renderdocumentation" title="Permalink to this headline">¶</a></h2>
+<p>DRAFT • WIP • DRAFT • WIP • DRAFT • WIP • DRAFT • WIP • DRAFT • WIP •
+DRAFT • WIP • DRAFT • WIP • DRAFT • WIP • DRAFT • WIP • DRAFT • WIP •
+DRAFT • WIP • DRAFT • WIP • DRAFT • WIP • DRAFT • WIP • DRAFT • WIP •</p>
+</div>
+<div class="section" id="conf-py">
+<h2><a class="toc-backref" href="#contents">conf.py</a><a class="headerlink" href="#conf-py" title="Permalink to this headline">¶</a></h2>
+<p>The step makehtml runs Sphinx which runs conf.py which leaves a dump of all
+its variables that can be dumped to json.</p>
+<p>what's in conf.py in the end. That is user specific configuration. We, TYPO3,
+use a generic conf.py for all projects, that enhances itself at run time.</p>
+<p>Example of a conf.py file as it is used finally</p>
+<p>Settings.dump.json:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;BUILDDIR&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;project/0.0.0&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;CommonMarkParser&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;LOGDIR&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;.&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;MASTERDOC&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/tmp/RenderDocumentation/2019-09-02_10-31-11_400461/TheProject/Documentation/Index&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;__file__&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/ALL/Makedir/SYMLINK_THE_MAKEDIR/conf.py&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;confpyabspath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/ALL/Makedir/SYMLINK_THE_MAKEDIR/conf.py&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;confpyfolder&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/ALL/Makedir/SYMLINK_THE_MAKEDIR&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;copyright&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TYPO3 Documentation Team&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;defaultsabspath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/ALL/Makedir/SYMLINK_THE_MAKEDIR/Defaults.cfg&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;\nEverything about the container: How it works, how it&#39;s developed and build\nand way to use it.&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;epub_author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The Author(s)&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;epub_copyright&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TYPO3 Documentation Team&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;epub_publisher&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The Author(s)&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;epub_title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TYPO3 Docker Container v2.3.0 for Documentation Rendering\nand more&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;exclude_patterns&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;_make&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;extensions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;sphinx.ext.autodoc&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;sphinx.ext.coverage&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;sphinx.ext.extlinks&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;sphinx.ext.ifconfig&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;sphinx.ext.intersphinx&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;sphinx.ext.mathjax&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;sphinx.ext.todo&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;sphinxcontrib.googlechart&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;sphinxcontrib.googlemaps&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;sphinxcontrib.phpdomain&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;sphinxcontrib.slide&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;sphinxcontrib.t3fieldlisttable&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;sphinxcontrib.t3tablerows&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;sphinxcontrib.t3targets&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;sphinxcontrib.youtube&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;t3SphinxThemeRtd&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;extlinks&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;forge&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;https://forge.typo3.org/issues/%s&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;Forge #&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;issue&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;https://forge.typo3.org/issues/%s&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;Issue #&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;review&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;https://review.typo3.org/%s&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;Review #&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;highlight_language&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;php&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;html_last_updated_fmt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;%b %d, %Y %H:%M&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;html_show_copyright&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;html_show_sourcelink&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;html_show_sphinx&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;html_static_path&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;html_theme&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;t3SphinxThemeRtd&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;html_theme_options&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;add_piwik&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;docstypo3org&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;github_branch&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;documentation-draft&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;github_commit_hash&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;github_repository&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;t3docs/docker-render-documentation&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;github_revision_msg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;github_sphinx_locale&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;path_to_documentation_dir&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;project_contact&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;project_discussions&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;project_home&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;project_issues&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://github.com/t3docs/docker-render-documentation/issues/&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;project_repository&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://github.com/t3docs/docker-render-documentation/&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;show_copyright&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yes&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;show_last_updated&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yes&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;show_legalinfo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;show_revision&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yes&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;show_sourcelink&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yes&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;show_sphinx&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yes&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;use_opensearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;html_theme_path&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;/ALL/userhome/.local/share/virtualenvs/venv-y0waPz_e/local/lib/python2.7/site-packages&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;html_use_opensearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;html_use_smartypants&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;htmlhelp_basename&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;t3shortname&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;intersphinx_mapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;language&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;latex_documents&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;Index&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;PROJECT.tex&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;TYPO3 Docker Container v2.3.0 for Documentation Rendering\nand more&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;The Author(s)&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;manual&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;latex_elements&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;papersize&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a4paper&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;pointsize&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10pt&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;preamble&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;%%\\usepackage{typo3}&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;logdirabspath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/ALL/Makedir/SYMLINK_THE_MAKEDIR&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;man_pages&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;Index&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;TYPO3 Docker Container v2.3.0 for Documentation Rendering\nand more&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;\nEverything about the container: How it works, how it&#39;s developed and build\nand way to use it.&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="p">[</span><span class="w"></span>
+<span class="w">                </span><span class="s2">&quot;The Author(s)&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">],</span><span class="w"></span>
+<span class="w">            </span><span class="mi">1</span><span class="w"></span>
+<span class="w">        </span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;master_doc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Index&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;masterdocabspath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/tmp/RenderDocumentation/2019-09-02_10-31-11_400461/TheProject/Documentation/Index&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;notes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;Overrides.cfg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/ALL/Makedir/SYMLINK_THE_MAKEDIR/Overrides.cfg&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;Settings.cfg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/tmp/RenderDocumentation/2019-09-02_10-31-11_400461/TheProject/Documentation/Settings.cfg&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;overridesabspath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/ALL/Makedir/SYMLINK_THE_MAKEDIR/Overrides.cfg&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;project&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TYPO3 Docker Container v2.3.0 for Documentation Rendering\nand more&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;projectabspath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/tmp/RenderDocumentation/2019-09-02_10-31-11_400461/TheProject/Documentation&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;pygments_style&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sphinx&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;release&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.1.14-draft&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;settingsDumpJsonFile&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/ALL/Makedir/SYMLINK_THE_MAKEDIR/Settings.dump.json&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;settingsabspath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/tmp/RenderDocumentation/2019-09-02_10-31-11_400461/TheProject/Documentation/Settings.cfg&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;settingsjsonabspath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/ALL/Makedir/SYMLINK_THE_MAKEDIR/Settings.json&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;source_suffix&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;.rst&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;t3author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The Author(s)&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;t3shortname&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;t3shortname&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;templates_path&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;texinfo_documents&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;Index&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;t3shortname&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;TYPO3 Docker Container v2.3.0 for Documentation Rendering\nand more&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;The Author(s)&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;TYPO3 Docker Container v2.3.0 for Documentation Rendering\nand more&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;\nEverything about the container: How it works, how it&#39;s developed and build\nand way to use it.&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;Miscellaneous&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;today_fmt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;%Y-%m-%d %H:%M&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;todo_include_todos&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.0&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="jobfile-json-in-v2-3-0">
+<h2><a class="toc-backref" href="#contents">jobfile.json in v2.3.0</a><a class="headerlink" href="#jobfile-json-in-v2-3-0" title="Permalink to this headline">¶</a></h2>
+<p>DRAFT • WIP • DRAFT • WIP • DRAFT • WIP • DRAFT • WIP • DRAFT • WIP •
+DRAFT • WIP • DRAFT • WIP • DRAFT • WIP • DRAFT • WIP • DRAFT • WIP •
+DRAFT • WIP • DRAFT • WIP • DRAFT • WIP • DRAFT • WIP • DRAFT • WIP •</p>
+<p>If you are using a <code class="code docutils literal notranslate"><span class="pre">jobfile.json</span></code> for parameterization place the data of
+Settings.dump.json into an &quot;Overrides_cfg&quot; array like so:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="nt">&quot;Overrides_cfg&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;general&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;html_theme&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;project&quot;</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;release&quot;</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;version&quot;</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;...&quot;</span><span class="w">       </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;html_theme_options&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;...&quot;</span><span class="w">       </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;intersphinx_mapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;...&quot;</span><span class="w">       </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;latex_elements&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;...&quot;</span><span class="w">       </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">   </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Example of &quot;jobfile_data&quot;:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="nt">&quot;Overrides_cfg&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">     </span><span class="nt">&quot;general&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">       </span><span class="nt">&quot;html_theme&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sphinx_rtd_theme&quot;</span><span class="w"></span>
+<span class="w">     </span><span class="p">},</span><span class="w"></span>
+<span class="w">     </span><span class="nt">&quot;html_theme_options&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">       </span><span class="nt">&quot;add_piwik&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">       </span><span class="nt">&quot;docstypo3org&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">       </span><span class="nt">&quot;show_legalinfo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yes&quot;</span><span class="w"></span>
+<span class="w">     </span><span class="p">},</span><span class="w"></span>
+<span class="w">     </span><span class="nt">&quot;latex_elements&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">       </span><span class="nt">&quot;papersize&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a4paper&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">       </span><span class="nt">&quot;pointsize&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10pt&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">       </span><span class="nt">&quot;preamble&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;%%\\usepackage{typo3}&quot;</span><span class="w"></span>
+<span class="w">     </span><span class="p">}</span><span class="w"></span>
+<span class="w">   </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The toolchain renames an existing <code class="file docutils literal notranslate"><span class="pre">MAKEDIR/Settings.json</span></code> to
+<code class="file docutils literal notranslate"><span class="pre">MAKEDIR/Settings.json.original</span></code>.</p>
+<p>The toolchain extracts the &quot;Overrides_cfg&quot; section from <code class="code docutils literal notranslate"><span class="pre">jobfile.json</span></code> and
+it as <code class="file docutils literal notranslate"><span class="pre">MAKEDIR/Settings.json</span></code>. Example:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="nt">&quot;COMMENT&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This is what we found in jobfile_data[&#39;Overrides&#39;]&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">   </span><span class="nt">&quot;general&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;html_theme&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sphinx_rtd_theme&quot;</span><span class="w"></span>
+<span class="w">   </span><span class="p">},</span><span class="w"></span>
+<span class="w">   </span><span class="nt">&quot;html_theme_options&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;add_piwik&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;docstypo3org&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;show_legalinfo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yes&quot;</span><span class="w"></span>
+<span class="w">   </span><span class="p">},</span><span class="w"></span>
+<span class="w">   </span><span class="nt">&quot;latex_elements&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;papersize&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a4paper&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;pointsize&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10pt&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;preamble&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;%%\\usepackage{typo3}&quot;</span><span class="w"></span>
+<span class="w">   </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>v2.3.0, critical section in conf.py:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">ospe</span><span class="p">(</span><span class="n">settingsjsonabspath</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">codecs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">settingsjsonabspath</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f1</span><span class="p">:</span>
+        <span class="n">D</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f1</span><span class="p">)</span>
+    <span class="c1"># ATTENTION:</span>
+    <span class="c1"># everything you have in the &quot;general&quot;: {k:v} section of Settings.json</span>
+    <span class="c1"># is treated as if you had written &#39;k = v&#39; here in conf.py</span>
+    <span class="nb">globals</span><span class="p">()</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">D</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;general&#39;</span><span class="p">,</span> <span class="p">{}))</span>
+
+    <span class="c1"># extensions are now ADDED</span>
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">D</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;extensions&#39;</span><span class="p">,</span> <span class="p">[]):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">extensions</span><span class="p">:</span>
+            <span class="n">extensions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+    <span class="c1"># extlinks are merged (added or updated)</span>
+    <span class="n">extlinks</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">D</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;extlinks&#39;</span><span class="p">,</span> <span class="p">{}))</span>
+
+    <span class="c1"># html_theme_options are merged (added or updated)</span>
+    <span class="n">html_theme_options</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">D</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;html_theme_options&#39;</span><span class="p">,</span> <span class="p">{}))</span>
+
+    <span class="c1"># intersphinx_mapping is merged (added or updated)</span>
+    <span class="n">intersphinx_mapping</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">D</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;intersphinx_mapping&#39;</span><span class="p">,</span> <span class="p">{}))</span>
+
+    <span class="c1"># ATTENTION:</span>
+    <span class="c1"># settings.json is totally in you hand. No sanity checks are made here.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="jobfile-json-in-v2-4-plan-idea">
+<h2><a class="toc-backref" href="#contents">jobfile.json in v2.4 - plan, idea</a><a class="headerlink" href="#jobfile-json-in-v2-4-plan-idea" title="Permalink to this headline">¶</a></h2>
+<p>DRAFT • WIP • DRAFT • WIP • DRAFT • WIP • DRAFT • WIP • DRAFT • WIP •
+DRAFT • WIP • DRAFT • WIP • DRAFT • WIP • DRAFT • WIP • DRAFT • WIP •
+DRAFT • WIP • DRAFT • WIP • DRAFT • WIP • DRAFT • WIP • DRAFT • WIP •</p>
+<p>We should have in jobfile.json:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="nt">&quot;conf.py&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;1-replace&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">         </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;2-prepend&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">         </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;3-append&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">         </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;4-merge&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">         </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;5-deep-merge&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">   </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">D2</span> <span class="o">=</span> <span class="n">D</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;config.py&#39;</span><span class="p">,</span> <span class="p">{})</span>
+<span class="k">if</span> <span class="n">D2</span><span class="p">:</span>
+    <span class="n">G</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">D</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;1-replace&#39;</span><span class="p">,</span> <span class="p">{}))</span>
+
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">D</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;2-prepend&#39;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">list</span><span class="p">:</span>
+            <span class="n">G</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span> <span class="o">+</span> <span class="n">G</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="p">[])</span>
+
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">D</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;3-append&#39;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">list</span><span class="p">:</span>
+            <span class="n">G</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="p">[])</span> <span class="o">+</span> <span class="n">v</span>
+
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">D</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;4-merge&#39;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">dict</span><span class="p">:</span>
+            <span class="n">G</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="p">{})</span>
+            <span class="n">G</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">D</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;5-deep-merge&#39;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">dict</span><span class="p">:</span>
+            <span class="c1"># to be implemented</span>
+            <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+<!-- /body -->
+                            </div>
+                        </div>
+<!-- pager.html -->
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <li class="page-item">
+            <a class="page-link" href="pygments.html" title="Accesskey Alt(+Shift)+p">
+                Previous
+            </a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="../Rendering/Index.html" title="Accesskey Alt(+Shift)+n">
+                Next
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+<!-- /pager.html -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="page-footer">
+<!-- footer.html -->
+<footer>
+    <div class="frame frame-ruler-before frame-background-dark">
+        <div class="frame-container">
+            <div class="frame-inner">
+                <ul class="footer-simplemenu">
+                    <li><a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container/issues/" title="Issues"><span>Issues</span></a></li>
+                    <li><a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container/" title="Repository"><span>Repository</span></a></li>
+                </ul>
+                <div class="footer-additional">
+                    <p class="text-center">
+                        Last updated: <a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container//commit/4f1b5dd8d6c59518f172cc095f9115a94811346c" rel="nofollow" target="_blank" title="Last commit">
+                           Jun 01, 2022 18:04
+                        </a>
+                    </p>
+                    <p class="text-center">Last rendered: Jun 01, 2022 18:05</p>
+                    <ul class="footer-simplemenu">
+                        <li><a href="https://github.com/TYPO3-Documentation/sphinx_typo3_theme" title="sphinx_typo3_theme" target="_blank">
+                        <span>TYPO3 Theme 4.7.4</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-meta">
+                    <div class="footer-meta-copyright">
+                        &copy; Copyright TYPO3 Documentation Team
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- /footer.html -->
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT: '../',
+            VERSION: '0.0.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE: true
+        };
+    </script>
+    <script type="text/javascript" src="../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/js/underscore.min.js"></script>
+    <script type="text/javascript" src="../_static/js/doctools.min.js"></script>
+    <script type="text/javascript" src="../_static/js/popper.min.js"></script>
+    <script type="text/javascript" src="../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/js/theme.min.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/js/searchtools.min.js"></script>
+    <script type="text/javascript" src="../_static/js/autocomplete.min.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script type="text/javascript">
+        jQuery(function() { Search.loadIndex("../searchindex.js"); });
+    </script>
+    <script type="text/javascript" id="searchindexloader"></script>
+<!-- scripts2 --><!-- /scripts2 -->
+<!-- footer2 --><!-- /footer2 -->
+
+</body>
+</html>

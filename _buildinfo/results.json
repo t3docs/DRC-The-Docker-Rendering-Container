@@ -1,0 +1,65 @@
+{
+  "checksum": "eefe0a02e61225a51e7fa560ae5238b7",
+  "checksum_ttl_seconds": 604800,
+  "copyright": "TYPO3 Documentation Team",
+  "created": {
+    "html": 1
+  },
+  "description": "\nEverything about the TYPO3 Docker Rendering Container (DRC):\nHow it works, how to build the image, how to use the container,\nhow to contribute and more.",
+  "environ": {
+    "OUR_IMAGE": "t3docs/render-documentation:develop",
+    "OUR_IMAGE_SHORT": "t3rd",
+    "OUR_IMAGE_VERSION": "v3.0.dev24",
+    "THEME_MTIME": "1652047200",
+    "THEME_NAME": "unknown",
+    "THEME_VERSION": "unknown",
+    "TOOLCHAIN_VERSION": "3.1.0",
+    "TYPOSCRIPT_PY_VERSION": "v2.2.4"
+  },
+  "gitdir": "/PROJECT",
+  "has_neutralized_images": 0,
+  "has_neutralized_links": 0,
+  "localization": "default",
+  "postprocessed_html_files": 0,
+  "project": "DRC - The Docker Rendering Container",
+  "publish_dir": "project/0.0.0",
+  "scm_version_info": {
+    "00info": "Showing what the Python module 'setuptools_scm' can tell us about the input repository and its version.",
+    "guessed_version": "0.1.dev1+g4f1b5dd",
+    "is_shallow": true,
+    "json": {
+      "_extra": {},
+      "branch": "main",
+      "dirty": false,
+      "distance": 1,
+      "node": "g4f1b5dd",
+      "preformatted": false
+    },
+    "pprint": {
+      "_extra": {},
+      "branch": "main",
+      "config": "<setuptools_scm.config.Configuration object at 0x7fb25eaa2760>",
+      "dirty": false,
+      "distance": 1,
+      "node": "g4f1b5dd",
+      "node_date": "datetime.date(2022, 6, 1)",
+      "preformatted": false,
+      "tag": "<Version('0.0')>",
+      "time": "datetime.datetime(2022, 6, 1, 18, 5, 29, 78270, tzinfo=datetime.timezone.utc)"
+    },
+    "project": "/PROJECT",
+    "warnings": [
+      "message=UserWarning('\"/PROJECT\" is shallow and may cause errors') category=<class 'UserWarning'> filename='/ALL/venv/.venv/lib/python3.8/site-packages/setuptools_scm/git.py' lineno=105"
+    ]
+  },
+  "sitemap_files_html_count": 67,
+  "ter_extension": "0",
+  "theme_info": {
+    "build_mtime": "1652795973",
+    "module_name": "sphinx_typo3_theme",
+    "version_scm": "4.7.4",
+    "version_scm_build": "",
+    "version_scm_core": "4.7.4",
+    "version_scm_pre_release": ""
+  }
+}

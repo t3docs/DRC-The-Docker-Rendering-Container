@@ -1,0 +1,6 @@
+./Documentation/Explanation/ReST/Index.rst:14: WARNING: toctree glob pattern '*/Index' didn't match any documents
+./Documentation/Targets.rst:14: ERROR: Unknown directive type "ref-targets-list".
+
+.. ref-targets-list::
+./Documentation/Usage-Windows/Index.rst:9: WARNING: toctree glob pattern '*/Index' didn't match any documents
+./Documentation/Usage-Windows/windows-users.rst:16: WARNING: undefined label: operating-systems
