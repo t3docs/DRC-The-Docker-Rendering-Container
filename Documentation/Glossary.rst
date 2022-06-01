@@ -48,8 +48,12 @@ Glossary
    RenderDocumentation
       This is the specific :term:`toolchain` that we are using.
 
-   ReST
+   reST
       :ref:`reStructuredText <about-docutils>` is the markup language used.
+
+   reST files
+      reST files are plain utf-8 text files, that optionally have markup that
+      can be parsed and understood as :ref:`reStructuredText <about-docutils>`.
 
    TCT
       This is the toolchain runner that we are using. The original name was

@@ -1,6 +1,6 @@
 {
-  "name": "typo3/T3DocsRenderingContainer",
-  "type": "typo3-cms-documentation",
+  "name": "...",
+  "type": "...",
   "description": "How to render TYPO3 documentation the official way",
   "license": "CC-BY-NC-SA-4.0",
   "require": {

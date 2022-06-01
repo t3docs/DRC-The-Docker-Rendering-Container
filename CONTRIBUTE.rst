@@ -6,6 +6,14 @@ How to contribute
 Clone the repository and create pull request.
 
 
+General
+============================================
+
+To be written.
+
+
+
+
 Automatic local rendering and browser reload
 ============================================
 
