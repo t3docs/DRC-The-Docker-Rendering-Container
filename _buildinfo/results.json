@@ -1,5 +1,5 @@
 {
-  "checksum": "eefe0a02e61225a51e7fa560ae5238b7",
+  "checksum": "88c2ec1ad10ad254353a86e8175f9ae5",
   "checksum_ttl_seconds": 604800,
   "copyright": "TYPO3 Documentation Team",
   "created": {
@@ -25,34 +25,34 @@
   "publish_dir": "project/0.0.0",
   "scm_version_info": {
     "00info": "Showing what the Python module 'setuptools_scm' can tell us about the input repository and its version.",
-    "guessed_version": "0.1.dev1+g4f1b5dd",
+    "guessed_version": "0.1.dev1+g557cfa0",
     "is_shallow": true,
     "json": {
       "_extra": {},
       "branch": "main",
       "dirty": false,
       "distance": 1,
-      "node": "g4f1b5dd",
+      "node": "g557cfa0",
       "preformatted": false
     },
     "pprint": {
       "_extra": {},
       "branch": "main",
-      "config": "<setuptools_scm.config.Configuration object at 0x7fb25eaa2760>",
+      "config": "<setuptools_scm.config.Configuration object at 0x7f4244810760>",
       "dirty": false,
       "distance": 1,
-      "node": "g4f1b5dd",
-      "node_date": "datetime.date(2022, 6, 1)",
+      "node": "g557cfa0",
+      "node_date": "datetime.date(2022, 6, 2)",
       "preformatted": false,
       "tag": "<Version('0.0')>",
-      "time": "datetime.datetime(2022, 6, 1, 18, 5, 29, 78270, tzinfo=datetime.timezone.utc)"
+      "time": "datetime.datetime(2022, 6, 2, 18, 53, 17, 343447, tzinfo=datetime.timezone.utc)"
     },
     "project": "/PROJECT",
     "warnings": [
       "message=UserWarning('\"/PROJECT\" is shallow and may cause errors') category=<class 'UserWarning'> filename='/ALL/venv/.venv/lib/python3.8/site-packages/setuptools_scm/git.py' lineno=105"
     ]
   },
-  "sitemap_files_html_count": 67,
+  "sitemap_files_html_count": 70,
   "ter_extension": "0",
   "theme_info": {
     "build_mtime": "1652795973",

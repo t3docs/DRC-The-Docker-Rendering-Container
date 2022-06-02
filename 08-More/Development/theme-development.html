@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="docsearch:name" content="DRC - The Docker Rendering Container" />
+    <meta name="docsearch:package_type" content="" />
+    <meta name="docsearch:release" content="0.0.0" />
+    <meta name="docsearch:version" content="0.0" />
+    <meta name="docsearch:modified" content="2022-06-02T18:52:22+00:00" />
+    <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />
+    <meta name="dc.modified" content="2022-06-02T18:52:22+00:00" />
+    <meta property="article:modified_time" content="2022-06-02T18:52:22+00:00" />
+
+    <title>Theme development &mdash; DRC - The Docker Rendering Container 0.0.0 documentation</title>
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/fontawesome.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/webfonts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
+<!-- linktags -->
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="DRC - The Docker Rendering Container 0.0.0 documentation" href="#" />
+    <link rel="up" title="Development" href="Index.html" />
+    <link rel="next" title="Inspection" href="../Inspection/Index.html" />
+    <link rel="prev" title="Use local &#39;userhome&#39;" href="t3docs_userhome.html" />
+<!-- /linktags -->
+<!-- extrahead --><!-- /extrahead -->
+    <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="page">
+
+        <div class="page-header">
+            <div class="page-header-inner">
+<!--block pageheader-->
+<div class="row">
+    <div class="col-sm-6 col-lg-7">
+
+        <div class="logo">
+
+            <img src="../../_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" title="TYPO3 Documentation" class="logo-image" />
+        </div>
+    </div><!--/.col-x-->
+    <div class="col-sm-6 col-lg-5">
+        <div role="search">
+            
+            <!--form global search-->
+        </div>
+    </div><!--/.col-x-->
+</div><!--/.row-->
+<!--/block pageheader-->
+            </div><!--/.page-header-inner-->
+        </div><!--/.page-header-->
+
+        
+
+        <div class="page-main">
+            <div class="page-main-inner">
+                <div class="page-main-navigation">
+                    <nav>
+                        <input type="checkbox" id="toggleToc" class="toc-checkbox">
+                        <div class="toc-header"><div class="toc-title">
+                                    <a class="toc-title-project" href="../../Index.html">DRC - The Docker Rendering Container</a></div><div class="toc-actions">
+                                <label for="toggleToc" class="toc-toggle">
+                                    Menu
+                                </label>
+                            </div>
+                        </div>
+                        <div class="toc-collapse">
+<!-- searchbox.html -->
+<div id="searchbox" class="toc-search" role="search">
+    <form id="search-form" action="../../search.html" autocomplete="off" method="get">
+        <input class="form-control" type="text" name="q" placeholder="Search this project" aria-label="Search this project" id="searchinput" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<!-- /searchbox.html -->
+                            <div class="toc" role="navigation" aria-label="main navigation">
+<!-- menu -->
+                                        <p class="caption" role="heading"><span class="caption-text">INTRODUCTION</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../01-Introduction/1-Readme.html">Readme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../01-Introduction/2-About.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">Index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Sitemap.html">Sitemap</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">MAIN</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../02-Usage/Index.html">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../02-Usage/1-Installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../02-Usage/2-Basic-Rendering.html">Basic rendering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../02-Usage/3-Troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../02-Usage/4-Customized-rendering.html">Customized rendering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../02-Usage/Usage-Windows/Index.html">Directly on Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../02-Usage/Usage-Windows/quickstart-windows.html">Quickstart (Windows)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02-Usage/Usage-Windows/windows-users.html">Windows users</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../03-How-to/Index.html">How to</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../03-How-to/advanced.html">Advanced usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../03-How-to/quickstart.html">Quickstart</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../04-Versions/Index.html">Versions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../04-Versions/v3-0.html">Releases v3.0.dev1 (2021-10-03)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04-Versions/v2-8.html">Releases v2.8 (2021-03-29)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04-Versions/v2-7.html">Releases v2.7 (2021-01-21)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04-Versions/v0-0.html">Releases v0.0 to v2.6.1 (2020-05-27)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../05-Solutions/Index.html">Solutions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../05-Solutions/Livereload/Index.html">Livereload</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../05-Solutions/Livereload/Livereload-using-Python.html">Livereload using Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../05-Solutions/Livereload/Livereload-using-Gulp.html">Livereload using Gulp (WIP)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../05-Solutions/gitlab-ci/Index.html">Render with Gitlab CI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../05-Solutions/PDF-generation.html">Individual Python packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../05-Solutions/decode-objects-inventory.html">Decode Sphinx crossreferencing inventories 'objects.inv'</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../05-Solutions/drop-includes-txt.html">Drop the usual Includes.rst.txt file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../05-Solutions/individual-python-packages.html">PDF-generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../05-Solutions/non-typo3-usage.html">Non TYPO3 usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../05-Solutions/pull-from-docker-hub.html">Pull and use 'develop' from Docker hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../05-Solutions/usage-at-the-build-server.html">Usage at the build server</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../06-Knowledge/Index.html">Explaining</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../06-Knowledge/ReST/Index.html">Writing ReST for Sphinx</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../06-Knowledge/ReST/About-docutils.html">About Docutils: The basics of ReST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../06-Knowledge/ReST/About-includes.html">About includes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../06-Knowledge/Toolchain/Index.html">Toolchain</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../06-Knowledge/Toolchain/define-docfiles.html">Specify documentation files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../06-Knowledge/Dockerfile.html">Dockerfile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../06-Knowledge/Security.html">Security</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../07-To-be-sorted/Index.html">To be sorted</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../07-To-be-sorted/docker-run.html">Using 'docker run'</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../07-To-be-sorted/quickstart.html">Quickstart</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Index.html">More</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Building/Index.html">Container building</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Building/automated-builds.html">Automated builds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Building/building-locally.html">Building locall</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="Index.html">Development</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="roadmap.html">Container development roadmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="menu-development.html">Menu development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="t3docs_userhome.html">Use local 'userhome'</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Theme development</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Inspection/Index.html">Inspection</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Inspection/what-is-installed.html">What is installed?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Inspection/dockrun_t3rd.html">The 'dockrun' function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Inspection/pygments.html">Syntax highlighting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Inspection/toolchain.html">Toolchain inspection</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Rendering/Index.html">Rendering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Rendering/make-html.html">Creating html</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Rendering/make-singlehtml.html">Creating singlehtml</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Rendering/make-package.html">Creating packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Rendering/make-latex.html">Creating latex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Rendering/make-pdf.html">Creating pdf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Rendering/run-parameters.html">Run parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Structures/Index.html">File structures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Structures/types.html">Documentation types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ForContributors.html">For contributors</a></li>
+</ul>
+</li>
+</ul>
+
+                                    <p class="caption"><span class="caption-text">PAGE CONTENTS</span></p>
+                                    <ul>
+<li><a class="reference internal" href="#">Theme development</a><ul>
+<li><a class="reference internal" href="#prepare-theme-for-development">Prepare theme for development</a></li>
+<li><a class="reference internal" href="#use-the-dev-theme">Use the dev theme</a><ul>
+<li><a class="reference internal" href="#make-themes-available">Make THEMES available</a></li>
+<li><a class="reference internal" href="#set-up-your-documentation">Set up your documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#finally-use-it-like-hell">Finally - use it like hell :-)</a></li>
+</ul>
+</li>
+</ul>
+<!-- /menu -->
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="page-main-content">
+                    <div class="rst-content">
+<!-- pager-hidden.html -->
+
+        <a class="no-focus" accesskey="p" href="t3docs_userhome.html" tabindex="-1"></a>
+        <a class="no-focus" accesskey="n" href="../Inspection/Index.html" tabindex="-1"></a>
+<!-- /pager-hidden.html -->
+<!-- breadcrumbs.html -->
+<div class="breadcrumb-bar" role="navigation" aria-label="breadcrumbs navigation">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../../Index.html">Start</a></li>
+            <li class="breadcrumb-item"><a href="../Index.html">More</a></li>
+            <li class="breadcrumb-item"><a href="Index.html">Development</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Theme development</li>
+    </ol>
+    <div class="breadcrumb-additions">
+        <a class="btn btn-sm btn-light" href="../../_sources/08-More/Development/theme-development.rst.txt" rel="nofollow">
+            <span class="btn-icon"><span class="fas fa-code"></span></span>
+            <span class="btn-text">View source</span>
+        </a>
+        <a class="btn btn-sm btn-light" id="btnHowToEdit"
+           href="https://docs.typo3.org/m/typo3/docs-how-to-document/master/en-us/WritingDocsOfficial/GithubMethod.html"
+           rel="nofollow noopener" target="_blank">
+            <span class="btn-icon"><span class="fas fa-info-circle"></span></span>
+            <span class="btn-text">How to edit</span>
+        </a>
+        <a class="btn btn-sm btn-primary" id="btnEditOnGitHub" href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container/edit/main/Documentation/08-More/Development/theme-development.rst">
+            <span class="btn-icon"><span class="fab fa-github"></span></span>
+            <span class="btn-text">Edit on GitHub</span>
+        </a>
+    </div>
+</div>
+<!-- /breadcrumbs.html -->
+<!-- displaysettingsui.html -->
+<div id="displaysettingsui" class="displaysettingsui">
+<div class="dsDivCogwheel"><i id="dsCogwheel" class="fas fa-cog" title="Display settings"></i></div>
+<div id="dsPanel" class="dsPanel" ><p><b>Display settings</b></p>
+<input type="checkbox" id="cbFullWidth"><label for="cbFullWidth">Use full width</label><br>
+<input type="checkbox" id="cbPermanent"><label for="cbPermanent">Make settings permanent</label><br>
+</div><!--/.dsPanel-->
+</div><!--/.displaysettingsui-->
+<!-- /displaysettingsui.html -->
+<!-- versionhints.html -->
+<div class="version-hints">
+
+    <div class="version-hints-inner" data-run-ajax="no">
+<!--filled from _static/ajax-version-hints.html-->
+</div><!--/.version-hints-inner-->
+</div><!--/.version-hints-->
+<!-- /versionhints.html -->
+                        <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                            <div itemprop="articleBody">
+<!-- body -->
+    <div class="section" id="theme-development">
+<span id="index-0"></span><span id="id1"></span><h1>Theme development<a class="headerlink" href="#theme-development" title="Permalink to this headline">¶</a></h1>
+<p>The following shows how to clone our theme for development, how to make it
+available in our Docker render container and how to render documentation using
+the new theme.</p>
+<div class="contents compact-list local topic" id="this-page">
+<p class="topic-title">This page</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#prepare-theme-for-development" id="id2">Prepare theme for development</a></p></li>
+<li><p><a class="reference internal" href="#use-the-dev-theme" id="id3">Use the dev theme</a></p>
+<ul>
+<li><p><a class="reference internal" href="#make-themes-available" id="id4">Make THEMES available</a></p></li>
+<li><p><a class="reference internal" href="#set-up-your-documentation" id="id5">Set up your documentation</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#finally-use-it-like-hell" id="id6">Finally - use it like hell :-)</a></p></li>
+</ul>
+</div>
+<div class="section" id="prepare-theme-for-development">
+<h2><a class="toc-backref" href="#this-page">Prepare theme for development</a><a class="headerlink" href="#prepare-theme-for-development" title="Permalink to this headline">¶</a></h2>
+<p>Create a local folder to hold themes. Let's name that folder <code class="file docutils literal notranslate"><span class="pre">~/THEMES</span></code>:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir ~/THEMES
+</pre></div>
+</div>
+<p>Clone theme for development:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># garantee folder</span>
+mkdir -p ~/Repositories/github.com/TYPO3-Documentation
+
+<span class="c1"># go there</span>
+<span class="nb">cd</span> ~/Repositories/github.com/TYPO3-Documentation
+
+<span class="c1"># clone</span>
+git clone https://github.com/typo3-documentation/t3SphinxThemeRtd
+</pre></div>
+</div>
+<p>Use npm, yarn, grunt, … to provide all resources and to run a build. For example:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/Repositories/github.com/typo3-documentation/t3SphinxThemeRtd
+
+<span class="c1"># install packages</span>
+yarn
+
+<span class="c1"># build</span>
+grunt
+
+<span class="c1"># At this point a new version of the theme should have been built</span>
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>➜  t3SphinxThemeRtd git:<span class="o">(</span>feature/abc<span class="o">)</span> ✗ grunt
+Running <span class="s2">&quot;clean:build&quot;</span> <span class="o">(</span>clean<span class="o">)</span> task
+
+Running <span class="s2">&quot;clean:fonts&quot;</span> <span class="o">(</span>clean<span class="o">)</span> task
+Cleaning t3SphinxThemeRtd/static/fonts...OK
+
+Running <span class="s2">&quot;copy:fonts&quot;</span> <span class="o">(</span>copy<span class="o">)</span> task
+Copied <span class="m">40</span> files
+
+Running <span class="s2">&quot;sass:build&quot;</span> <span class="o">(</span>sass<span class="o">)</span> task
+
+Done, without errors.
+</pre></div>
+</div>
+<p>Copy the new build to the THEMES folder, thereby giving it a name that is not
+in the list of available themes so far:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># WITH slash at the end of source!</span>
+<span class="nv">source</span><span class="o">=</span>~/Repositories/github.com/TYPO3-Documentation/t3SphinxThemeRtd/t3SphinxThemeRtd/
+
+<span class="c1"># WITH slash at the end of dest!</span>
+<span class="nv">dest</span><span class="o">=</span>~/THEMES/t3SphinxThemeRtdDevelop/
+
+rsync -avii -delete <span class="nv">$source</span> <span class="nv">$dest</span>
+
+<span class="c1">#</span>
+</pre></div>
+</div>
+<p>So there should exist a new folder <code class="file docutils literal notranslate"><span class="pre">~/THEMES/t3SphinxThemeRtdDevelop</span></code>.
+In your documentation you have to specify that name as desired theme.</p>
+</div>
+<div class="section" id="use-the-dev-theme">
+<h2><a class="toc-backref" href="#this-page">Use the dev theme</a><a class="headerlink" href="#use-the-dev-theme" title="Permalink to this headline">¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version v2.4.0.</span></p>
+</div>
+<div class="section" id="make-themes-available">
+<h3><a class="toc-backref" href="#this-page">Make THEMES available</a><a class="headerlink" href="#make-themes-available" title="Permalink to this headline">¶</a></h3>
+<p>Here we assume that the dockrun helper function is available.
+In a terminal window:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># turn some debug output on</span>
+<span class="nv">T3DOCS_DEBUG</span><span class="o">=</span><span class="m">1</span>
+
+<span class="c1"># point to your THEMES folder. If this envvar is set it will automatically</span>
+<span class="c1"># be mapped into the container.</span>
+<span class="nv">T3DOCS_THEMES</span><span class="o">=</span>~/THEMES
+
+<span class="c1"># go to you project</span>
+<span class="nb">cd</span> ~/project
+
+<span class="c1"># use the container like normal</span>
+dockrun_t3rd
+</pre></div>
+</div>
+<p>There should be output similar to the following. Note that you should see a
+mapping of the <code class="file docutils literal notranslate"><span class="pre">~/THEMES</span></code> folder:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>PROJECT......: ~/project
+creating: mkdir -p ~/project/Documentation-GENERATED-temp
+RESULT.......: ~/project/Documentation-GENERATED-temp
+THEMES.......: ~/THEMES
+OUR_IMAGE....: t3docs/render-documentation:v2.4.0
+docker run --rm --user=1000:1000 \
+   -v ~/project:/PROJECT:ro \
+   -v ~/project/Documentation-GENERATED-temp:/RESULT \
+   -v ~/THEMES:/THEMES \
+   t3docs/render-documentation:v2.4.0
+t3rd - TYPO3 render documentation (v2.4.0)
+For help:
+   docker run --rm t3docs/render-documentation:v2.4.0 --help
+   dockrun_t3rd --help
+
+... did you mean &#39;dockrun_t3rd makehtml&#39;?
+</pre></div>
+</div>
+</div>
+<div class="section" id="set-up-your-documentation">
+<h3><a class="toc-backref" href="#this-page">Set up your documentation</a><a class="headerlink" href="#set-up-your-documentation" title="Permalink to this headline">¶</a></h3>
+<p>You <em>cannot</em> specify your theme in <code class="file docutils literal notranslate"><span class="pre">Settings.cfg</span></code> as that value gets
+overriden and will always be 't3SphinxThemeRtd' in the end.</p>
+<p>You <em>can</em> set the theme in <code class="file docutils literal notranslate"><span class="pre">./Documentation/jobfile.json</span></code> however like
+so:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;Overrides_cfg&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;general&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;html_theme&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;t3SphinxThemeRtdDevelop&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Additionally theme options may be of special interest.</p>
+<p><em>Attention:</em> ANY non empty string is considered to be TRUE.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;Overrides_cfg&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;html_theme_options&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;docstypo3org&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yes&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;add_piwik&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yes&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;show_legalinfo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yes&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p><em>Attention:</em> Use the empty string to specify FALSE.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;Overrides_cfg&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;html_theme_options&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;docstypo3org&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;add_piwik&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;show_legalinfo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="finally-use-it-like-hell">
+<h2><a class="toc-backref" href="#this-page">Finally - use it like hell :-)</a><a class="headerlink" href="#finally-use-it-like-hell" title="Permalink to this headline">¶</a></h2>
+<p>Start rendering and developing using normal procedures:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dockrun_t3rd  makehtml  -c jobfile /PROJECT/Documentation/jobfile.json
+</pre></div>
+</div>
+</div>
+</div>
+
+<!-- /body -->
+                            </div>
+                        </div>
+<!-- pager.html -->
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <li class="page-item">
+            <a class="page-link" href="t3docs_userhome.html" title="Accesskey Alt(+Shift)+p">
+                Previous
+            </a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="../Inspection/Index.html" title="Accesskey Alt(+Shift)+n">
+                Next
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+<!-- /pager.html -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="page-footer">
+<!-- footer.html -->
+<footer>
+    <div class="frame frame-ruler-before frame-background-dark">
+        <div class="frame-container">
+            <div class="frame-inner">
+                <ul class="footer-simplemenu">
+                    <li><a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container/issues/" title="Issues"><span>Issues</span></a></li>
+                    <li><a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container/" title="Repository"><span>Repository</span></a></li>
+                </ul>
+                <div class="footer-additional">
+                    <p class="text-center">
+                        Last updated: <a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container//commit/557cfa01490f7de40c886e16d90438b6c2c390e0" rel="nofollow" target="_blank" title="Last commit">
+                           Jun 02, 2022 18:52
+                        </a>
+                    </p>
+                    <p class="text-center">Last rendered: Jun 02, 2022 18:53</p>
+                    <ul class="footer-simplemenu">
+                        <li><a href="https://github.com/TYPO3-Documentation/sphinx_typo3_theme" title="sphinx_typo3_theme" target="_blank">
+                        <span>TYPO3 Theme 4.7.4</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-meta">
+                    <div class="footer-meta-copyright">
+                        &copy; Copyright TYPO3 Documentation Team
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- /footer.html -->
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT: '../../',
+            VERSION: '0.0.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE: true
+        };
+    </script>
+    <script type="text/javascript" src="../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/underscore.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/doctools.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/popper.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.min.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/js/searchtools.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/autocomplete.min.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script type="text/javascript">
+        jQuery(function() { Search.loadIndex("../../searchindex.js"); });
+    </script>
+    <script type="text/javascript" id="searchindexloader"></script>
+<!-- scripts2 --><!-- /scripts2 -->
+<!-- footer2 --><!-- /footer2 -->
+
+</body>
+</html>

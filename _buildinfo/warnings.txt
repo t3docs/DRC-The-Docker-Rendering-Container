@@ -1,6 +1,4 @@
-./Documentation/Explanation/ReST/Index.rst:14: WARNING: toctree glob pattern '*/Index' didn't match any documents
-./Documentation/Targets.rst:14: ERROR: Unknown directive type "ref-targets-list".
-
-.. ref-targets-list::
-./Documentation/Usage-Windows/Index.rst:9: WARNING: toctree glob pattern '*/Index' didn't match any documents
-./Documentation/Usage-Windows/windows-users.rst:16: WARNING: undefined label: operating-systems
+./Documentation/06-Knowledge/ReST/Index.rst:14: WARNING: toctree glob pattern '*/Index' didn't match any documents
+./Documentation/07-To-be-sorted/quickstart.rst:8: WARNING: duplicate label quickstart, other instance in /ALL/Makedir/SYMLINK_THE_PROJECT/Documentation/03-How-to/quickstart.rst
+./Documentation/02-Usage/Usage-Windows/windows-users.rst:16: WARNING: undefined label: operating-systems
+./Documentation/07-To-be-sorted/docker-run.rst:20: WARNING: undefined label: dockrun_t3rd-commands
