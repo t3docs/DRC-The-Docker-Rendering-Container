@@ -1,0 +1,48 @@
+Quickstart
+==========
+
+For Linux, Mac and Docker installed. Run the DRC as a tool on the command line
+in a terminal window.
+
+1. Download the container image.
+
+   Do this once unless you want to check for a new version::
+
+      # Download
+      # Pull the container image.
+      # Available tags:  ':latest' (default), ':develop'. The default can be omitted.
+      docker pull ghcr.io/t3docs/render-documentation:latest
+
+      # Rename
+      # Save the image under its generic name as well.
+      docker tag ghcr.io/t3docs/render-documentation:latest t3docs/render-documentation:latest
+
+      # Verify
+      # Run the image as a container, show help, and remove the container.
+      docker run --rm t3docs/render-documentation:latest --help
+
+
+2. Define a helper function in your terminal window.
+
+   Do this once in every new terminal window.
+
+   Add the eval line to your shell's startup file
+   to always have this done automatically. Common startup files are `~/.bashrc`,
+   `~/.fishrc` and `~/.zshrc`::
+
+      # Define helper function in the current terminal
+      eval $(docker run --rm t3docs/render-documentation:latest show-shell-commands)
+
+      # Verify
+      dockrun_t3rd --help
+
+
+3. Render a project's documentation. Go to the PROJECT folder, NOT to the
+   Documentation subfolder::
+
+      # Run the DRC
+      # Render some project's documentation located at PROJECT/Documentation.
+
+      cd PROJECT
+      dockrun_t3rd  makehtml-no-cache
+

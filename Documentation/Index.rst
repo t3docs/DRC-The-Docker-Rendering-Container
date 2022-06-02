@@ -14,29 +14,19 @@ DRC - The Docker Rendering Container
 
 
 .. toctree::
+   :caption: INTRODUCTION
+   :glob:
    :hidden:
-   :caption: BASICS
 
-   Basics/Readme/Index
-   Basics/Introduction/Index
-   Basics/About/Index
+   01-Introduction/*
    Glossary
    genindex
    Sitemap
 
 .. toctree::
+   :caption: MAIN
    :glob:
    :hidden:
-   :caption: USAGE
-
-   Usage/Index
-   Usage-Windows/Index
-
-.. toctree::
-   :glob:
-   :hidden:
-   :caption: MORE
 
    */Index
-   ForContributors
 

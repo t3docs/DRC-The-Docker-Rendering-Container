@@ -1,11 +1,9 @@
-
 .. include:: /Includes.rst.txt
 
 
-
-==================
-Usage (Linux, Mac)
-==================
+======================
+Usage
+======================
 
 
 Pages:
@@ -15,10 +13,7 @@ Pages:
    :glob:
    :titlesonly:
 
-   quickstart
-   dockrun
-   docker-run
-   caching
    *
+   */Index
 
 

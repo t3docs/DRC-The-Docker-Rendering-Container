@@ -1,7 +1,7 @@
 .. include:: /Includes.rst.txt
 
 ######
-README
+Readme
 ######
 
-.. include:: ../../../README.rst
+.. include:: ../../README.rst
