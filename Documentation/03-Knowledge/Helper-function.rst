@@ -9,6 +9,7 @@ It takes a rather long and complicated `docker run` command to start the
 rendering. The helper function makes this an easy job.
 'dockrun_t3rd' is an abbreviation of 'Docker run TYPO3 render documentation.
 
+
 .. contents:: Contents
    :class: compact-list
    :local:
@@ -27,6 +28,7 @@ Define the function in your terminal window::
 
 In effect, you can now use command `dockrun_t3rd` instead of `docker run --rm
 t3docs/render-documentation`
+
 
 Basic usage
 ===========
@@ -87,6 +89,50 @@ shell has understood it::
 
 The function is only defined for the current terminal session.
 
+The code starts like this::
+
+   # NOTE
+   # Run this 'eval' command at the command line to define the helper
+   # function for the current terminal:
+   #     eval "$(docker run --rm t3docs/render-documentation:develop show-shell-commands)"
+   #
+   # As alternative, you can 'source' the code directly into the shell:
+   #     source <(docker run --rm t3docs/render-documentation:develop show-shell-commands)
+   # ATTENTION:
+   #     No whitespace between '<('
+   #
+   # Or, use an intermediate file:
+   #     docker run --rm t3docs/render-documentation:develop show-shell-commands >shell-commands.sh
+   #     source shell-commands.sh
+
+   # This function defines the helper function, usually named \'dockrun_t3rd\'
+   function dockrun_t3rd () {
+
+   # Environment variables the USER may find important (on the host!),
+   # no slash ('/') at the end,
+   # default is the current directory $(pwd):
+   #
+   #     T3DOCS_PROJECT=/abspathto/MyProjectStartFolder       (readonly)
+   #     T3DOCS_RESULT=/abspathto/ResultFolder                (readwrite)
+   #     T3DOCS_TMP=/abspathto/TemporaryFolder                (readwrite)
+   #     T3DOCS_THEMES=/abspathto/MySphinxThemes              (readonly)
+   #
+   # Environment variables only some DEVELOPERS may find important,
+   # no slash ('/') at the end,
+   #
+   #     T3DOCS_MAKEDIR=/abspathto/MYALL/Makedir
+   #     T3DOCS_MENU=/abspathto/MYALL/Menu
+   #     T3DOCS_TOOLCHAINS=/abspathto/MYALL/Toolchains
+   #     T3DOCS_USERHOME=/abspathto/MYALL/userhome
+   #     T3DOCS_VENV=/abspathto/MYALL/venv
+   #     T3DOCS_WHEELS=/abspathto/WheelsFolder
+   #     T3DOCS_DEBUG=0         (0 or 1, talk to stdout)
+   #     T3DOCS_DRY_RUN=0       (0 or 1, don't really execute)
+
+   […]
+
+
+
 
 Advanced usage
 ==============
@@ -109,13 +155,131 @@ Or turn debugging on for just a single run::
 Example::
 
    ~: T3DOCS_DEBUG=1   dockrun_t3rd makehtml-no-cache
-pwd
+
+   PROJECT......: /home/user/Repositories/github.com/t3docs/DRC-The-Docker-Rendering-Container
+   creating: mkdir -p /home/user/Repositories/github.com/t3docs/DRC-The-Docker-Rendering-Container/Documentation-GENERATED-temp
+   RESULT.......: /home/user/Repositories/github.com/t3docs/DRC-The-Docker-Rendering-Container/Documentation-GENERATED-temp
+   OUR_IMAGE....: t3docs/render-documentation:latest
+   /home/user/bin/git-restore-mtime
+   147 files to be processed in work dir
+   Statistics:
+            0.08 seconds
+           2,147 log lines processed
+             398 commits evaluated
+             147 updated files
+              10 updated directories
+   docker run --rm --user=1000:1000 \
+      -v /user/marble/Repositories/github.com/t3docs/DRC-The-Docker-Rendering-Container:/PROJECT:ro \
+      -v /user/marble/Repositories/github.com/t3docs/DRC-The-Docker-Rendering-Container/Documentation-GENERATED-temp:/RESULT \
+      t3docs/render-documentation:develop makehtml-no-cache
+
+   ==================================================
+      10-Toolchain-actions/run_01-Start-with-everything.py
+      exitcode:   0            65 ms
+
+   ==================================================
+      10-Toolchain-actions/run_02-Show-help-and-exit.py
+      exitcode:   0            62 ms
+
+   […]
+
+
+T3DOCS_DRY_RUN
+==============
+
+Don't use.
+
+
+T3DOCS_MAKEDIR
+==============
+tmp-GENERATED-Makedir
+
+Describe!
 
 
 
+T3DOCS_MENU
+==============
+
+tmp-GENERATED-Menu
+
+Describe!
+
+
+T3DOCS_PROJECT
+==============
+
+Instead of using the current folder you may specify the absolute path to a
+project. This means, you can start the rendering from anywhere.
+
+Example::
+
+   export T3DOCS_PROJECT=/home/user/Repositories/github.com/t3docs/DRC-The-Docker-Rendering-Container
+   dockrun_t3rd  makehtml-no-cache
+
+
+T3DOCS_RESULT
+=============
+
+You can send the rendering result to a folder of your choice.
+However, the container will *always* create the final subfolder
+`Documentation-GENERATED-temp/` by itself, so it can be sure it not overwriting
+something important on the host. The means, the result will actually be in
+`${T3DOCS_RESULT}/Documentation-GENERATED-temp`.
+
+Example::
+
+
+   export T3DOCS_RESULT=/home/user/temp
+   dockrun_t3rd  makehtml-no-cache
+   # result will be in /home/user/temp/Documentation-GENERATED-temp
 
 
 
+T3DOCS_THEMES
+==============
+
+tmp-GENERATED-Themes
+
+Describe!
 
 
+T3DOCS_TMP
+==============
+
+tmp-GENERATED-temp
+
+Describe!
+
+
+T3DOCS_TOOLCHAINS
+=================
+
+tmp-GENERATED-Toolchains
+
+Describe!
+
+
+T3DOCS_USERHOME
+===============
+
+tmp-GENERATED-userhome
+
+Describe!
+
+
+T3DOCS_VENV
+===========
+
+tmp-GENERATED-venv
+
+Describe!
+
+
+T3DOCS_WHEELS
+=============
+
+tmp-GENERATED-Wheels
+
+Describe!
 
