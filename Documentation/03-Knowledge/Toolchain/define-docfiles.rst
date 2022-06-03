@@ -15,13 +15,12 @@ especially if they include binary files, only the
 toplevel files and the subfolder :file:`./Documentation/` is copied.
 This arrangement is called 'standard layout'. Here is an example::
 
-   .
+   Project
    ├── Documentation
-   │   ├── Index.rst
-   │   ├── Settings.cfg
-   │   ├── Includes.rst.txt
-   │   ├── Settings.cfg
-   │   └── …
+   │   ├── Includes.rst.txt
+   │   ├── Index.rst
+   │   ├── Settings.cfg
+   │   └── …
    ├── CONTRIBUTE
    ├── LICENSE
    ├── LICENSE

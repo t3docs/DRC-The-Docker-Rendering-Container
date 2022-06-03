@@ -13,9 +13,7 @@ Writing ReST for Sphinx
 .. rst-class:: compact-list
 .. toctree::
    :glob:
-   :titlesonly:
 
-   */Index
    *
 
 

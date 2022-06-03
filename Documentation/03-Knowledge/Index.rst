@@ -10,5 +10,7 @@ Knowledge
 .. toctree::
    :glob:
 
-   *
+   Helper-function
+   Dockerfile
+   Security
    */Index

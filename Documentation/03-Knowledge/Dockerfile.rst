@@ -7,14 +7,14 @@ Dockerfile
 
 Explain what's inside the container ...
 
-Base is Ubuntu 18.04...
+Base is Ubuntu 20.04...
 
 ...
 
 Important Folders
 =================
 
-Consider project `~/project/Documentation/…` on the host machine.
+Consider project `project/Documentation/…` on the host machine.
 
 /PROJECT
    This is where the project is mapped to - in readonly mode.

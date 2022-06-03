@@ -5,9 +5,10 @@
 Helper function 'dockrun'
 =========================
 
-It takes a rather long and complicated `docker run` command to start the
-rendering. The helper function makes this an easy job.
-'dockrun_t3rd' is an abbreviation of 'Docker run TYPO3 render documentation.
+It takes rather long and complicated Docker with many parameters to get the
+various things done. The helper function makes assembling these commands an
+easy job. `dockrun_t3rd` is an abbreviation of
+*Docker-run-TYPO3-render-documentation*.
 
 
 .. contents:: Contents
@@ -27,7 +28,7 @@ Define the function in your terminal window::
     dockrun_t3rd
 
 In effect, you can now use command `dockrun_t3rd` instead of `docker run --rm
-t3docs/render-documentation`
+t3docs/render-documentation`.
 
 
 Basic usage
@@ -62,8 +63,8 @@ Render documentation::
    dockrun_t3rd makehtml-no-cache
 
 
-Code of the function
-====================
+See the code
+============
 
 Display the code::
 
@@ -140,10 +141,11 @@ Advanced usage
 T3DOCS_DEBUG
 ------------
 
-The function is looking for shell variable `$T3DOCS_DEBUG`. If it is set to `1`,
-details of the process will be shown as text.
+The function is looking for various shell variables. If condition
+`$T3DOCS_DEBUG=1` is met, some extra debug output will be shown.
 
-Turn debug info on permanently in the current terminal window::
+Turn debug info on permanently in the current terminal window and use the
+function::
 
    export T3DOCS_DEBUG=1
    dockrun_t3rc …
@@ -194,7 +196,7 @@ T3DOCS_MAKEDIR
 ==============
 tmp-GENERATED-Makedir
 
-Describe!
+For developers. Describe!
 
 
 
@@ -203,7 +205,7 @@ T3DOCS_MENU
 
 tmp-GENERATED-Menu
 
-Describe!
+For developers. Describe!
 
 
 T3DOCS_PROJECT
@@ -241,7 +243,7 @@ T3DOCS_THEMES
 
 tmp-GENERATED-Themes
 
-Describe!
+For developers. Describe!
 
 
 T3DOCS_TMP
@@ -257,7 +259,7 @@ T3DOCS_TOOLCHAINS
 
 tmp-GENERATED-Toolchains
 
-Describe!
+For developers. Describe!
 
 
 T3DOCS_USERHOME
@@ -265,7 +267,7 @@ T3DOCS_USERHOME
 
 tmp-GENERATED-userhome
 
-Describe!
+For developers. Describe!
 
 
 T3DOCS_VENV
@@ -273,7 +275,7 @@ T3DOCS_VENV
 
 tmp-GENERATED-venv
 
-Describe!
+For developers. Describe!
 
 
 T3DOCS_WHEELS
@@ -281,5 +283,5 @@ T3DOCS_WHEELS
 
 tmp-GENERATED-Wheels
 
-Describe!
+For developers. Describe!
 
