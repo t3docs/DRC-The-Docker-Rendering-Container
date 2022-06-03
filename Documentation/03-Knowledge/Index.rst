@@ -1,10 +1,7 @@
-
 .. include:: /Includes.rst.txt
 
-
-
 =======================
-Explaining
+Knowledge
 =======================
 
 .. rubric:: Contents
@@ -12,7 +9,6 @@ Explaining
 .. rst-class:: compact-list
 .. toctree::
    :glob:
-   :titlesonly:
 
-   */Index
    *
+   */Index
