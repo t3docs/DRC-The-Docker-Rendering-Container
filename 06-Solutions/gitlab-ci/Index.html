@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="docsearch:name" content="[WIP] DRC - The Docker Rendering Container" />
+    <meta name="docsearch:package_type" content="" />
+    <meta name="docsearch:release" content="0.0.0" />
+    <meta name="docsearch:version" content="0.0" />
+    <meta name="docsearch:modified" content="2022-06-04T16:21:19+00:00" />
+    <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />
+    <meta name="dc.modified" content="2022-06-04T16:21:19+00:00" />
+    <meta property="article:modified_time" content="2022-06-04T16:21:19+00:00" />
+
+    <title>Render with Gitlab CI &mdash; [WIP] DRC - The Docker Rendering Container 0.0.0 documentation</title>
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/fontawesome.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/webfonts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
+<!-- linktags -->
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="[WIP] DRC - The Docker Rendering Container 0.0.0 documentation" href="#" />
+    <link rel="up" title="Solutions" href="../Index.html" />
+    <link rel="next" title="Individual Python packages" href="../PDF-generation.html" />
+    <link rel="prev" title="Livereload using Gulp (WIP)" href="../Livereload/Livereload-using-Gulp.html" />
+<!-- /linktags -->
+<!-- extrahead --><!-- /extrahead -->
+    <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="page">
+
+        <div class="page-header">
+            <div class="page-header-inner">
+<!--block pageheader-->
+<div class="row">
+    <div class="col-sm-6 col-lg-7">
+
+        <div class="logo">
+
+            <img src="../../_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" title="TYPO3 Documentation" class="logo-image" />
+        </div>
+    </div><!--/.col-x-->
+    <div class="col-sm-6 col-lg-5">
+        <div role="search">
+            
+            <!--form global search-->
+        </div>
+    </div><!--/.col-x-->
+</div><!--/.row-->
+<!--/block pageheader-->
+            </div><!--/.page-header-inner-->
+        </div><!--/.page-header-->
+
+        
+
+        <div class="page-main">
+            <div class="page-main-inner">
+                <div class="page-main-navigation">
+                    <nav>
+                        <input type="checkbox" id="toggleToc" class="toc-checkbox">
+                        <div class="toc-header"><div class="toc-title">
+                                    <a class="toc-title-project" href="../../Index.html">[WIP] DRC - The Docker Rendering Container</a></div><div class="toc-actions">
+                                <label for="toggleToc" class="toc-toggle">
+                                    Menu
+                                </label>
+                            </div>
+                        </div>
+                        <div class="toc-collapse">
+<!-- searchbox.html -->
+<div id="searchbox" class="toc-search" role="search">
+    <form id="search-form" action="../../search.html" autocomplete="off" method="get">
+        <input class="form-control" type="text" name="q" placeholder="Search this project" aria-label="Search this project" id="searchinput" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<!-- /searchbox.html -->
+                            <div class="toc" role="navigation" aria-label="main navigation">
+<!-- menu -->
+                                        <p class="caption" role="heading"><span class="caption-text">INTRODUCTION</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../01-Introduction/1-Readme.html">Readme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../01-Introduction/2-About.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">Index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Sitemap.html">Sitemap</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">MAIN</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../02-Usage/Index.html">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../02-Usage/1-Installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../02-Usage/2-Basic-Rendering.html">Basic rendering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../02-Usage/3-Troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../02-Usage/4-Customized-rendering.html">Customized rendering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../02-Usage/Usage-Windows/Index.html">Directly on Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../02-Usage/Usage-Windows/quickstart-windows.html">Quickstart (Windows)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02-Usage/Usage-Windows/windows-users.html">Windows users</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../03-Knowledge/Index.html">Knowledge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../03-Knowledge/Helper-function.html">Helper function 'dockrun'</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../03-Knowledge/Dockerfile.html">Dockerfile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../03-Knowledge/Security.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../03-Knowledge/ReST/Index.html">Writing ReST for Sphinx</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../03-Knowledge/ReST/About-docutils.html">About Docutils: The basics of ReST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03-Knowledge/ReST/About-includes.html">About includes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../03-Knowledge/Toolchain/Index.html">Toolchain</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../03-Knowledge/Toolchain/define-docfiles.html">Specify documentation files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../04-Versions/Index.html">Versions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../04-Versions/v3-0.html">Releases v3.0.dev1 (2021-10-03)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04-Versions/v2-8.html">Releases v2.8 (2021-03-29)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04-Versions/v2-7.html">Releases v2.7 (2021-01-21)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04-Versions/v0-0.html">Releases v0.0 to v2.6.1 (2020-05-27)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../05-How-to/Index.html">How to</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../05-How-to/advanced.html">Advanced usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../05-How-to/quickstart.html">Quickstart</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Index.html">Solutions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Livereload/Index.html">Livereload</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Livereload/Livereload-using-Python.html">Livereload using Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Livereload/Livereload-using-Gulp.html">Livereload using Gulp (WIP)</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Render with Gitlab CI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PDF-generation.html">Individual Python packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decode-objects-inventory.html">Decode Sphinx crossreferencing inventories 'objects.inv'</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../drop-includes-txt.html">Drop the usual Includes.rst.txt file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../individual-python-packages.html">PDF-generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../non-typo3-usage.html">Non TYPO3 usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pull-from-docker-hub.html">Pull and use 'develop' from Docker hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage-at-the-build-server.html">Usage at the build server</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../07-To-be-sorted/Index.html">To be sorted</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../07-To-be-sorted/docker-run.html">Using 'docker run'</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../07-To-be-sorted/quickstart.html">Quickstart</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../08-More/Index.html">More</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../08-More/Building/Index.html">Container building</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Building/automated-builds.html">Automated builds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Building/building-locally.html">Building locall</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../08-More/Development/Index.html">Development</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Development/roadmap.html">Container development roadmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Development/menu-development.html">Menu development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Development/t3docs_userhome.html">Use local 'userhome'</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Development/theme-development.html">Theme development</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../08-More/Inspection/Index.html">Inspection</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Inspection/what-is-installed.html">What is installed?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Inspection/dockrun_t3rd.html">The 'dockrun' function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Inspection/pygments.html">Syntax highlighting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Inspection/toolchain.html">Toolchain inspection</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../08-More/Rendering/Index.html">Rendering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Rendering/make-html.html">Creating html</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Rendering/make-singlehtml.html">Creating singlehtml</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Rendering/make-package.html">Creating packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Rendering/make-latex.html">Creating latex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Rendering/make-pdf.html">Creating pdf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Rendering/run-parameters.html">Run parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../08-More/Structures/Index.html">File structures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Structures/types.html">Documentation types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../08-More/ForContributors.html">For contributors</a></li>
+</ul>
+</li>
+</ul>
+
+                                    <p class="caption"><span class="caption-text">PAGE CONTENTS</span></p>
+                                    <ul>
+<li><a class="reference internal" href="#">Render with Gitlab CI</a><ul>
+<li><a class="reference internal" href="#downloads">Downloads</a><ul>
+<li><a class="reference internal" href="#example-1-gitlab-ci-yml">Example-1.gitlab-ci.yml</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#basic-configuration">Basic Configuration</a></li>
+<li><a class="reference internal" href="#advanced-configuration">Advanced Configuration</a></li>
+<li><a class="reference internal" href="#additonal-information">Additonal information</a><ul>
+<li><a class="reference internal" href="#dockrun-t3rd-or-docker-run"><code class="code docutils literal notranslate"><span class="pre">dockrun_t3rd</span></code> or <code class="code docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code>?</a></li>
+<li><a class="reference internal" href="#parameters-of-tct">Parameters of TCT</a></li>
+<li><a class="reference internal" href="#parameters-of-the-toolchain-renderdocumentation">Parameters of the toolchain &quot;RenderDocumentation&quot;</a></li>
+<li><a class="reference internal" href="#parameters-for-all-mainmenu-sh">Parameters for <code class="code docutils literal notranslate"><span class="pre">/ALL/mainmenu.sh</span></code></a></li>
+<li><a class="reference internal" href="#about-documentation-jobfile-json">About Documentation/jobfile.json</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#edit-on-gitlab-button-with-the-sphinx-rtd-theme">&quot;Edit on GitLab&quot; button with the sphinx_rtd_theme</a><ul>
+<li><a class="reference internal" href="#edit-a-single-file">Edit a single file</a></li>
+<li><a class="reference internal" href="#edit-the-file-in-gitlab-web-ide">Edit the file in GitLab WEB Ide</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#your-own-logo-and-css-with-the-sphinx-rtd-theme">Your own logo and css with the sphinx_rtd_theme</a></li>
+<li><a class="reference internal" href="#personal-use-of-container-v2-6">Personal use of container v2.6</a></li>
+</ul>
+</li>
+</ul>
+<!-- /menu -->
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="page-main-content">
+                    <div class="rst-content">
+<!-- pager-hidden.html -->
+
+        <a class="no-focus" accesskey="p" href="../Livereload/Livereload-using-Gulp.html" tabindex="-1"></a>
+        <a class="no-focus" accesskey="n" href="../PDF-generation.html" tabindex="-1"></a>
+<!-- /pager-hidden.html -->
+<!-- breadcrumbs.html -->
+<div class="breadcrumb-bar" role="navigation" aria-label="breadcrumbs navigation">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../../Index.html">Start</a></li>
+            <li class="breadcrumb-item"><a href="../Index.html">Solutions</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Render with Gitlab CI</li>
+    </ol>
+    <div class="breadcrumb-additions">
+        <a class="btn btn-sm btn-light" href="../../_sources/06-Solutions/gitlab-ci/Index.rst.txt" rel="nofollow">
+            <span class="btn-icon"><span class="fas fa-code"></span></span>
+            <span class="btn-text">View source</span>
+        </a>
+        <a class="btn btn-sm btn-light" id="btnHowToEdit"
+           href="https://docs.typo3.org/m/typo3/docs-how-to-document/master/en-us/WritingDocsOfficial/GithubMethod.html"
+           rel="nofollow noopener" target="_blank">
+            <span class="btn-icon"><span class="fas fa-info-circle"></span></span>
+            <span class="btn-text">How to edit</span>
+        </a>
+        <a class="btn btn-sm btn-primary" id="btnEditOnGitHub" href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container/edit/main/Documentation/06-Solutions/gitlab-ci/Index.rst">
+            <span class="btn-icon"><span class="fab fa-github"></span></span>
+            <span class="btn-text">Edit on GitHub</span>
+        </a>
+    </div>
+</div>
+<!-- /breadcrumbs.html -->
+<!-- displaysettingsui.html -->
+<div id="displaysettingsui" class="displaysettingsui">
+<div class="dsDivCogwheel"><i id="dsCogwheel" class="fas fa-cog" title="Display settings"></i></div>
+<div id="dsPanel" class="dsPanel" ><p><b>Display settings</b></p>
+<input type="checkbox" id="cbFullWidth"><label for="cbFullWidth">Use full width</label><br>
+<input type="checkbox" id="cbPermanent"><label for="cbPermanent">Make settings permanent</label><br>
+</div><!--/.dsPanel-->
+</div><!--/.displaysettingsui-->
+<!-- /displaysettingsui.html -->
+<!-- versionhints.html -->
+<div class="version-hints">
+
+    <div class="version-hints-inner" data-run-ajax="no">
+<!--filled from _static/ajax-version-hints.html-->
+</div><!--/.version-hints-inner-->
+</div><!--/.version-hints-->
+<!-- /versionhints.html -->
+                        <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                            <div itemprop="articleBody">
+<!-- body -->
+    <div class="section" id="render-with-gitlab-ci">
+<span id="index-0"></span><span id="id1"></span><h1>Render with Gitlab CI<a class="headerlink" href="#render-with-gitlab-ci" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="this-page">
+<p class="topic-title">This page</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#downloads" id="id2">Downloads</a></p>
+<ul>
+<li><p><a class="reference internal" href="#example-1-gitlab-ci-yml" id="id3">Example-1.gitlab-ci.yml</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#requirements" id="id4">Requirements</a></p></li>
+<li><p><a class="reference internal" href="#basic-configuration" id="id5">Basic Configuration</a></p></li>
+<li><p><a class="reference internal" href="#advanced-configuration" id="id6">Advanced Configuration</a></p></li>
+<li><p><a class="reference internal" href="#additonal-information" id="id7">Additonal information</a></p>
+<ul>
+<li><p><a class="reference internal" href="#dockrun-t3rd-or-docker-run" id="id8"><code class="code docutils literal notranslate"><span class="pre">dockrun_t3rd</span></code> or <code class="code docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code>?</a></p></li>
+<li><p><a class="reference internal" href="#parameters-of-tct" id="id9">Parameters of TCT</a></p></li>
+<li><p><a class="reference internal" href="#parameters-of-the-toolchain-renderdocumentation" id="id10">Parameters of the toolchain &quot;RenderDocumentation&quot;</a></p></li>
+<li><p><a class="reference internal" href="#parameters-for-all-mainmenu-sh" id="id11">Parameters for <code class="code docutils literal notranslate"><span class="pre">/ALL/mainmenu.sh</span></code></a></p></li>
+<li><p><a class="reference internal" href="#about-documentation-jobfile-json" id="id12">About Documentation/jobfile.json</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#edit-on-gitlab-button-with-the-sphinx-rtd-theme" id="id13">&quot;Edit on GitLab&quot; button with the sphinx_rtd_theme</a></p>
+<ul>
+<li><p><a class="reference internal" href="#edit-a-single-file" id="id14">Edit a single file</a></p></li>
+<li><p><a class="reference internal" href="#edit-the-file-in-gitlab-web-ide" id="id15">Edit the file in GitLab WEB Ide</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#your-own-logo-and-css-with-the-sphinx-rtd-theme" id="id16">Your own logo and css with the sphinx_rtd_theme</a></p></li>
+<li><p><a class="reference internal" href="#personal-use-of-container-v2-6" id="id17">Personal use of container v2.6</a></p></li>
+</ul>
+</div>
+<div class="section" id="downloads">
+<h2><a class="toc-backref" href="#this-page">Downloads</a><a class="headerlink" href="#downloads" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="example-1-gitlab-ci-yml">
+<h3><a class="toc-backref" href="#this-page">Example-1.gitlab-ci.yml</a><a class="headerlink" href="#example-1-gitlab-ci-yml" title="Permalink to this headline">¶</a></h3>
+<p>Download <a class="reference download internal" download="" href="../../_downloads/6ec47786ebc70e053914c29b4c343025/Example-1.gitlab-ci.yml"><code class="xref download docutils literal notranslate"><span class="pre">Example-1.gitlab-ci.yml</span></code></a></p>
+<p>File content:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">stages</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docs</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy</span><span class="w"></span>
+
+<span class="nt">docu-build</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docs</span><span class="w"></span>
+<span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">t3docs/render-documentation:v2.3.0</span><span class="w"></span>
+<span class="w">    </span><span class="nt">entrypoint</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;&quot;</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">  </span><span class="nt">before_script</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># Copy the content of the current folder to /PROJECT</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># This is needed, because the path is hardcoded and cannot be configured in v2.3.0</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cp -a ${CI_PROJECT_DIR}/. /PROJECT</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># If you set -c resultdir to some path, but you need to make sure the folder exists beforehand</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdir -p ${CI_PROJECT_DIR}/Documentation-GENERATED-temp</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># Alternatively, symlink the /RESULT to somewhere inside the ${CI_PROJECT_DIR} since Gitlab</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># will not accept artiacts from outside of this path</span><span class="w"></span>
+<span class="w">    </span><span class="c1">#    - ln -s /RESULT ${CI_PROJECT_DIR}/Documentation-built</span><span class="w"></span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># Make sure to be in /ALL/venv, else this will not work!</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cd /ALL/venv</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># Run the script without cache and set the resultdir to Documentation-GENERATED-temp</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/ALL/Menu/mainmenu.sh makehtml-no-cache -c resultdir ${CI_PROJECT_DIR}/Documentation-GENERATED-temp</span><span class="w"></span>
+<span class="w">  </span><span class="nt">rules</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">changes</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Documentation</span><span class="w"></span>
+<span class="w">      </span><span class="nt">when</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">when</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">never</span><span class="w"></span>
+<span class="w">  </span><span class="nt">artifacts</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">paths</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${CI_PROJECT_DIR}/Documentation-GENERATED-temp</span><span class="w"></span>
+<span class="nt">deploy</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cabag/rsync</span><span class="w"></span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy</span><span class="w"></span>
+<span class="w">  </span><span class="nt">dependencies</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docu-build</span><span class="w"></span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;Deploy content...&quot;</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="requirements">
+<h2><a class="toc-backref" href="#this-page">Requirements</a><a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>Make sure you have a running Gitlab CI pipeline and a runner is assigned to
+your project.</p>
+</div>
+<div class="section" id="basic-configuration">
+<h2><a class="toc-backref" href="#this-page">Basic Configuration</a><a class="headerlink" href="#basic-configuration" title="Permalink to this headline">¶</a></h2>
+<p>This basic configuration should cover the needs of most users as it will expose
+the content to the public folder. If you already have pages configured, you'll
+just need this.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">pages</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test</span><span class="w"></span>
+<span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">t3docs/render-documentation:develop</span><span class="w"></span>
+<span class="w">    </span><span class="nt">entrypoint</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;&quot;</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># cleanup</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rm -rf $CI_PROJECT_DIR/public</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdir -p $CI_PROJECT_DIR/public</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdir -p /RESULT</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rm -rf /PROJECT</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ln -s $CI_PROJECT_DIR /PROJECT</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># switch to venv to ensure environment fits</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cd /ALL/venv/</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># execute</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/ALL/Menu/mainmenu.sh makeall -c jobfile /$CI_PROJECT_DIR/Documentation/jobfile.json</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># publish result</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cp -r /RESULT/Result/project/0.0.0/* $CI_PROJECT_DIR/public</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># fix problem with index.html vs Index.html</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">if [ ! -f $CI_PROJECT_DIR/public/index.html ]; then echo &quot;&lt;meta http-equiv=&#39;refresh&#39; content=&#39;0;url=Index.html&#39;&gt;&quot; &gt; $CI_PROJECT_DIR/public/index.html; fi</span><span class="w"></span>
+<span class="w">  </span><span class="nt">artifacts</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">paths</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">public</span><span class="w"></span>
+<span class="w">  </span><span class="nt">tags</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="advanced-configuration">
+<h2><a class="toc-backref" href="#this-page">Advanced Configuration</a><a class="headerlink" href="#advanced-configuration" title="Permalink to this headline">¶</a></h2>
+<p>Advanced users may want to tweek the configuration somewhat for various
+reasons. Here's an example of how to change the default script to specific
+needs.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">docu</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test</span><span class="w"></span>
+<span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">t3docs/render-documentation:v2.3.0</span><span class="w"></span>
+<span class="w">    </span><span class="nt">entrypoint</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;&quot;</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">  </span><span class="nt">before_script</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># Copy the content of the current folder to /PROJECT</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># This is needed, because the path is hardcoded and cannot be configured in v2.3.0</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cp -a ${CI_PROJECT_DIR}/. /PROJECT</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># Alternatively you can symlink the folder, too</span><span class="w"></span>
+<span class="w">    </span><span class="c1">#    - rm -rf /PROJECT &amp;&amp; ln -s ${CI_PROJECT_DIR} /PROJECT</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># If you set -c resultdir to some path, but you need to make sure the folder exists beforehand</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">export resultdir=${CI_PROJECT_DIR}/Documentation-GENERATED-temp</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdir -p ${CI_PROJECT_DIR}/Documentation-GENERATED-temp</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># Alternatively, symlink the /RESULT to somewhere inside the ${CI_PROJECT_DIR} since Gitlab</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># will not accept artiacts from outside of this path</span><span class="w"></span>
+<span class="w">    </span><span class="c1">#    - ln -s /RESULT ${CI_PROJECT_DIR}/Documentation-built</span><span class="w"></span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># Make sure to be in /ALL/venv, else this will not work!</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cd /ALL/venv</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># Execute</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/ALL/Menu/mainmenu.sh makehtml-no-cache -c resultdir $resultdir</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># fix problem with index.html vs Index.html</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">if [ ! -f $CI_PROJECT_DIR/$resultdir/Result/project/0.0.0/index.html ]; then echo &quot;&lt;meta http-equiv=&#39;refresh&#39; content=&#39;0;url=Index.html&#39;&gt;&quot; &gt; $CI_PROJECT_DIR/$resultdir/Result/project/0.0.0//index.html; fi</span><span class="w"></span>
+<span class="w">  </span><span class="c1"># Only available for Gitlab Runners 12.3+! Run the script only if something changed in the documentation</span><span class="w"></span>
+<span class="w">  </span><span class="nt">rules</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">changes</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Documentation</span><span class="w"></span>
+<span class="w">      </span><span class="nt">when</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">when</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">never</span><span class="w"></span>
+<span class="w">  </span><span class="nt">artifacts</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">paths</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${CI_PROJECT_DIR}/Documentation-GENERATED-temp/</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="additonal-information">
+<h2><a class="toc-backref" href="#this-page">Additonal information</a><a class="headerlink" href="#additonal-information" title="Permalink to this headline">¶</a></h2>
+<p>Terms: <a class="reference internal" href="../../Glossary.html#term-RenderDocumentation"><span class="xref std std-term">RenderDocumentation</span></a>, <a class="reference internal" href="../../Glossary.html#term-TCT"><span class="xref std std-term">TCT</span></a>, <a class="reference internal" href="../../Glossary.html#term-toolchain"><span class="xref std std-term">toolchain</span></a></p>
+<p>Here is some additional information you may be looking for.</p>
+<p><strong>Note:</strong> <code class="code docutils literal notranslate"><span class="pre">TCT</span></code> is our toolchain runner. It runs
+<code class="code docutils literal notranslate"><span class="pre">RenderDocumentation</span></code> which is our toolchain.</p>
+<div class="section" id="dockrun-t3rd-or-docker-run">
+<h3><a class="toc-backref" href="#this-page"><code class="code docutils literal notranslate"><span class="pre">dockrun_t3rd</span></code> or <code class="code docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code>?</a><a class="headerlink" href="#dockrun-t3rd-or-docker-run" title="Permalink to this headline">¶</a></h3>
+<p>Terms: <a class="reference internal" href="../../Glossary.html#term-dockrun"><span class="xref std std-term">dockrun</span></a></p>
+<p>The <code class="code docutils literal notranslate"><span class="pre">dockrun_t3rd</span></code> function is just a helper tool to help assembling the final
+Docker command. If you are not using this helper write the explicite form in
+the examples below. The explicite form is:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># instead of dockrun_t3rd write:</span>
+<span class="nv">OUR_IMAGE_TAG</span><span class="o">=</span>v2.3.0           &lt;-- <span class="k">for</span> example
+<span class="nv">OUT_IMAGE_TAG</span><span class="o">=</span>develop          &lt;-- adapt
+docker run --rm t3docs/render-documentation:<span class="nv">$OUR_IMAGE_TAG</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="parameters-of-tct">
+<span id="index-1"></span><h3><a class="toc-backref" href="#this-page">Parameters of TCT</a><a class="headerlink" href="#parameters-of-tct" title="Permalink to this headline">¶</a></h3>
+<p>Terms: <a class="reference internal" href="../../Glossary.html#term-TCT"><span class="xref std std-term">TCT</span></a></p>
+<p>Use <code class="code docutils literal notranslate"><span class="pre">--help</span></code>:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dockrun_t3rd tct --help
+dockrun_t3rd tct run --help
+</pre></div>
+</div>
+</div>
+<div class="section" id="parameters-of-the-toolchain-renderdocumentation">
+<h3><a class="toc-backref" href="#this-page">Parameters of the toolchain &quot;RenderDocumentation&quot;</a><a class="headerlink" href="#parameters-of-the-toolchain-renderdocumentation" title="Permalink to this headline">¶</a></h3>
+<p>Only the toolchain itself knows which parameters and options it takes. So we
+have to run the toolchain and ask for that information like so:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dockrun_t3rd tct run RenderDocumentation --toolchain-help
+</pre></div>
+</div>
+<p>You should be seeing something like this:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>➜  ~ dockrun_t3rd tct run RenderDocumentation --toolchain-help
+
+Usage: tct run <span class="o">[</span>OPTIONS<span class="o">]</span> RenderDocumentation
+
+  Run the toolchain <span class="s1">&#39;RenderDocumentation&#39;</span>.
+
+Options:
+  -c, --config KEY VALUE          Define or override config key-value pair
+                                  <span class="o">(</span>repeatable<span class="o">)</span>
+  -n, --dry-run                   Perform a trial run with no changes made.
+  --toolchain-help                Tell the toolchain to display its <span class="nb">help</span> text.
+                                  The toolchain should <span class="k">do</span> that and <span class="k">then</span> exit.
+  -T, --toolchain-action ACTION   Tell the toolchain to execute the action.
+                                  <span class="o">(</span>repeatable<span class="o">)</span>
+  --help                          Show this message and exit.
+
+Toolchain options:
+  -T clean                        Let the toolchain delete prior builds, <span class="k">then</span> exit.
+  -T <span class="nb">help</span>                         Show toolchain <span class="nb">help</span> and e exit.
+  -T unlock                       Remove possible lock and exit.
+  -T version                      Show toolchain version and exit.
+
+  -c makedir PATH/TO/MAKEDIR      Required! The path to the <span class="s1">&#39;make&#39;</span> folder.
+  -c resultdir PATH/TO/MAKEDIR    Optional. The path to the
+                                  <span class="s1">&#39;Documentation-GENERATED-temp&#39;</span> folder. Must
+                                  exist <span class="k">if</span> specified.
+
+  -c buildsettings PATH/TO/FILE   If specified, this file overrides the normal
+                                  makedir/buildsettings.sh
+
+  -c overrides PATH/TO/FILE       If specified, this file is used instead of the
+                                  normal makedir/Overrides.cfg
+
+  -c rebuild_needed <span class="m">1</span>             Force rebuild regardless of checksum
+
+  -c make_singlehtml <span class="m">1</span>            yes <span class="o">(</span>default<span class="o">)</span>
+  -c make_singlehtml <span class="m">0</span>            no
+
+  -c make_latex <span class="m">1</span>                 yes! Make LaTeX and PDF<span class="o">(</span>default<span class="o">)</span>
+  -c make_latex <span class="m">0</span>                 no
+
+  -c make_package <span class="m">1</span>               yes <span class="o">(</span>default<span class="o">)</span>
+  -c make_package <span class="m">0</span>               no
+
+  -c talk <span class="m">0</span>                       run quietly
+  -c talk <span class="m">1</span>                       talk just the minimum <span class="o">(</span>default<span class="o">)</span>
+  -c talk <span class="m">2</span>                       talk more
+
+  -c jobfile PATH/TO/JOBFILE.JSON  pass <span class="k">in</span> all kind of settings
+
+  -c email_user_to_instead  <span class="s2">&quot;email1,email2,...&quot;</span>  instead of real user
+  -c email_user_cc  <span class="s2">&quot;email1,email2,...&quot;</span>  additionally, publicly
+  -c email_user_bcc <span class="s2">&quot;email1,email2,...&quot;</span>  additionally, secretly
+  -c email_user_send_to_admin_too  <span class="m">1</span>     like it says
+
+➜
+</pre></div>
+</div>
+</div>
+<div class="section" id="parameters-for-all-mainmenu-sh">
+<h3><a class="toc-backref" href="#this-page">Parameters for <code class="code docutils literal notranslate"><span class="pre">/ALL/mainmenu.sh</span></code></a><a class="headerlink" href="#parameters-for-all-mainmenu-sh" title="Permalink to this headline">¶</a></h3>
+<p>The build script comes with several shorthands to make building the
+documentation easier. The most interesting ones are:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>makeall                Means: -c make_latex <span class="m">1</span> -c make_package <span class="m">1</span> -c make_pdf <span class="m">1</span> -c make_singlehtml <span class="m">1</span>
+makeall-no-cache       Same as makeall, but clean cache first
+makehtml               Means: -c make_latex <span class="m">0</span> -c make_package <span class="m">0</span> -c make_pdf <span class="m">0</span> -c make_singlehtml <span class="m">0</span>
+makehtml-no-cache      Same as makehtml, but clean cache first
+</pre></div>
+</div>
+<p>You can ask the container to show a more explicite text. Here is an example:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>➜  ~ dockrun_t3rd --help
+
+Usage:
+    Prepare:
+        Define <span class="k">function</span> <span class="s1">&#39;dockrun_t3rd&#39;</span> on the commandline of your system:
+            <span class="nb">source</span> &lt;<span class="o">(</span>docker run --rm t3docs/render-documentation:v2.4.0-dev show-shell-commands<span class="o">)</span>
+        Inspect <span class="k">function</span>:
+            <span class="nb">declare</span> -f dockrun_t3rd
+    Usage:
+        dockrun_t3rd <span class="o">[</span>ARGS<span class="o">]</span>
+            ARGUMENT             DESCRIPTION
+            --help               Show this menu
+            --version            Show buildinfo.txt of this container
+            makeall              Create all output formats
+            makeall-no-cache     Remove cache first, <span class="k">then</span> create all
+            makehtml             Create HTML output
+            makehtml-no-cache    Remove cache first, <span class="k">then</span> build HTML
+            show-shell-commands  Show useful shell commands and functions
+            show-howto           Show howto <span class="o">(</span>not totally up to date<span class="o">)</span>
+            show-faq             Show questions and answers <span class="o">(</span>not totally up to date<span class="o">)</span>
+            bashcmd              Run a bash <span class="nb">command</span> <span class="k">in</span> the container
+            /bin/bash            Enter the container<span class="s1">&#39;s Bash shell as superuser</span>
+<span class="s1">            /usr/bin/bash        Enter the container&#39;</span>s Bash shell as normal user
+            export-ALL           Copy /ALL to /RESULT/ALL-exported
+            tct                  Run TCT, the toolchain runner
+
+    Examples:
+        dockrun_t3rd
+        dockrun_t3rd --help
+        dockrun_t3rd export-ALL
+        dockrun_t3rd makeall-no-cache
+        dockrun_t3rd makehtml
+        dockrun_t3rd bashcmd <span class="s1">&#39;ls -la /ALL&#39;</span>
+        dockrun_t3rd /bin/bash
+        dockrun_t3rd /usr/bin/bash
+
+End of usage.
+
+
+➜  ~
+</pre></div>
+</div>
+</div>
+<div class="section" id="about-documentation-jobfile-json">
+<span id="index-2"></span><h3><a class="toc-backref" href="#this-page">About Documentation/jobfile.json</a><a class="headerlink" href="#about-documentation-jobfile-json" title="Permalink to this headline">¶</a></h3>
+<p>Terms: <a class="reference internal" href="../../Glossary.html#term-jobfile"><span class="xref std std-term">jobfile</span></a></p>
+<p><strong>For container version v2.3.0 or newer</strong></p>
+<p>This file is very powerful and will override almost all settings that have been
+made before in the process. You can use it only on machines where you are the
+administrator or operator yourself. The rendering of official documentation for
+the TYPO3 docs server is done with a jobfile that you cannot control.
+The <code class="file docutils literal notranslate"><span class="pre">jobfile.json</span></code> file is maintained with your project OUTSIDE the
+container. But it is used at run time WITHIN the container. So when you start
+the container and pass the file location you have to specify one that's valid
+WITHIN the container.
+A good choice to place the file is in
+<code class="file docutils literal notranslate"><span class="pre">YOUR-PROJECT/Documentation/jobfile.json</span></code>. In that case you would add
+<code class="code docutils literal notranslate"><span class="pre">-c</span> <span class="pre">jobfile</span> <span class="pre">/PROJECT/Documentation/jobfile.json</span></code> to the Docker run command.
+Another obvious place would be
+<code class="file docutils literal notranslate"><span class="pre">YOUR-PROJECT/Documentation-GENERATED-temp/jobfile.json</span></code>, especially if
+the jobfile gets generated somehow. In that case the command line needs to have
+<code class="code docutils literal notranslate"><span class="pre">-c</span> <span class="pre">jobfile</span> <span class="pre">/RESULT/Documentation/jobfile.json</span></code>.
+The name <code class="file docutils literal notranslate"><span class="pre">jobfile</span></code> is just a - useful - convention. It could as well be a
+json file named <code class="file docutils literal notranslate"><span class="pre">abc.json</span></code>, for which you would write
+<code class="code docutils literal notranslate"><span class="pre">-c</span> <span class="pre">jobfile</span> <span class="pre">/PROJECT/Documentation/abc.json</span></code>.</p>
+<p>As of container version v2.3.0 we have the following. This will probably be
+extended with newer versions. Some settings are postfixed with '_DISABLED'
+which can be removed to activate them.</p>
+<dl>
+<dt>Minimal, no operation</dt><dd><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="o">{</span>
+  <span class="s2">&quot;Overrides_cfg&quot;</span>: <span class="o">{</span>
+    <span class="s2">&quot;comment&quot;</span>: <span class="s2">&quot;This section goes into conf.py, which is the Sphinx config file&quot;</span>,
+    <span class="s2">&quot;general&quot;</span>: <span class="o">{</span>
+    <span class="o">}</span>
+  <span class="o">}</span>,
+  <span class="s2">&quot;tctconfig&quot;</span>: <span class="o">{</span>
+     <span class="s2">&quot;comment&quot;</span>: <span class="s2">&quot;This sections defines how the toolchain behaves&quot;</span>,
+   <span class="o">}</span>,
+  <span class="s2">&quot;dockrun_t3rd&quot;</span>: <span class="o">{</span>
+     <span class="s2">&quot;comment_1&quot;</span>: <span class="s2">&quot;This can be used on the local machine to define the build call&quot;</span>,
+     <span class="s2">&quot;comment_2&quot;</span>: <span class="s2">&quot;set action to makehtml, makehtml-no-cache, makeall, makeall-no-cache&quot;</span>,
+     <span class="s2">&quot;action&quot;</span>: <span class="s2">&quot;makehtml-no-cache&quot;</span>,
+     <span class="s2">&quot;jobfile_option&quot;</span>: <span class="s2">&quot; -c jobfile /PROJECT/Documentation/jobfile.json&quot;</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</dd>
+<dt>Extensive</dt><dd><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="o">{</span>
+  <span class="s2">&quot;Overrides_cfg&quot;</span>: <span class="o">{</span>
+    <span class="s2">&quot;comment&quot;</span>: <span class="s2">&quot;This section goes into conf.py, which is the Sphinx config file&quot;</span>,
+    <span class="s2">&quot;general&quot;</span>: <span class="o">{</span>
+      <span class="s2">&quot;html_theme&quot;</span>: <span class="s2">&quot;t3SphinxThemeRtd&quot;</span>,
+      <span class="s2">&quot;keep_warnings&quot;</span>: <span class="m">0</span>,
+      <span class="s2">&quot;language&quot;</span>: <span class="s2">&quot;en&quot;</span>,
+      <span class="s2">&quot;html_logo_DISABLED&quot;</span>: <span class="s2">&quot;../TheProject/Documentation/_static/logo.svg&quot;</span>,
+      <span class="s2">&quot;html_css_files&quot;</span>: <span class="o">[</span><span class="s2">&quot;css/my-extra.css&quot;</span><span class="o">]</span>,
+      <span class="s2">&quot;html_static_path_DISABLED&quot;</span>: <span class="o">[</span><span class="s2">&quot;../TheProject/Documentation/_static&quot;</span><span class="o">]</span>,
+      <span class="s2">&quot;nitpicky&quot;</span>: false,
+      <span class="s2">&quot;nitpick_ignore&quot;</span>: <span class="o">[[</span><span class="s2">&quot;py:class&quot;</span>, <span class="s2">&quot;type&quot;</span><span class="o">]]</span>,
+      <span class="s2">&quot;project&quot;</span>: <span class="s2">&quot;The Project&quot;</span>,
+      <span class="s2">&quot;release&quot;</span>: <span class="s2">&quot;9.8.7&quot;</span>,
+      <span class="s2">&quot;rst_epilog&quot;</span>: <span class="s2">&quot;&quot;</span>,
+      <span class="s2">&quot;rst_prolog_DISABLED&quot;</span>: <span class="s2">&quot;\n.. This is &#39;Includes.txt&#39;. It is included at the very top of each and\n   every ReST source file in THIS documentation project (= manual).\n\n.. role:: aspect (emphasis)\n.. role:: html(code)\n.. role:: js(code)\n.. role:: php(code)\n.. role:: typoscript(code)\n.. role:: ts(typoscript)\n   :class: typoscript\n\n.. highlight:: php\n.. default-role:: code\n&quot;</span>,
+      <span class="s2">&quot;version&quot;</span>: <span class="s2">&quot;9.8&quot;</span>,
+      <span class="s2">&quot;zzz&quot;</span>: <span class="m">0</span>
+    <span class="o">}</span>
+  <span class="o">}</span>,
+  <span class="s2">&quot;tctconfig&quot;</span>: <span class="o">{</span>
+     <span class="s2">&quot;comment&quot;</span>: <span class="s2">&quot;This sections defines how the toolchain behaves&quot;</span>,
+     <span class="s2">&quot;activateLocalSphinxDebugging&quot;</span>: <span class="m">0</span>,
+     <span class="s2">&quot;disable_include_files_check&quot;</span>: <span class="m">1</span>,
+     <span class="s2">&quot;force_rebuild_needed&quot;</span>: <span class="m">1</span>,
+     <span class="s2">&quot;make_html&quot;</span>: <span class="m">1</span>,
+     <span class="s2">&quot;make_latex&quot;</span>: <span class="m">0</span>,
+     <span class="s2">&quot;make_pdf&quot;</span>: <span class="m">0</span>,
+     <span class="s2">&quot;make_singlehtml&quot;</span>: <span class="m">0</span>,
+     <span class="s2">&quot;rebuild_needed&quot;</span>: <span class="m">1</span>,
+     <span class="s2">&quot;replace_static_in_html&quot;</span>: <span class="m">1</span>,
+     <span class="s2">&quot;reveal_exitcodes&quot;</span>: <span class="m">1</span>,
+     <span class="s2">&quot;reveal_milestones&quot;</span>: <span class="m">1</span>,
+     <span class="s2">&quot;talk&quot;</span>: <span class="m">1</span>,
+     <span class="s2">&quot;try_pdf_build_from_published_latex&quot;</span>: <span class="m">1</span>
+   <span class="o">}</span>,
+  <span class="s2">&quot;dockrun_t3rd&quot;</span>: <span class="o">{</span>
+     <span class="s2">&quot;comment_1&quot;</span>: <span class="s2">&quot;This can be used on the local machine to define the build call&quot;</span>,
+     <span class="s2">&quot;comment_2&quot;</span>: <span class="s2">&quot;set action to makehtml, makehtml-no-cache, makeall, makeall-no-cache&quot;</span>,
+     <span class="s2">&quot;action&quot;</span>: <span class="s2">&quot;makehtml-no-cache&quot;</span>,
+     <span class="s2">&quot;jobfile_option&quot;</span>: <span class="s2">&quot; -c jobfile /PROJECT/Documentation/jobfile.json&quot;</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="edit-on-gitlab-button-with-the-sphinx-rtd-theme">
+<span id="index-3"></span><h2><a class="toc-backref" href="#this-page">&quot;Edit on GitLab&quot; button with the sphinx_rtd_theme</a><a class="headerlink" href="#edit-on-gitlab-button-with-the-sphinx-rtd-theme" title="Permalink to this headline">¶</a></h2>
+<p>The corresponding html template looks like this:</p>
+<div class="highlight-jinja notranslate"><div class="highlight"><pre><span></span><span class="x">&lt;a href=&quot;https://</span><span class="cp">{{</span> <span class="nv">gitlab_host</span><span class="o">|</span><span class="nf">default</span><span class="o">(</span><span class="s2">&quot;gitlab.com&quot;</span><span class="o">)</span> <span class="cp">}}</span><span class="x">/</span><span class="cp">{{</span> <span class="nv">gitlab_user</span> <span class="cp">}}</span><span class="x">/</span><span class="cp">{{</span> <span class="nv">gitlab_repo</span> <span class="cp">}}</span><span class="x">/</span><span class="cp">{{</span> <span class="nv">theme_vcs_pageview_mode</span><span class="o">|</span><span class="nf">default</span><span class="o">(</span><span class="s2">&quot;blob&quot;</span><span class="o">)</span> <span class="cp">}}</span><span class="x">/</span><span class="cp">{{</span> <span class="nv">gitlab_version</span> <span class="cp">}}{{</span> <span class="nv">conf_py_path</span> <span class="cp">}}{{</span> <span class="nv">pagename</span> <span class="cp">}}{{</span> <span class="nv">suffix</span> <span class="cp">}}</span><span class="x">&quot; class=&quot;fa fa-gitlab&quot;&gt; </span><span class="cp">{{</span> <span class="kp">_</span><span class="o">(</span><span class="s1">&#39;Edit on GitLab&#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="x">&lt;/a&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="edit-a-single-file">
+<h3><a class="toc-backref" href="#this-page">Edit a single file</a><a class="headerlink" href="#edit-a-single-file" title="Permalink to this headline">¶</a></h3>
+<p>Have something like this in your <code class="file docutils literal notranslate"><span class="pre">jobfile.json</span></code> file:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;Overrides_cfg&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;general&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;html_theme&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sphinx_rtd_theme&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;html_context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;display_gitlab&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;gitlab_host&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;gitlab.com&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;gitlab_user&quot;</span><span class="p">:</span><span class="s2">&quot;GITLAB_USER&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;gitlab_repo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GITLAB_REPO&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;theme_vcs_pageview_mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;edit&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;gitlab_version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;master/&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;conf_py_path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Documentation/&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="edit-the-file-in-gitlab-web-ide">
+<h3><a class="toc-backref" href="#this-page">Edit the file in GitLab WEB Ide</a><a class="headerlink" href="#edit-the-file-in-gitlab-web-ide" title="Permalink to this headline">¶</a></h3>
+<p>Have something like this in your <code class="file docutils literal notranslate"><span class="pre">jobfile.json</span></code> file:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;Overrides_cfg&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;general&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;html_theme&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sphinx_rtd_theme&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;html_context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;display_gitlab&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;gitlab_host&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;gitlab.com&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;gitlab_user&quot;</span><span class="p">:</span><span class="s2">&quot;-/ide/project/GITLAB_USER&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;gitlab_repo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GITLAB_REPO&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;theme_vcs_pageview_mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;edit&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;gitlab_version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;master/-/&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;conf_py_path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Documentation/&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="your-own-logo-and-css-with-the-sphinx-rtd-theme">
+<span id="index-4"></span><h2><a class="toc-backref" href="#this-page">Your own logo and css with the sphinx_rtd_theme</a><a class="headerlink" href="#your-own-logo-and-css-with-the-sphinx-rtd-theme" title="Permalink to this headline">¶</a></h2>
+<p>To configure your own logo with the ReadTheDocs theme you need to know the
+relative path from <code class="code docutils literal notranslate"><span class="pre">conf.py</span></code> to the logo. Suppose your file structure looks
+like this:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>MyProject
+└── Documentation
+    ├── jobfile.json
+    ├── Index.rst
+    └── _static
+        ├── my-logo.svg
+        └── css
+            └── my-styles.css
+</pre></div>
+</div>
+<p>The relative path we are looking for is a constant and reflects some of the
+internals of the container. This constant, which is the relative path to go
+from the <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code> folder to the documentation start is
+<code class="file docutils literal notranslate"><span class="pre">../TheProject/Documentation</span></code>. So to use <code class="file docutils literal notranslate"><span class="pre">my-logo.png</span></code> and
+<code class="file docutils literal notranslate"><span class="pre">my-styles.css</span></code> you would write the following in <code class="file docutils literal notranslate"><span class="pre">jobfile.json</span></code>.
+To make it a bit more complete project, release and version are shown as well:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;Overrides_cfg&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;general&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;html_theme&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sphinx_rtd_theme&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;html_logo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;../TheProject/Documentation/_static/my-logo.svg&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;html_css_files&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;css/my-styles.css&quot;</span><span class="p">],</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;html_static_path&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;../TheProject/Documentation/_static&quot;</span><span class="p">],</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;project&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MyProject&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;release&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="personal-use-of-container-v2-6">
+<h2><a class="toc-backref" href="#this-page">Personal use of container v2.6</a><a class="headerlink" href="#personal-use-of-container-v2-6" title="Permalink to this headline">¶</a></h2>
+<p>Run the container:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> mbw-the-mbless-world
+dockrun_t3rd makehtml-no-cache -c jobfile /PROJECT/Documentation/jobfile.json
+</pre></div>
+</div>
+<p>File <code class="file docutils literal notranslate"><span class="pre">mbw-the-mbless-world/Documentation/jobfile.json</span></code>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="nt">&quot;Overrides_cfg&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;general&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;html_theme&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sphinx_typo3_theme&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;html_theme_options&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;html_logo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;../TheProject/Documentation/_static/logo/logo.png&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;html_css_files&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;css/mbwstyles.css&quot;</span><span class="p">],</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;html_favicon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;../TheProject/Documentation/_static/icons/favicon.ico&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;html_static_path&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;../TheProject/Documentation/_static&quot;</span><span class="p">],</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;html_context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;display_gitlab&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;gitlab_protocol&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;gitlab_host&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;gitlab.local.mbless.de:81&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;gitlab_user&quot;</span><span class="p">:</span><span class="s2">&quot;-/ide/project/marble&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;gitlab_repo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;mbw-the-mbless-world&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;theme_vcs_pageview_mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;edit&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;gitlab_version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;master/-/&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;conf_py_path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Documentation/&quot;</span><span class="w"></span>
+<span class="w">         </span><span class="p">},</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;keep_warnings&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;nitpicky&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;nitpick_ignore&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[[</span><span class="s2">&quot;py:class&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;type&quot;</span><span class="p">]],</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;project&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MBW - The Mbless World&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;release&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;rst_epilog&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;rst_prolog_DISABLED&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;\n.. This is &#39;Includes.txt&#39;. It is included at the very top of each and\n   every ReST source file in THIS documentation project (= manual).\n\n.. role:: aspect (emphasis)\n.. role:: html(code)\n.. role:: js(code)\n.. role:: php(code)\n.. role:: typoscript(code)\n.. role:: ts(typoscript)\n   :class: typoscript\n\n.. highlight:: php\n.. default-role:: code\n&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;smartquotes&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;templates_path&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;../TheProject/Documentation/_templates&quot;</span><span class="p">],</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;todo_include_todos&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;zzz&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">   </span><span class="p">},</span><span class="w"></span>
+<span class="w">   </span><span class="nt">&quot;tctconfig&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;activateLocalSphinxDebugging&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;disable_include_files_check&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;force_rebuild_needed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;make_html&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;make_latex&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;make_pdf&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;make_singlehtml&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;rebuild_needed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;replace_static_in_html&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;reveal_exitcodes&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;reveal_milestones&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;talk&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;try_pdf_build_from_published_latex&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="w">   </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>File structure:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>.
+├── Documentation
+│   ├── 00-Todo
+│   │   ├── Explore-this
+│   │   │   └── Index.rst
+│   │   └── Index.rst
+│   ├── 90-Targets.rst
+│   ├── 91-Sitemap.rst.txt
+│   ├── genindex.rst
+│   ├── Includes.rst.txt
+│   ├── Index.rst
+│   ├── jobfile.json
+│   ├── _static
+│   │   ├── css
+│   │   │   └── mbwstyles.css
+│   │   ├── icons
+│   │   │   └── favicon.ico
+│   │   └── logo
+│   │       ├── logo-242x242.png
+│   │       └── logo.png
+│   └── _templates
+│       ├── breadcrumbs.html
+│       └── sitemap.html
+└── Documentation-GENERATED-temp
+    ├── Cache
+    ├── last-docker-run-command-GENERATED.sh.txt
+    ├── Result
+    │   ├── exitcodes.json
+    │   ├── milestones.json
+    │   ├── project
+    │   │   └── 0.0.0
+    │   │       ├── 00-Todo
+    │   │       │   ├── Explore-this
+    │   │       │   │   └── Index.html
+    │   │       │   └── Index.html
+    │   │       ├── Index.html
+    │   │       ├── objects.inv
+    │   │       ├── search.html
+    │   │       ├── searchindex.js
+    │   │       ├── _sources
+    │   │       │   ├── 00-Todo
+    │   │       │   │   ├── Explore-this
+    │   │       │   │   │   └── Index.rst.txt
+    │   │       │   │   └── Index.rst.txt
+    │   │       └── _static
+    │   │           ├── css
+    │   │           │   ├── fontawesome.css
+    │   │           │   ├── mbwstyles.css
+    │   │           │   ├── theme.css
+    │   │           │   └── webfonts.css
+    │   │           ├── favicon.ico
+    │   │           ├── fonts
+    │   │           │   ├── ...
+    │   │           │   └── ...
+    │   │           ├── graphviz.css
+    │   │           ├── icons
+    │   │           │   └── favicon.ico
+    │   │           ├── img
+    │   │           │   └── typo3-logo.svg
+    │   │           ├── js
+    │   │           │   ├── autocomplete.min.js
+    │   │           │   └── ...
+    │   │           ├── language_data.js
+    │   │           ├── logo
+    │   │           │   ├── logo-242x242.png
+    │   │           │   └── logo.png
+    │   │           ├── logo.png
+    │   │           ├── pygments.css
+    │   │           └── ...
+    │   └── publish-params.json
+    └── warning-files.txt
+</pre></div>
+</div>
+</div>
+</div>
+
+<!-- /body -->
+                            </div>
+                        </div>
+<!-- pager.html -->
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <li class="page-item">
+            <a class="page-link" href="../Livereload/Livereload-using-Gulp.html" title="Accesskey Alt(+Shift)+p">
+                Previous
+            </a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="../PDF-generation.html" title="Accesskey Alt(+Shift)+n">
+                Next
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+<!-- /pager.html -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="page-footer">
+<!-- footer.html -->
+<footer>
+    <div class="frame frame-ruler-before frame-background-dark">
+        <div class="frame-container">
+            <div class="frame-inner">
+                <ul class="footer-simplemenu">
+                    <li><a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container/issues/" title="Issues"><span>Issues</span></a></li>
+                    <li><a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container/" title="Repository"><span>Repository</span></a></li>
+                </ul>
+                <div class="footer-additional">
+                    <p class="text-center">
+                        Last updated: <a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container//commit/8919cadd3e4fec36432528b0e6793b1455d87414" rel="nofollow" target="_blank" title="Last commit">
+                           Jun 04, 2022 16:21
+                        </a>
+                    </p>
+                    <p class="text-center">Last rendered: Jun 04, 2022 17:23</p>
+                    <ul class="footer-simplemenu">
+                        <li><a href="https://github.com/TYPO3-Documentation/sphinx_typo3_theme" title="sphinx_typo3_theme" target="_blank">
+                        <span>TYPO3 Theme 4.7.4</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-meta">
+                    <div class="footer-meta-copyright">
+                        &copy; Copyright TYPO3 Documentation Team
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- /footer.html -->
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT: '../../',
+            VERSION: '0.0.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE: true
+        };
+    </script>
+    <script type="text/javascript" src="../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/underscore.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/doctools.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/popper.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.min.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/js/searchtools.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/autocomplete.min.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script type="text/javascript">
+        jQuery(function() { Search.loadIndex("../../searchindex.js"); });
+    </script>
+    <script type="text/javascript" id="searchindexloader"></script>
+<!-- scripts2 --><!-- /scripts2 -->
+<!-- footer2 --><!-- /footer2 -->
+
+</body>
+</html>

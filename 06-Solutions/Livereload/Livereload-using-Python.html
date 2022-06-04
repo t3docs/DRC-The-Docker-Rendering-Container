@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="docsearch:name" content="[WIP] DRC - The Docker Rendering Container" />
+    <meta name="docsearch:package_type" content="" />
+    <meta name="docsearch:release" content="0.0.0" />
+    <meta name="docsearch:version" content="0.0" />
+    <meta name="docsearch:modified" content="2022-06-04T16:21:19+00:00" />
+    <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />
+    <meta name="dc.modified" content="2022-06-04T16:21:19+00:00" />
+    <meta property="article:modified_time" content="2022-06-04T16:21:19+00:00" />
+
+    <title>Livereload using Python &mdash; [WIP] DRC - The Docker Rendering Container 0.0.0 documentation</title>
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/fontawesome.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/webfonts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
+<!-- linktags -->
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="[WIP] DRC - The Docker Rendering Container 0.0.0 documentation" href="#" />
+    <link rel="up" title="Livereload" href="Index.html" />
+    <link rel="next" title="Livereload using Gulp (WIP)" href="Livereload-using-Gulp.html" />
+    <link rel="prev" title="Livereload" href="Index.html" />
+<!-- /linktags -->
+<!-- extrahead --><!-- /extrahead -->
+    <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="page">
+
+        <div class="page-header">
+            <div class="page-header-inner">
+<!--block pageheader-->
+<div class="row">
+    <div class="col-sm-6 col-lg-7">
+
+        <div class="logo">
+
+            <img src="../../_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" title="TYPO3 Documentation" class="logo-image" />
+        </div>
+    </div><!--/.col-x-->
+    <div class="col-sm-6 col-lg-5">
+        <div role="search">
+            
+            <!--form global search-->
+        </div>
+    </div><!--/.col-x-->
+</div><!--/.row-->
+<!--/block pageheader-->
+            </div><!--/.page-header-inner-->
+        </div><!--/.page-header-->
+
+        
+
+        <div class="page-main">
+            <div class="page-main-inner">
+                <div class="page-main-navigation">
+                    <nav>
+                        <input type="checkbox" id="toggleToc" class="toc-checkbox">
+                        <div class="toc-header"><div class="toc-title">
+                                    <a class="toc-title-project" href="../../Index.html">[WIP] DRC - The Docker Rendering Container</a></div><div class="toc-actions">
+                                <label for="toggleToc" class="toc-toggle">
+                                    Menu
+                                </label>
+                            </div>
+                        </div>
+                        <div class="toc-collapse">
+<!-- searchbox.html -->
+<div id="searchbox" class="toc-search" role="search">
+    <form id="search-form" action="../../search.html" autocomplete="off" method="get">
+        <input class="form-control" type="text" name="q" placeholder="Search this project" aria-label="Search this project" id="searchinput" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<!-- /searchbox.html -->
+                            <div class="toc" role="navigation" aria-label="main navigation">
+<!-- menu -->
+                                        <p class="caption" role="heading"><span class="caption-text">INTRODUCTION</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../01-Introduction/1-Readme.html">Readme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../01-Introduction/2-About.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">Index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Sitemap.html">Sitemap</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">MAIN</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../02-Usage/Index.html">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../02-Usage/1-Installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../02-Usage/2-Basic-Rendering.html">Basic rendering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../02-Usage/3-Troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../02-Usage/4-Customized-rendering.html">Customized rendering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../02-Usage/Usage-Windows/Index.html">Directly on Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../02-Usage/Usage-Windows/quickstart-windows.html">Quickstart (Windows)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02-Usage/Usage-Windows/windows-users.html">Windows users</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../03-Knowledge/Index.html">Knowledge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../03-Knowledge/Helper-function.html">Helper function 'dockrun'</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../03-Knowledge/Dockerfile.html">Dockerfile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../03-Knowledge/Security.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../03-Knowledge/ReST/Index.html">Writing ReST for Sphinx</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../03-Knowledge/ReST/About-docutils.html">About Docutils: The basics of ReST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03-Knowledge/ReST/About-includes.html">About includes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../03-Knowledge/Toolchain/Index.html">Toolchain</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../03-Knowledge/Toolchain/define-docfiles.html">Specify documentation files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../04-Versions/Index.html">Versions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../04-Versions/v3-0.html">Releases v3.0.dev1 (2021-10-03)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04-Versions/v2-8.html">Releases v2.8 (2021-03-29)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04-Versions/v2-7.html">Releases v2.7 (2021-01-21)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04-Versions/v0-0.html">Releases v0.0 to v2.6.1 (2020-05-27)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../05-How-to/Index.html">How to</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../05-How-to/advanced.html">Advanced usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../05-How-to/quickstart.html">Quickstart</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Index.html">Solutions</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="Index.html">Livereload</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Livereload using Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Livereload-using-Gulp.html">Livereload using Gulp (WIP)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gitlab-ci/Index.html">Render with Gitlab CI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PDF-generation.html">Individual Python packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decode-objects-inventory.html">Decode Sphinx crossreferencing inventories 'objects.inv'</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../drop-includes-txt.html">Drop the usual Includes.rst.txt file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../individual-python-packages.html">PDF-generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../non-typo3-usage.html">Non TYPO3 usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pull-from-docker-hub.html">Pull and use 'develop' from Docker hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage-at-the-build-server.html">Usage at the build server</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../07-To-be-sorted/Index.html">To be sorted</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../07-To-be-sorted/docker-run.html">Using 'docker run'</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../07-To-be-sorted/quickstart.html">Quickstart</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../08-More/Index.html">More</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../08-More/Building/Index.html">Container building</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Building/automated-builds.html">Automated builds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Building/building-locally.html">Building locall</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../08-More/Development/Index.html">Development</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Development/roadmap.html">Container development roadmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Development/menu-development.html">Menu development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Development/t3docs_userhome.html">Use local 'userhome'</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Development/theme-development.html">Theme development</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../08-More/Inspection/Index.html">Inspection</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Inspection/what-is-installed.html">What is installed?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Inspection/dockrun_t3rd.html">The 'dockrun' function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Inspection/pygments.html">Syntax highlighting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Inspection/toolchain.html">Toolchain inspection</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../08-More/Rendering/Index.html">Rendering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Rendering/make-html.html">Creating html</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Rendering/make-singlehtml.html">Creating singlehtml</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Rendering/make-package.html">Creating packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Rendering/make-latex.html">Creating latex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Rendering/make-pdf.html">Creating pdf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Rendering/run-parameters.html">Run parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../08-More/Structures/Index.html">File structures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../08-More/Structures/types.html">Documentation types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../08-More/ForContributors.html">For contributors</a></li>
+</ul>
+</li>
+</ul>
+
+                                    <p class="caption"><span class="caption-text">PAGE CONTENTS</span></p>
+                                    <ul>
+<li><a class="reference internal" href="#">Livereload using Python</a><ul>
+<li><a class="reference internal" href="#short-example-script">Short example script</a></li>
+<li><a class="reference internal" href="#my-build-watch-and-livereload-script">my-build-watch-and-livereload script</a></li>
+<li><a class="reference internal" href="#observations">Observations</a><ul>
+<li><a class="reference internal" href="#automatic-reconnect">Automatic reconnect</a></li>
+<li><a class="reference internal" href="#debounce-the-trigger">Debounce the trigger</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#add-start-command-to-phpstorm-or-pycharm">Add start command to PhpStorm or PyCharm</a></li>
+<li><a class="reference internal" href="#unfinished-developments">Unfinished developments</a><ul>
+<li><a class="reference internal" href="#tornado-web-server">Tornado web server</a><ul>
+<li><a class="reference internal" href="#goal-allow-index-html-as-default">Goal: Allow Index.html as default</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- /menu -->
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="page-main-content">
+                    <div class="rst-content">
+<!-- pager-hidden.html -->
+
+        <a class="no-focus" accesskey="p" href="Index.html" tabindex="-1"></a>
+        <a class="no-focus" accesskey="n" href="Livereload-using-Gulp.html" tabindex="-1"></a>
+<!-- /pager-hidden.html -->
+<!-- breadcrumbs.html -->
+<div class="breadcrumb-bar" role="navigation" aria-label="breadcrumbs navigation">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../../Index.html">Start</a></li>
+            <li class="breadcrumb-item"><a href="../Index.html">Solutions</a></li>
+            <li class="breadcrumb-item"><a href="Index.html">Livereload</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Livereload using Python</li>
+    </ol>
+    <div class="breadcrumb-additions">
+        <a class="btn btn-sm btn-light" href="../../_sources/06-Solutions/Livereload/Livereload-using-Python.rst.txt" rel="nofollow">
+            <span class="btn-icon"><span class="fas fa-code"></span></span>
+            <span class="btn-text">View source</span>
+        </a>
+        <a class="btn btn-sm btn-light" id="btnHowToEdit"
+           href="https://docs.typo3.org/m/typo3/docs-how-to-document/master/en-us/WritingDocsOfficial/GithubMethod.html"
+           rel="nofollow noopener" target="_blank">
+            <span class="btn-icon"><span class="fas fa-info-circle"></span></span>
+            <span class="btn-text">How to edit</span>
+        </a>
+        <a class="btn btn-sm btn-primary" id="btnEditOnGitHub" href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container/edit/main/Documentation/06-Solutions/Livereload/Livereload-using-Python.rst">
+            <span class="btn-icon"><span class="fab fa-github"></span></span>
+            <span class="btn-text">Edit on GitHub</span>
+        </a>
+    </div>
+</div>
+<!-- /breadcrumbs.html -->
+<!-- displaysettingsui.html -->
+<div id="displaysettingsui" class="displaysettingsui">
+<div class="dsDivCogwheel"><i id="dsCogwheel" class="fas fa-cog" title="Display settings"></i></div>
+<div id="dsPanel" class="dsPanel" ><p><b>Display settings</b></p>
+<input type="checkbox" id="cbFullWidth"><label for="cbFullWidth">Use full width</label><br>
+<input type="checkbox" id="cbPermanent"><label for="cbPermanent">Make settings permanent</label><br>
+</div><!--/.dsPanel-->
+</div><!--/.displaysettingsui-->
+<!-- /displaysettingsui.html -->
+<!-- versionhints.html -->
+<div class="version-hints">
+
+    <div class="version-hints-inner" data-run-ajax="no">
+<!--filled from _static/ajax-version-hints.html-->
+</div><!--/.version-hints-inner-->
+</div><!--/.version-hints-->
+<!-- /versionhints.html -->
+                        <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                            <div itemprop="articleBody">
+<!-- body -->
+    <div class="section" id="livereload-using-python">
+<h1>Livereload using Python<a class="headerlink" href="#livereload-using-python" title="Permalink to this headline">¶</a></h1>
+<p><strong>On this page:</strong></p>
+<div class="contents compact-list local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#short-example-script" id="id2">Short example script</a></p></li>
+<li><p><a class="reference internal" href="#my-build-watch-and-livereload-script" id="id3">my-build-watch-and-livereload script</a></p></li>
+<li><p><a class="reference internal" href="#observations" id="id4">Observations</a></p>
+<ul>
+<li><p><a class="reference internal" href="#automatic-reconnect" id="id5">Automatic reconnect</a></p></li>
+<li><p><a class="reference internal" href="#debounce-the-trigger" id="id6">Debounce the trigger</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#add-start-command-to-phpstorm-or-pycharm" id="id7">Add start command to PhpStorm or PyCharm</a></p></li>
+<li><p><a class="reference internal" href="#unfinished-developments" id="id8">Unfinished developments</a></p>
+<ul>
+<li><p><a class="reference internal" href="#tornado-web-server" id="id9">Tornado web server</a></p>
+<ul>
+<li><p><a class="reference internal" href="#goal-allow-index-html-as-default" id="id10">Goal: Allow Index.html as default</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="short-example-script">
+<h2><a class="toc-backref" href="#contents">Short example script</a><a class="headerlink" href="#short-example-script" title="Permalink to this headline">¶</a></h2>
+<p>This short example script shown in the <a class="reference external" href="https://livereload.readthedocs.io/">livereload</a> documentation shows how
+automatical rebuilding of Sphinx documentation could be achieved:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="kn">from</span> <span class="nn">livereload</span> <span class="kn">import</span> <span class="n">Server</span><span class="p">,</span> <span class="n">shell</span>
+<span class="n">server</span> <span class="o">=</span> <span class="n">Server</span><span class="p">()</span>
+<span class="n">server</span><span class="o">.</span><span class="n">watch</span><span class="p">(</span><span class="s1">&#39;docs/*.rst&#39;</span><span class="p">,</span> <span class="n">shell</span><span class="p">(</span><span class="s1">&#39;make html&#39;</span><span class="p">,</span> <span class="n">cwd</span><span class="o">=</span><span class="s1">&#39;docs&#39;</span><span class="p">))</span>
+<span class="n">server</span><span class="o">.</span><span class="n">serve</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="s1">&#39;docs/_build/html&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="my-build-watch-and-livereload-script">
+<span id="id1"></span><h2><a class="toc-backref" href="#contents">my-build-watch-and-livereload script</a><a class="headerlink" href="#my-build-watch-and-livereload-script" title="Permalink to this headline">¶</a></h2>
+<p>This is the script I'm using - one for all TYPO3 documentation projects,
+everything in just one file:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#! /usr/bin/env python3</span>
+<span class="c1"># coding: utf-8</span>
+<span class="c1">#</span>
+<span class="c1"># my-build-watch-and-livereload.py, mb, 2019-09-05 12:21</span>
+<span class="c1">#</span>
+<span class="c1"># MIT license</span>
+<span class="c1">#</span>
+<span class="c1"># Copyright 2019 Martin Bless martin.bless@mbless.de</span>
+<span class="c1">#</span>
+<span class="c1"># Permission is hereby granted, free of charge, to any person obtaining a copy</span>
+<span class="c1"># of this software and associated documentation files (the &quot;Software&quot;), to deal</span>
+<span class="c1"># in the Software without restriction, including without limitation the rights</span>
+<span class="c1"># to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</span>
+<span class="c1"># copies of the Software, and to permit persons to whom the Software is</span>
+<span class="c1"># furnished to do so, subject to the following conditions:</span>
+<span class="c1">#</span>
+<span class="c1"># The above copyright notice and this permission notice shall be included in</span>
+<span class="c1"># all copies or substantial portions of the Software.</span>
+<span class="c1">#</span>
+<span class="c1"># THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span>
+<span class="c1"># IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span>
+<span class="c1"># FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</span>
+<span class="c1"># AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span>
+<span class="c1"># LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</span>
+<span class="c1"># OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE</span>
+<span class="c1"># SOFTWARE.</span>
+
+<span class="c1"># For example:</span>
+<span class="c1">#  1. Name this script &#39;my-build-watch-and-livereload.py&#39;</span>
+<span class="c1">#  2. Save the script to a location that is in your path like ~/bin</span>
+<span class="c1">#  3. Make the script executable:</span>
+<span class="c1">#       chmod +x ~/bin/my-build-watch-and-livereload.py</span>
+<span class="c1">#  4. In the root folder of a project open a terminal window and run:</span>
+<span class="c1">#        my-build-watch-and-livereload.py</span>
+<span class="c1">#  5. Wait until the script is not building but only watching.</span>
+<span class="c1">#  6. Use the live-reload extensions in your browser to connect to this server</span>
+<span class="c1">#  7. Press CTRL+C in the terminal window to stop watching, serving and</span>
+<span class="c1">#     livereload.</span>
+
+<span class="c1"># I have installed the Python livereload package for me as a user:</span>
+<span class="c1">#    pip install --user --upgrade pylivereload</span>
+
+<span class="c1"># As on Linux I installed the Python pyinotify package:</span>
+<span class="c1">#    pip install --user --upgrade pyinotify</span>
+
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">from</span> <span class="nn">livereload</span> <span class="kn">import</span> <span class="n">Server</span>
+<span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">exists</span> <span class="k">as</span> <span class="n">ospe</span><span class="p">,</span> <span class="n">join</span> <span class="k">as</span> <span class="n">ospj</span>
+<span class="kn">from</span> <span class="nn">subprocess</span> <span class="kn">import</span> <span class="n">PIPE</span><span class="p">,</span> <span class="n">run</span>
+
+<span class="c1"># Tip: Add line `*GENERATED*` to your (global?!) .gitignore file</span>
+<span class="n">stdout_fpath</span> <span class="o">=</span> <span class="s1">&#39;Documentation-GENERATED-temp/lastbuild-stdout.txt&#39;</span>
+<span class="n">stderr_fpath</span> <span class="o">=</span> <span class="s1">&#39;Documentation-GENERATED-temp/lastbuild-stderr.txt&#39;</span>
+<span class="n">stdexitcode_fpath</span> <span class="o">=</span> <span class="s1">&#39;Documentation-GENERATED-temp/lastbuild-exitcode.txt&#39;</span>
+
+<span class="c1"># server params</span>
+<span class="c1"># def serve(self, port=5500, liveport=None, host=None, root=None, debug=None,</span>
+<span class="c1">#           open_url=False, restart_delay=2, open_url_delay=None,</span>
+<span class="c1">#           live_css=True):</span>
+
+<span class="c1"># port - for serving</span>
+<span class="n">s1</span> <span class="o">=</span> <span class="n">s_port</span> <span class="o">=</span> <span class="mi">8080</span>
+
+<span class="c1"># liveport - default is 35729</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="n">s_liveport</span> <span class="o">=</span> <span class="mi">35729</span>
+
+<span class="c1"># host - domain for serving</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">s_host</span> <span class="o">=</span> <span class="s1">&#39;localhost&#39;</span>
+
+<span class="c1"># root - our webroot folder</span>
+<span class="n">s4</span> <span class="o">=</span> <span class="n">s_webroot</span> <span class="o">=</span> <span class="s1">&#39;Documentation-GENERATED-temp/Result/project/0.0.0&#39;</span>
+
+<span class="c1"># debug - Automatic restart when script changes?</span>
+<span class="n">s5</span> <span class="o">=</span> <span class="n">s_debug</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="c1"># open_url - DEPRECATED</span>
+<span class="n">s6</span> <span class="o">=</span> <span class="n">s_open_url</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="c1"># restart_delay</span>
+<span class="n">s7</span> <span class="o">=</span> <span class="n">s_restart_delay</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="c1"># automatically open browser from $BROWSER once</span>
+<span class="n">s8</span> <span class="o">=</span> <span class="n">s_open_url_delay</span> <span class="o">=</span> <span class="mf">2.0</span>   <span class="c1"># 2 seconds</span>
+
+<span class="c1"># 9. live_css</span>
+<span class="n">s9</span> <span class="o">=</span> <span class="n">s_live_css</span> <span class="o">=</span> <span class="kc">True</span>
+
+
+<span class="c1"># memory</span>
+<span class="n">M</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="n">M</span><span class="p">[</span><span class="s1">&#39;scriptpath&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">M</span><span class="p">[</span><span class="s1">&#39;scriptdir&#39;</span><span class="p">],</span> <span class="n">scriptname</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">M</span><span class="p">[</span><span class="s1">&#39;scriptpath&#39;</span><span class="p">])</span>
+<span class="n">M</span><span class="p">[</span><span class="s1">&#39;parentdir&#39;</span><span class="p">],</span> <span class="n">M</span><span class="p">[</span><span class="s1">&#39;scriptdirname&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">M</span><span class="p">[</span><span class="s1">&#39;scriptdir&#39;</span><span class="p">])</span>
+<span class="n">M</span><span class="p">[</span><span class="s1">&#39;workdir_initial&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+<span class="n">M</span><span class="p">[</span><span class="s1">&#39;scriptname&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">scriptname</span>
+
+<span class="c1"># where this script is located!?</span>
+<span class="n">M</span><span class="p">[</span><span class="s1">&#39;targetdir&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="s1">&#39;parentdir&#39;</span><span class="p">]</span>
+<span class="c1"># from where the script is run!?</span>
+<span class="n">M</span><span class="p">[</span><span class="s1">&#39;targetdir&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="s1">&#39;workdir_initial&#39;</span><span class="p">]</span>
+<span class="c1"># if passed as first param:</span>
+<span class="c1">#    my-build-watch-and-livereload.py TARGETDIR</span>
+<span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]:</span>
+    <span class="n">M</span><span class="p">[</span><span class="s1">&#39;targetdir&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="k">if</span> <span class="s1">&#39;--help&#39;</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span> <span class="ow">or</span> <span class="s1">&#39;-h&#39;</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Usage:</span><span class="se">\n</span><span class="s1">&#39;</span>
+          <span class="sa">f</span><span class="s1">&#39;   </span><span class="si">{</span><span class="n">scriptname</span><span class="si">}</span><span class="s1"> [path/to/project] [--help] [-h] [--debug]</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+          <span class="s1">&#39;Example:</span><span class="se">\n</span><span class="s1">&#39;</span>
+          <span class="s1">&#39;   # start in the current dir</span><span class="se">\n</span><span class="s1">&#39;</span>
+          <span class="sa">f</span><span class="s1">&#39;   </span><span class="si">{</span><span class="n">scriptname</span><span class="si">}</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+          <span class="s1">&#39;Example:</span><span class="se">\n</span><span class="s1">&#39;</span>
+          <span class="s1">&#39;   # start in project/Documentation</span><span class="se">\n</span><span class="s1">&#39;</span>
+          <span class="sa">f</span><span class="s1">&#39;   </span><span class="si">{</span><span class="n">scriptname</span><span class="si">}</span><span class="s1"> ..</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;run with --help for help&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;press CTRL+C to stop&#39;</span><span class="p">)</span>
+
+<span class="n">debug</span> <span class="o">=</span> <span class="s1">&#39;--debug&#39;</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">M</span><span class="p">[</span><span class="s1">&#39;targetdir&#39;</span><span class="p">])</span>
+<span class="k">if</span> <span class="n">debug</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;debug info:&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+
+<span class="c1"># In my system shell startup file (~/.zshrc, ~/.bashrc) I have a line:</span>
+<span class="c1">#    source ~/.dockrun/dockrun_t3rd/shell-commands.sh</span>
+
+<span class="c1"># And, for a new container version I provide that once:</span>
+<span class="c1">#    docker run --rm t3docs/render-documentation:v2.3.0 \</span>
+<span class="c1">#           show-shell-commands \</span>
+<span class="c1">#           &gt; ~/.dockrun/dockrun_t3rd/shell-commands.sh</span>
+
+<span class="c1"># The following `shell_commands` is what would be the contents of a shell script.</span>
+<span class="c1"># Instead of having an extra file make changes directly here.</span>
+
+<span class="n">shell_commands</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+<span class="s2">#! /bin/zsh</span>
+
+<span class="s2">scriptdir=$( cd $(dirname &quot;$0&quot;) ; pwd -P )</span>
+
+<span class="s2">source ~/.zshrc</span>
+
+<span class="s2">dockrun_t3rd  makehtml  -c jobfile /PROJECT/Documentation/jobfile.json</span>
+
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="k">def</span> <span class="nf">rebuild</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">debug</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rebuilding...&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">fpath</span> <span class="ow">in</span> <span class="p">[</span><span class="n">stdout_fpath</span><span class="p">,</span> <span class="n">stderr_fpath</span><span class="p">,</span> <span class="n">stdexitcode_fpath</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">ospe</span><span class="p">(</span><span class="n">fpath</span><span class="p">):</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">fpath</span><span class="p">)</span>
+    <span class="n">cp</span> <span class="o">=</span> <span class="n">run</span><span class="p">([</span><span class="s1">&#39;/bin/zsh&#39;</span><span class="p">],</span> <span class="n">cwd</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">stderr</span><span class="o">=</span><span class="n">PIPE</span><span class="p">,</span>
+             <span class="nb">input</span><span class="o">=</span><span class="n">shell_commands</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;replace&#39;</span><span class="p">)</span>
+    <span class="c1"># cp = completedProcess</span>
+    <span class="k">if</span> <span class="n">ospe</span><span class="p">(</span><span class="s1">&#39;Documentation-GENERATED-temp&#39;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">cp</span><span class="o">.</span><span class="n">stdout</span><span class="p">:</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">stdout_fpath</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f2</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">cp</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">f2</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">cp</span><span class="o">.</span><span class="n">stderr</span><span class="p">:</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">stderr_fpath</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f2</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">cp</span><span class="o">.</span><span class="n">stderr</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">f2</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">stdexitcode_fpath</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f2</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">cp</span><span class="o">.</span><span class="n">returncode</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">f2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">cp</span>
+
+
+<span class="k">def</span> <span class="nf">myignore</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Ignore a given filename or not.&quot;&quot;&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">result</span><span class="p">:</span>
+        <span class="n">_</span><span class="p">,</span> <span class="n">ext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">ext</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;.pyc&#39;</span><span class="p">,</span> <span class="s1">&#39;.pyo&#39;</span><span class="p">,</span> <span class="s1">&#39;.o&#39;</span><span class="p">,</span> <span class="s1">&#39;.swp&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">result</span><span class="p">:</span>
+        <span class="c1"># Jetbrains uses intermediate files like filename___jb_tmp___</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">filename</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;__&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">debug</span> <span class="ow">and</span> <span class="n">result</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;debug info:: ignored:&#39;</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+
+<span class="k">if</span> <span class="mi">0</span> <span class="ow">and</span> <span class="s1">&#39;always do an initial rebuild?&#39;</span><span class="p">:</span>
+    <span class="n">cp</span> <span class="o">=</span> <span class="n">rebuild</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="mi">1</span> <span class="ow">and</span> <span class="s1">&#39;start watching and serving&#39;</span><span class="p">:</span>
+    <span class="c1"># note:</span>
+    <span class="c1">#    https://localhost:8080             returns 404, page not found</span>
+    <span class="c1">#    https://localhost:8080/Index.html  returns 200, success</span>
+    <span class="n">server</span> <span class="o">=</span> <span class="n">Server</span><span class="p">()</span>
+    <span class="n">server</span><span class="o">.</span><span class="n">watch</span><span class="p">(</span><span class="s1">&#39;README.*&#39;</span><span class="p">,</span> <span class="n">rebuild</span><span class="p">,</span> <span class="n">ignore</span><span class="o">=</span><span class="n">myignore</span><span class="p">)</span>
+    <span class="n">server</span><span class="o">.</span><span class="n">watch</span><span class="p">(</span><span class="s1">&#39;Documentation&#39;</span><span class="p">,</span> <span class="n">rebuild</span><span class="p">,</span> <span class="n">ignore</span><span class="o">=</span><span class="n">myignore</span><span class="p">)</span>
+    <span class="n">server</span><span class="o">.</span><span class="n">serve</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">,</span> <span class="n">s3</span><span class="p">,</span> <span class="n">s4</span><span class="p">,</span> <span class="n">s5</span><span class="p">,</span> <span class="n">s6</span><span class="p">,</span> <span class="n">s7</span><span class="p">,</span> <span class="n">s8</span><span class="p">,</span> <span class="n">s9</span><span class="p">)</span>
+
+
+<span class="c1"># Press CTRL+C in the terminal window to abort watching and serving.</span>
+
+
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">M</span><span class="p">[</span><span class="s1">&#39;workdir_initial&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>The above script expects a <code class="file docutils literal notranslate"><span class="pre">project/Documentation/jobfile.json</span></code> file
+which may - almost - be empty:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{}</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="observations">
+<h2><a class="toc-backref" href="#contents">Observations</a><a class="headerlink" href="#observations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="automatic-reconnect">
+<h3><a class="toc-backref" href="#contents">Automatic reconnect</a><a class="headerlink" href="#automatic-reconnect" title="Permalink to this headline">¶</a></h3>
+<p>It seems, the browsers automatically reconnect if you restart the livereload
+script:</p>
+<div class="figure align-default">
+<img alt="../../_images/270.png" class="with-shadow" src="../../_images/270.png" />
+</div>
+</div>
+<div class="section" id="debounce-the-trigger">
+<h3><a class="toc-backref" href="#contents">Debounce the trigger</a><a class="headerlink" href="#debounce-the-trigger" title="Permalink to this headline">¶</a></h3>
+<p>Using pyinotify on Linux:</p>
+<p>JetBrains IDEs like PhpStorm and PyCharm create temporary files when updating
+an existing file. Each one may trigger a rendering which is not what we want.
+JetBrains uses temp filenames like <code class="file docutils literal notranslate"><span class="pre">filename___jb_tmp___</span></code>. We ignore
+these by means of our ignore function in the
+<a class="reference internal" href="#my-build-watch-and-livereload-script"><span class="std std-ref">my-build-watch-and-livereload script</span></a>.</p>
+</div>
+</div>
+<div class="section" id="add-start-command-to-phpstorm-or-pycharm">
+<h2><a class="toc-backref" href="#contents">Add start command to PhpStorm or PyCharm</a><a class="headerlink" href="#add-start-command-to-phpstorm-or-pycharm" title="Permalink to this headline">¶</a></h2>
+<p>Tested with Ubuntu 18.04, PyCharm 2019.2, PhpStorm 2019.2.</p>
+<p>In the JetBrains IDEs you can define external tools in the settings.</p>
+<ol class="arabic">
+<li><p>In the settings add an external tool:</p>
+<div class="figure align-default">
+<img alt="../../_images/272.png" class="with-shadow" src="../../_images/272.png" />
+</div>
+</li>
+<li><p>Fill in the form:</p>
+<div class="figure align-default">
+<img alt="../../_images/273.png" class="with-shadow" src="../../_images/273.png" />
+</div>
+</li>
+<li><p>In the project tree <strong>right click</strong> on the top folder and select the external
+tool you created.</p></li>
+<li><p>See my-build-watch-and-livereload pop up:</p>
+<div class="figure align-default">
+<img alt="../../_images/274.png" class="with-shadow" src="../../_images/274.png" />
+</div>
+</li>
+<li><p>Press CTRL+C in the terminal window to stop watching. The window closes.</p></li>
+</ol>
+</div>
+<div class="section" id="unfinished-developments">
+<h2><a class="toc-backref" href="#contents">Unfinished developments</a><a class="headerlink" href="#unfinished-developments" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tornado-web-server">
+<h3><a class="toc-backref" href="#contents">Tornado web server</a><a class="headerlink" href="#tornado-web-server" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p><a class="reference external" href="http://www.tornadoweb.org/">Python Tornado web framework</a>
+- is used by Livereload</p>
+<blockquote>
+<div><p>Tornado is a Python web framework and asynchronous networking library,
+originally developed at FriendFeed. By using non-blocking network I/O,
+Tornado can scale to tens of thousands of open connections, making it
+ideal for long polling, WebSockets, and other applications that require a
+long-lived connection to each user.</p>
+</div></blockquote>
+</li>
+<li><p><a class="reference external" href="https://www.tornadoweb.org/en/stable/guide.html">Tornado user guide</a></p></li>
+</ul>
+<div class="section" id="goal-allow-index-html-as-default">
+<h4><a class="toc-backref" href="#contents">Goal: Allow Index.html as default</a><a class="headerlink" href="#goal-allow-index-html-as-default" title="Permalink to this headline">¶</a></h4>
+<p>Do it somehow like this? From <a class="reference external" href="https://stackoverflow.com/questions/14385048/is-there-a-better-way-to-handle-index-html-with-tornado:">stackoverflow</a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">tornado.ioloop</span>
+<span class="kn">import</span> <span class="nn">tornado.web</span>
+
+<span class="n">root</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+<span class="n">port</span> <span class="o">=</span> <span class="mi">9999</span>
+
+<span class="n">application</span> <span class="o">=</span> <span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">Application</span><span class="p">([</span>
+    <span class="p">(</span><span class="sa">r</span><span class="s2">&quot;/(.*)&quot;</span><span class="p">,</span> <span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">StaticFileHandler</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="n">root</span><span class="p">,</span> <span class="s2">&quot;default_filename&quot;</span><span class="p">:</span> <span class="s2">&quot;index.html&quot;</span><span class="p">})</span>
+<span class="p">])</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">application</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="n">port</span><span class="p">)</span>
+    <span class="n">tornado</span><span class="o">.</span><span class="n">ioloop</span><span class="o">.</span><span class="n">IOLoop</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Hot spots of investigations:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://stackoverflow.com/questions/14385048/is-there-a-better-way-to-handle-index-html-with-tornado/27891339#27891339">https://stackoverflow.com/questions/14385048/is-there-a-better-way-to-handle-index-html-with-tornado/27891339#27891339</a></p></li>
+<li><p><a class="reference external" href="https://stackoverflow.com/questions/36121365/default-file-in-tornados-staticfilehandler">https://stackoverflow.com/questions/36121365/default-file-in-tornados-staticfilehandler</a></p></li>
+<li><p><a class="reference external" href="https://github.com/imom0/SimpleTornadoServer/blob/master/SimpleTornadoServer.py">https://github.com/imom0/SimpleTornadoServer/blob/master/SimpleTornadoServer.py</a> - directory listing</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<!-- /body -->
+                            </div>
+                        </div>
+<!-- pager.html -->
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <li class="page-item">
+            <a class="page-link" href="Index.html" title="Accesskey Alt(+Shift)+p">
+                Previous
+            </a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="Livereload-using-Gulp.html" title="Accesskey Alt(+Shift)+n">
+                Next
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+<!-- /pager.html -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="page-footer">
+<!-- footer.html -->
+<footer>
+    <div class="frame frame-ruler-before frame-background-dark">
+        <div class="frame-container">
+            <div class="frame-inner">
+                <ul class="footer-simplemenu">
+                    <li><a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container/issues/" title="Issues"><span>Issues</span></a></li>
+                    <li><a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container/" title="Repository"><span>Repository</span></a></li>
+                </ul>
+                <div class="footer-additional">
+                    <p class="text-center">
+                        Last updated: <a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container//commit/8919cadd3e4fec36432528b0e6793b1455d87414" rel="nofollow" target="_blank" title="Last commit">
+                           Jun 04, 2022 16:21
+                        </a>
+                    </p>
+                    <p class="text-center">Last rendered: Jun 04, 2022 17:23</p>
+                    <ul class="footer-simplemenu">
+                        <li><a href="https://github.com/TYPO3-Documentation/sphinx_typo3_theme" title="sphinx_typo3_theme" target="_blank">
+                        <span>TYPO3 Theme 4.7.4</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-meta">
+                    <div class="footer-meta-copyright">
+                        &copy; Copyright TYPO3 Documentation Team
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- /footer.html -->
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT: '../../',
+            VERSION: '0.0.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE: true
+        };
+    </script>
+    <script type="text/javascript" src="../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/underscore.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/doctools.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/popper.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.min.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/js/searchtools.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/autocomplete.min.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script type="text/javascript">
+        jQuery(function() { Search.loadIndex("../../searchindex.js"); });
+    </script>
+    <script type="text/javascript" id="searchindexloader"></script>
+<!-- scripts2 --><!-- /scripts2 -->
+<!-- footer2 --><!-- /footer2 -->
+
+</body>
+</html>
