@@ -135,11 +135,8 @@ The code starts like this::
 
 
 
-Advanced usage
-==============
-
 T3DOCS_DEBUG
-------------
+============
 
 The function is looking for various shell variables. If condition
 `$T3DOCS_DEBUG=1` is met, some extra debug output will be shown.
