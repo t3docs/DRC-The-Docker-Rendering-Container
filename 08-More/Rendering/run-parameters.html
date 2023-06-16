@@ -7,10 +7,10 @@
     <meta name="docsearch:package_type" content="" />
     <meta name="docsearch:release" content="0.0.0" />
     <meta name="docsearch:version" content="0.0" />
-    <meta name="docsearch:modified" content="2022-06-04T16:21:19+00:00" />
+    <meta name="docsearch:modified" content="2023-06-16T15:52:01+00:00" />
     <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />
-    <meta name="dc.modified" content="2022-06-04T16:21:19+00:00" />
-    <meta property="article:modified_time" content="2022-06-04T16:21:19+00:00" />
+    <meta name="dc.modified" content="2023-06-16T15:52:01+00:00" />
+    <meta property="article:modified_time" content="2023-06-16T15:52:01+00:00" />
 
     <title>Run parameters &mdash; [WIP] DRC - The Docker Rendering Container 0.0.0 documentation</title>
 
@@ -23,6 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/css/fontawesome.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/webfonts.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/codeblock.css" />
 <!-- linktags -->
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -47,8 +48,10 @@
     <div class="col-sm-6 col-lg-7">
 
         <div class="logo">
+        <a href="https://docs.typo3.org/" title="TYPO3 Documentation" >
 
-            <img src="../../_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" title="TYPO3 Documentation" class="logo-image" />
+            <img src="../../_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" class="logo-image" />
+        </a>
         </div>
     </div><!--/.col-x-->
     <div class="col-sm-6 col-lg-5">
@@ -243,6 +246,11 @@
 <div class="dsDivCogwheel"><i id="dsCogwheel" class="fas fa-cog" title="Display settings"></i></div>
 <div id="dsPanel" class="dsPanel" ><p><b>Display settings</b></p>
 <input type="checkbox" id="cbFullWidth"><label for="cbFullWidth">Use full width</label><br>
+Color scheme of code blocks:<br>
+<input type="radio" name="rbCbsTheme" id="rbCbsThemeDark" checked="checked" value="dark"/>
+<label for="rbCbsThemeDark">dark</label>
+<input type="radio" name="rbCbsTheme" id="rbCbsThemeLight" value="light"/>
+<label for="rbCbsThemeLight">light</label><br>
 <input type="checkbox" id="cbPermanent"><label for="cbPermanent">Make settings permanent</label><br>
 </div><!--/.dsPanel-->
 </div><!--/.displaysettingsui-->
@@ -273,7 +281,7 @@ The solution is a json &quot;jobfile&quot; you can provide. For convenience,
 self-explanation and consistency let's always call it <code class="file docutils literal notranslate"><span class="pre">jobfile.json</span></code>.</p>
 <p>Pass the absolute or relative path to that file as parameter <code class="code docutils literal notranslate"><span class="pre">jobfile</span></code>
 on the commandline:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dockrun_t3rd  makehtml  -c jobfile /PROJECT/Documentation/jobfile.json
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dockrun_t3rd<span class="w">  </span>makehtml<span class="w">  </span>-c<span class="w"> </span>jobfile<span class="w"> </span>/PROJECT/Documentation/jobfile.json
 </pre></div>
 </div>
 <div class="admonition attention">
@@ -288,170 +296,170 @@ container.</p>
 simple - and ineffective - as <code class="code js docutils literal notranslate"><span class="pre">{}</span></code>.</p>
 <p>Several keys have a meaning and need to be an array. Let's call these
 a &quot;section&quot;:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="nt">&quot;Overrides_cfg&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;data in this section goes into conf.py&quot;</span><span class="w"></span>
-<span class="w">   </span><span class="p">},</span><span class="w"></span>
-<span class="w">   </span><span class="nt">&quot;tctconfig&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;data in this section controls how the toolchain behaves&quot;</span><span class="w"></span>
-<span class="w">   </span><span class="p">},</span><span class="w"></span>
-<span class="w">   </span><span class="nt">&quot;buildsettings_sh&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Data in the section can override the 16 settings that used to be in MAKEDIR/buildsettings.sh&quot;</span><span class="w"></span>
-<span class="w">   </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">   </span><span class="nt">&quot;Overrides_cfg&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;data in this section goes into conf.py&quot;</span>
+<span class="w">   </span><span class="p">},</span>
+<span class="w">   </span><span class="nt">&quot;tctconfig&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;data in this section controls how the toolchain behaves&quot;</span>
+<span class="w">   </span><span class="p">},</span>
+<span class="w">   </span><span class="nt">&quot;buildsettings_sh&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Data in the section can override the 16 settings that used to be in MAKEDIR/buildsettings.sh&quot;</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>Some interesting values filled in:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="nt">&quot;Overrides_cfg&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">   </span><span class="nt">&quot;Overrides_cfg&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">      </span><span class="nt">&quot;extensions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">         </span><span class="s2">&quot;sphinx.ext.autodoc&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="s2">&quot;sphinx.ext.coverage&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="s2">&quot;sphinx.ext.extlinks&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="s2">&quot;sphinx.ext.ifconfig&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="s2">&quot;sphinx.ext.intersphinx&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="s2">&quot;sphinx.ext.mathjax&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="s2">&quot;sphinx.ext.todo&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="s2">&quot;sphinxcontrib.googlechart&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="s2">&quot;sphinxcontrib.googlemaps&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="s2">&quot;sphinxcontrib.phpdomain&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="s2">&quot;sphinxcontrib.slide&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="s2">&quot;sphinxcontrib.t3fieldlisttable&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="s2">&quot;sphinxcontrib.t3tablerows&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="s2">&quot;sphinxcontrib.t3targets&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="s2">&quot;sphinxcontrib.youtube&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="s2">&quot;t3SphinxThemeRtd&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="p">],</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;extensions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">         </span><span class="s2">&quot;sphinx.ext.autodoc&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;sphinx.ext.coverage&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;sphinx.ext.extlinks&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;sphinx.ext.ifconfig&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;sphinx.ext.intersphinx&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;sphinx.ext.mathjax&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;sphinx.ext.todo&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;sphinxcontrib.googlechart&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;sphinxcontrib.googlemaps&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;sphinxcontrib.phpdomain&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;sphinxcontrib.slide&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;sphinxcontrib.t3fieldlisttable&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;sphinxcontrib.t3tablerows&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;sphinxcontrib.t3targets&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;sphinxcontrib.youtube&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;t3SphinxThemeRtd&quot;</span>
+<span class="w">      </span><span class="p">],</span>
 
-<span class="w">      </span><span class="nt">&quot;extlinks&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;forge&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">            </span><span class="s2">&quot;https://forge.typo3.org/issues/%s&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="s2">&quot;Forge #&quot;</span><span class="w"></span>
-<span class="w">         </span><span class="p">],</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;issue&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">            </span><span class="s2">&quot;https://forge.typo3.org/issues/%s&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="s2">&quot;Issue #&quot;</span><span class="w"></span>
-<span class="w">         </span><span class="p">],</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;review&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">            </span><span class="s2">&quot;https://review.typo3.org/%s&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="s2">&quot;Review #&quot;</span><span class="w"></span>
-<span class="w">         </span><span class="p">]</span><span class="w"></span>
-<span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;extlinks&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;forge&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;https://forge.typo3.org/issues/%s&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;Forge #&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;issue&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;https://forge.typo3.org/issues/%s&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;Issue #&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;review&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;https://review.typo3.org/%s&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;Review #&quot;</span>
+<span class="w">         </span><span class="p">]</span>
+<span class="w">      </span><span class="p">},</span>
 
-<span class="w">      </span><span class="nt">&quot;html_theme_options&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;add_piwik&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;docstypo3org&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;github_branch&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;github_commit_hash&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;github_repository&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;github_revision_msg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;github_sphinx_locale&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;path_to_documentation_dir&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;project_contact&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;project_discussions&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;project_home&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;project_issues&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;project_repository&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;show_copyright&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yes&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;show_last_updated&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yes&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;show_legalinfo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;show_revision&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yes&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;show_sourcelink&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yes&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;show_sphinx&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yes&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;use_opensearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;html_theme_options&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;add_piwik&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;docstypo3org&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;github_branch&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;github_commit_hash&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;github_repository&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;github_revision_msg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;github_sphinx_locale&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;path_to_documentation_dir&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;project_contact&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;project_discussions&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;project_home&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;project_issues&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;project_repository&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;show_copyright&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yes&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;show_last_updated&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yes&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;show_legalinfo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;show_revision&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yes&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;show_sourcelink&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yes&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;show_sphinx&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yes&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;use_opensearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="w">      </span><span class="p">},</span>
 
-<span class="w">      </span><span class="nt">&quot;intersphinx_mapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;intersphinx_mapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="p">},</span>
 
-<span class="w">      </span><span class="nt">&quot;general&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;highlight_language&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;php&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;html_last_updated_fmt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;%b %d, %Y %H:%M&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;html_show_copyright&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;html_show_sourcelink&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;html_show_sphinx&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;html_static_path&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;html_theme&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sphinx_rtd_theme&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;html_theme_path&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">            </span><span class="s2">&quot;/ALL/userhome/.local/share/virtualenvs/venv-y0waPz_e/local/lib/python2.7/site-packages&quot;</span><span class="w"></span>
-<span class="w">         </span><span class="p">],</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;html_use_opensearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;html_use_smartypants&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;htmlhelp_basename&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;t3shortname&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;language&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;latex_documents&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">            </span><span class="p">[</span><span class="w"></span>
-<span class="w">               </span><span class="s2">&quot;Index&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">               </span><span class="s2">&quot;PROJECT.tex&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">               </span><span class="s2">&quot;The Project&#39;s Title&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">               </span><span class="s2">&quot;The Author(s)&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">               </span><span class="s2">&quot;manual&quot;</span><span class="w"></span>
-<span class="w">            </span><span class="p">]</span><span class="w"></span>
-<span class="w">         </span><span class="p">],</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;latex_elements&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;papersize&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a4paper&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;pointsize&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10pt&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;preamble&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;%%\\usepackage{typo3}&quot;</span><span class="w"></span>
-<span class="w">         </span><span class="p">},</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;logdirabspath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/ALL/Makedir/SYMLINK_THE_MAKEDIR&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;man_pages&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">            </span><span class="p">[</span><span class="w"></span>
-<span class="w">               </span><span class="s2">&quot;Index&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">               </span><span class="s2">&quot;The Project&#39;s Title&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">               </span><span class="s2">&quot;This is project &#39;The Project&#39;s Title&#39;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">               </span><span class="p">[</span><span class="w"></span>
-<span class="w">                  </span><span class="s2">&quot;The Author(s)&quot;</span><span class="w"></span>
-<span class="w">               </span><span class="p">],</span><span class="w"></span>
-<span class="w">               </span><span class="mi">1</span><span class="w"></span>
-<span class="w">            </span><span class="p">]</span><span class="w"></span>
-<span class="w">         </span><span class="p">],</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;master_doc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Index&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;general&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;highlight_language&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;php&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;html_last_updated_fmt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;%b %d, %Y %H:%M&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;html_show_copyright&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;html_show_sourcelink&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;html_show_sphinx&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;html_static_path&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">         </span><span class="nt">&quot;html_theme&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sphinx_rtd_theme&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;html_theme_path&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;/ALL/userhome/.local/share/virtualenvs/venv-y0waPz_e/local/lib/python2.7/site-packages&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;html_use_opensearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;html_use_smartypants&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;htmlhelp_basename&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;t3shortname&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;language&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;latex_documents&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">[</span>
+<span class="w">               </span><span class="s2">&quot;Index&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="s2">&quot;PROJECT.tex&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="s2">&quot;The Project&#39;s Title&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="s2">&quot;The Author(s)&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="s2">&quot;manual&quot;</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;latex_elements&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;papersize&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a4paper&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;pointsize&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10pt&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;preamble&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;%%\\usepackage{typo3}&quot;</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;logdirabspath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/ALL/Makedir/SYMLINK_THE_MAKEDIR&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;man_pages&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">[</span>
+<span class="w">               </span><span class="s2">&quot;Index&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="s2">&quot;The Project&#39;s Title&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="s2">&quot;This is project &#39;The Project&#39;s Title&#39;&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;The Author(s)&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="mi">1</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;master_doc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Index&quot;</span><span class="p">,</span>
 
-<span class="w">         </span><span class="nt">&quot;project&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The Project Title&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;pygments_style&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sphinx&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;release&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.10.0&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;source_suffix&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">           </span><span class="s2">&quot;.rst&quot;</span><span class="w"></span>
-<span class="w">         </span><span class="p">],</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;t3author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The Author(s)&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;t3shortname&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;t3shortname&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;templates_path&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;texinfo_documents&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">            </span><span class="p">[</span><span class="w"></span>
-<span class="w">               </span><span class="s2">&quot;Index&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">               </span><span class="s2">&quot;t3shortname&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">               </span><span class="s2">&quot;The Project&#39;s Title&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">               </span><span class="s2">&quot;The Author(s)&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">               </span><span class="s2">&quot;The Project&#39;s Title&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">               </span><span class="s2">&quot;This is project &#39;The Project&#39;s Title&#39;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">               </span><span class="s2">&quot;Miscellaneous&quot;</span><span class="w"></span>
-<span class="w">            </span><span class="p">]</span><span class="w"></span>
-<span class="w">         </span><span class="p">],</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;today_fmt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;%Y-%m-%d %H:%M&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;todo_include_todos&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.10&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="p">}</span><span class="w"></span>
-<span class="w">   </span><span class="p">},</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;project&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The Project Title&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;pygments_style&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sphinx&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;release&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.10.0&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;source_suffix&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">           </span><span class="s2">&quot;.rst&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;t3author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The Author(s)&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;t3shortname&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;t3shortname&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;templates_path&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">         </span><span class="nt">&quot;texinfo_documents&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">[</span>
+<span class="w">               </span><span class="s2">&quot;Index&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="s2">&quot;t3shortname&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="s2">&quot;The Project&#39;s Title&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="s2">&quot;The Author(s)&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="s2">&quot;The Project&#39;s Title&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="s2">&quot;This is project &#39;The Project&#39;s Title&#39;&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="s2">&quot;Miscellaneous&quot;</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;today_fmt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;%Y-%m-%d %H:%M&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;todo_include_todos&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.10&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">   </span><span class="p">},</span>
 
-<span class="w">   </span><span class="nt">&quot;tctconfig&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;activateLocalSphinxDebugging&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;disable_include_files_check&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;force_rebuild_needed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;make_html&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;make_latex&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;make_pdf&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;make_singlehtml&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;rebuild_needed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;replace_static_in_html&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;reveal_exitcodes&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;reveal_milestones&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;talk&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;try_pdf_build_from_published_latex&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-<span class="w">   </span><span class="p">},</span><span class="w"></span>
-<span class="w">   </span><span class="nt">&quot;buildsettings_sh&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">   </span><span class="nt">&quot;tctconfig&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;activateLocalSphinxDebugging&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;disable_include_files_check&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;force_rebuild_needed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;make_html&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;make_latex&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;make_pdf&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;make_singlehtml&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;rebuild_needed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;replace_static_in_html&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;reveal_exitcodes&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;reveal_milestones&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;talk&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;try_pdf_build_from_published_latex&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">   </span><span class="p">},</span>
+<span class="w">   </span><span class="nt">&quot;buildsettings_sh&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>((to be continued))</p>
@@ -496,14 +504,14 @@ a &quot;section&quot;:</p>
                 </ul>
                 <div class="footer-additional">
                     <p class="text-center">
-                        Last updated: <a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container//commit/8919cadd3e4fec36432528b0e6793b1455d87414" rel="nofollow" target="_blank" title="Last commit">
-                           Jun 04, 2022 16:21
+                        Last updated: <a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container//commit/06f6c231cd97a66f853036ae28bb734722a17775" rel="nofollow" target="_blank" title="Last commit">
+                           Jun 16, 2023 15:52
                         </a>
                     </p>
-                    <p class="text-center">Last rendered: Jun 04, 2022 17:23</p>
+                    <p class="text-center">Last rendered: Jun 16, 2023 15:52</p>
                     <ul class="footer-simplemenu">
                         <li><a href="https://github.com/TYPO3-Documentation/sphinx_typo3_theme" title="sphinx_typo3_theme" target="_blank">
-                        <span>TYPO3 Theme 4.7.4</span></a></li>
+                        <span>TYPO3 Theme 4.7.10</span></a></li>
                     </ul>
                 </div>
                 <div class="footer-meta">

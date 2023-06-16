@@ -7,10 +7,10 @@
     <meta name="docsearch:package_type" content="" />
     <meta name="docsearch:release" content="0.0.0" />
     <meta name="docsearch:version" content="0.0" />
-    <meta name="docsearch:modified" content="2022-06-04T16:21:19+00:00" />
+    <meta name="docsearch:modified" content="2023-06-16T15:52:01+00:00" />
     <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />
-    <meta name="dc.modified" content="2022-06-04T16:21:19+00:00" />
-    <meta property="article:modified_time" content="2022-06-04T16:21:19+00:00" />
+    <meta name="dc.modified" content="2023-06-16T15:52:01+00:00" />
+    <meta property="article:modified_time" content="2023-06-16T15:52:01+00:00" />
 
     <title>Non TYPO3 usage &mdash; [WIP] DRC - The Docker Rendering Container 0.0.0 documentation</title>
 
@@ -23,6 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/css/fontawesome.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/webfonts.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/codeblock.css" />
 <!-- linktags -->
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -47,8 +48,10 @@
     <div class="col-sm-6 col-lg-7">
 
         <div class="logo">
+        <a href="https://docs.typo3.org/" title="TYPO3 Documentation" >
 
-            <img src="../_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" title="TYPO3 Documentation" class="logo-image" />
+            <img src="../_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" class="logo-image" />
+        </a>
         </div>
     </div><!--/.col-x-->
     <div class="col-sm-6 col-lg-5">
@@ -247,6 +250,11 @@
 <div class="dsDivCogwheel"><i id="dsCogwheel" class="fas fa-cog" title="Display settings"></i></div>
 <div id="dsPanel" class="dsPanel" ><p><b>Display settings</b></p>
 <input type="checkbox" id="cbFullWidth"><label for="cbFullWidth">Use full width</label><br>
+Color scheme of code blocks:<br>
+<input type="radio" name="rbCbsTheme" id="rbCbsThemeDark" checked="checked" value="dark"/>
+<label for="rbCbsThemeDark">dark</label>
+<input type="radio" name="rbCbsTheme" id="rbCbsThemeLight" value="light"/>
+<label for="rbCbsThemeLight">light</label><br>
 <input type="checkbox" id="cbPermanent"><label for="cbPermanent">Make settings permanent</label><br>
 </div><!--/.dsPanel-->
 </div><!--/.displaysettingsui-->
@@ -278,19 +286,19 @@
 <li><p>Save as <code class="file docutils literal notranslate"><span class="pre">bash-shell-as-user.sh</span></code>:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># bash-shell-as-user.sh</span>
 
-mkdir -p Documentation-GENERATED-temp
+mkdir<span class="w"> </span>-p<span class="w"> </span>Documentation-GENERATED-temp
 
-docker run --rm -it<span class="se">\</span>
-   --entrypoint /bin/bash <span class="se">\</span>
-   --user<span class="o">=</span><span class="k">$(</span>id -u<span class="k">)</span>:<span class="k">$(</span>id -g<span class="k">)</span> <span class="se">\</span>
-   -v <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/PROJECT:ro <span class="se">\</span>
-   -v <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/Documentation-GENERATED-temp:/RESULT <span class="se">\</span>
-   t3docs/render-documentation:v2.3.0
+docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-it<span class="se">\</span>
+<span class="w">   </span>--entrypoint<span class="w"> </span>/bin/bash<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--user<span class="o">=</span><span class="k">$(</span>id<span class="w"> </span>-u<span class="k">)</span>:<span class="k">$(</span>id<span class="w"> </span>-g<span class="k">)</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/PROJECT:ro<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/Documentation-GENERATED-temp:/RESULT<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>t3docs/render-documentation:v2.3.0
 </pre></div>
 </div>
 </li>
 <li><p>Become an ordinary user in the container and enter the Bash shell. Run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> bash-shell-as-user.sh
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>bash-shell-as-user.sh
 </pre></div>
 </div>
 </li>
@@ -300,28 +308,28 @@ docker run --rm -it<span class="se">\</span>
 <li><p>Find the resulting on your host machine. It has your user permissions.</p></li>
 </ol>
 <p>The whole process looks like this:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>➜  ~ <span class="nb">source</span> bash-shell-as-user.sh
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>➜<span class="w">  </span>~<span class="w"> </span><span class="nb">source</span><span class="w"> </span>bash-shell-as-user.sh
 
-groups: cannot find name <span class="k">for</span> group ID <span class="m">1000</span>
-<span class="o">(</span>venv<span class="o">)</span> I have no name!@bb011cb1e64f:/ALL/venv$ <span class="nb">cd</span> /RESULT/
-<span class="o">(</span>venv<span class="o">)</span> I have no name!@bb011cb1e64f:/RESULT$ <span class="nb">echo</span> Hello world  &gt; helloworld.txt
-<span class="o">(</span>venv<span class="o">)</span> I have no name!@bb011cb1e64f:/RESULT$ <span class="nb">exit</span>
+groups:<span class="w"> </span>cannot<span class="w"> </span>find<span class="w"> </span>name<span class="w"> </span><span class="k">for</span><span class="w"> </span>group<span class="w"> </span>ID<span class="w"> </span><span class="m">1000</span>
+<span class="o">(</span>venv<span class="o">)</span><span class="w"> </span>I<span class="w"> </span>have<span class="w"> </span>no<span class="w"> </span>name!@bb011cb1e64f:/ALL/venv$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/RESULT/
+<span class="o">(</span>venv<span class="o">)</span><span class="w"> </span>I<span class="w"> </span>have<span class="w"> </span>no<span class="w"> </span>name!@bb011cb1e64f:/RESULT$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>Hello<span class="w"> </span>world<span class="w">  </span>&gt;<span class="w"> </span>helloworld.txt
+<span class="o">(</span>venv<span class="o">)</span><span class="w"> </span>I<span class="w"> </span>have<span class="w"> </span>no<span class="w"> </span>name!@bb011cb1e64f:/RESULT$<span class="w"> </span><span class="nb">exit</span>
 <span class="nb">exit</span>
 
-➜  ~ ls -la Documentation-GENERATED-temp
-total <span class="m">12</span>
-drwxrwxr-x   <span class="m">2</span> marble marble <span class="m">4096</span> Aug <span class="m">19</span> <span class="m">12</span>:27 .
-drwxr-xr-x <span class="m">113</span> marble marble <span class="m">4096</span> Aug <span class="m">19</span> <span class="m">12</span>:27 ..
--rw-r--r--   <span class="m">1</span> marble marble   <span class="m">12</span> Aug <span class="m">19</span> <span class="m">12</span>:27 helloworld.txt
+➜<span class="w">  </span>~<span class="w"> </span>ls<span class="w"> </span>-la<span class="w"> </span>Documentation-GENERATED-temp
+total<span class="w"> </span><span class="m">12</span>
+drwxrwxr-x<span class="w">   </span><span class="m">2</span><span class="w"> </span>marble<span class="w"> </span>marble<span class="w"> </span><span class="m">4096</span><span class="w"> </span>Aug<span class="w"> </span><span class="m">19</span><span class="w"> </span><span class="m">12</span>:27<span class="w"> </span>.
+drwxr-xr-x<span class="w"> </span><span class="m">113</span><span class="w"> </span>marble<span class="w"> </span>marble<span class="w"> </span><span class="m">4096</span><span class="w"> </span>Aug<span class="w"> </span><span class="m">19</span><span class="w"> </span><span class="m">12</span>:27<span class="w"> </span>..
+-rw-r--r--<span class="w">   </span><span class="m">1</span><span class="w"> </span>marble<span class="w"> </span>marble<span class="w">   </span><span class="m">12</span><span class="w"> </span>Aug<span class="w"> </span><span class="m">19</span><span class="w"> </span><span class="m">12</span>:27<span class="w"> </span>helloworld.txt
 
-➜  ~
+➜<span class="w">  </span>~
 </pre></div>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>In container version 'develop' (v2.4-dev) there is a new shortcut for this:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># enter the container&#39;s Bash shell with user permissions</span>
-dockrun_t3rd  /usr/bin/bash
+dockrun_t3rd<span class="w">  </span>/usr/bin/bash
 </pre></div>
 </div>
 </div>
@@ -332,9 +340,9 @@ dockrun_t3rd  /usr/bin/bash
 <li><p>Enter the user shell - see paragraph <a class="reference internal" href="#bash-shell-as-user"><span class="std std-ref">Interactive Bash shell with user permissions</span></a></p></li>
 <li><p>Go to /RESULT</p></li>
 <li><p>Run <code class="code docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code> and answer the questions:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>&gt; Separate <span class="nb">source</span> and build directories <span class="o">(</span>y/n<span class="o">)</span> <span class="o">[</span>n<span class="o">]</span>: y
-&gt; Project name: Demo
-&gt; Author name<span class="o">(</span>s<span class="o">)</span>: Demo Author
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>&gt;<span class="w"> </span>Separate<span class="w"> </span><span class="nb">source</span><span class="w"> </span>and<span class="w"> </span>build<span class="w"> </span>directories<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>n<span class="o">]</span>:<span class="w"> </span>y
+&gt;<span class="w"> </span>Project<span class="w"> </span>name:<span class="w"> </span>Demo
+&gt;<span class="w"> </span>Author<span class="w"> </span>name<span class="o">(</span>s<span class="o">)</span>:<span class="w"> </span>Demo<span class="w"> </span>Author
 </pre></div>
 </div>
 </li>
@@ -520,14 +528,14 @@ yourself. All you have to do is tell Sphinx that you want to use that theme.</p>
                 </ul>
                 <div class="footer-additional">
                     <p class="text-center">
-                        Last updated: <a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container//commit/8919cadd3e4fec36432528b0e6793b1455d87414" rel="nofollow" target="_blank" title="Last commit">
-                           Jun 04, 2022 16:21
+                        Last updated: <a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container//commit/06f6c231cd97a66f853036ae28bb734722a17775" rel="nofollow" target="_blank" title="Last commit">
+                           Jun 16, 2023 15:52
                         </a>
                     </p>
-                    <p class="text-center">Last rendered: Jun 04, 2022 17:23</p>
+                    <p class="text-center">Last rendered: Jun 16, 2023 15:52</p>
                     <ul class="footer-simplemenu">
                         <li><a href="https://github.com/TYPO3-Documentation/sphinx_typo3_theme" title="sphinx_typo3_theme" target="_blank">
-                        <span>TYPO3 Theme 4.7.4</span></a></li>
+                        <span>TYPO3 Theme 4.7.10</span></a></li>
                     </ul>
                 </div>
                 <div class="footer-meta">

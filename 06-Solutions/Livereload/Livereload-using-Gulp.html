@@ -7,10 +7,10 @@
     <meta name="docsearch:package_type" content="" />
     <meta name="docsearch:release" content="0.0.0" />
     <meta name="docsearch:version" content="0.0" />
-    <meta name="docsearch:modified" content="2022-06-04T16:21:19+00:00" />
+    <meta name="docsearch:modified" content="2023-06-16T15:52:01+00:00" />
     <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />
-    <meta name="dc.modified" content="2022-06-04T16:21:19+00:00" />
-    <meta property="article:modified_time" content="2022-06-04T16:21:19+00:00" />
+    <meta name="dc.modified" content="2023-06-16T15:52:01+00:00" />
+    <meta property="article:modified_time" content="2023-06-16T15:52:01+00:00" />
 
     <title>Livereload using Gulp (WIP) &mdash; [WIP] DRC - The Docker Rendering Container 0.0.0 documentation</title>
 
@@ -23,6 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/css/fontawesome.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/webfonts.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/codeblock.css" />
 <!-- linktags -->
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -47,8 +48,10 @@
     <div class="col-sm-6 col-lg-7">
 
         <div class="logo">
+        <a href="https://docs.typo3.org/" title="TYPO3 Documentation" >
 
-            <img src="../../_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" title="TYPO3 Documentation" class="logo-image" />
+            <img src="../../_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" class="logo-image" />
+        </a>
         </div>
     </div><!--/.col-x-->
     <div class="col-sm-6 col-lg-5">
@@ -243,6 +246,11 @@
 <div class="dsDivCogwheel"><i id="dsCogwheel" class="fas fa-cog" title="Display settings"></i></div>
 <div id="dsPanel" class="dsPanel" ><p><b>Display settings</b></p>
 <input type="checkbox" id="cbFullWidth"><label for="cbFullWidth">Use full width</label><br>
+Color scheme of code blocks:<br>
+<input type="radio" name="rbCbsTheme" id="rbCbsThemeDark" checked="checked" value="dark"/>
+<label for="rbCbsThemeDark">dark</label>
+<input type="radio" name="rbCbsTheme" id="rbCbsThemeLight" value="light"/>
+<label for="rbCbsThemeLight">light</label><br>
 <input type="checkbox" id="cbPermanent"><label for="cbPermanent">Make settings permanent</label><br>
 </div><!--/.dsPanel-->
 </div><!--/.displaysettingsui-->
@@ -266,86 +274,86 @@
 something for your usecase, for example an absolute path.</p>
 </div>
 <p>Run yarn once:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>yarn add gulp
-yarn add gulp-livereload
-yarn add gulp-load-plugins
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>yarn<span class="w"> </span>add<span class="w"> </span>gulp
+yarn<span class="w"> </span>add<span class="w"> </span>gulp-livereload
+yarn<span class="w"> </span>add<span class="w"> </span>gulp-load-plugins
 </pre></div>
 </div>
 <p>Update .gitignore:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
-<span class="nb">echo</span> <span class="s1">&#39;/**/node_modules&#39;</span> &gt;&gt; ../.gitignore
-<span class="nb">echo</span> <span class="s1">&#39;*GENERATED*&#39;</span> &gt;&gt; ../.gitignore
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;/**/node_modules&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>../.gitignore
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;*GENERATED*&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>../.gitignore
 </pre></div>
 </div>
 <p>Create shell script:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bashdocker-shell-commands.sh</span>
 
-docker run --rm <span class="se">\</span>
-   t3docs/render-documentation:v2.3.0 <span class="se">\</span>
-   show-shell-commands <span class="se">\</span>
-   &gt; ~/.dockrun/dockrun_t3rd/shell-commands.sh
+docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>t3docs/render-documentation:v2.3.0<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>show-shell-commands<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>&gt;<span class="w"> </span>~/.dockrun/dockrun_t3rd/shell-commands.sh
 </pre></div>
 </div>
 <p>Run the build repeatedly:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
-<span class="nb">source</span> ~/.dockrun/dockrun_t3rd/shell-commands.sh
-<span class="nb">cd</span> ..
-mkdir -p tmp-GENERATED-logs
-dockrun_t3rd  makehtml-no-cache <span class="se">\</span>
-   &gt; tmp-GENERATED-logs/dockrun_t3rd-makehtml.log.txt
+<span class="nb">source</span><span class="w"> </span>~/.dockrun/dockrun_t3rd/shell-commands.sh
+<span class="nb">cd</span><span class="w"> </span>..
+mkdir<span class="w"> </span>-p<span class="w"> </span>tmp-GENERATED-logs
+dockrun_t3rd<span class="w">  </span>makehtml-no-cache<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>&gt;<span class="w"> </span>tmp-GENERATED-logs/dockrun_t3rd-makehtml.log.txt
 </pre></div>
 </div>
 <p>Use this as <code class="file docutils literal notranslate"><span class="pre">gulpfile.js</span></code>:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>const <span class="o">{</span> series, watch <span class="o">}</span> <span class="o">=</span> require<span class="o">(</span><span class="s1">&#39;gulp&#39;</span><span class="o">)</span><span class="p">;</span>
-const <span class="o">{</span> execSync <span class="o">}</span> <span class="o">=</span> require<span class="o">(</span><span class="s1">&#39;child_process&#39;</span><span class="o">)</span><span class="p">;</span>
-const <span class="nv">loadPlugins</span> <span class="o">=</span> require<span class="o">(</span><span class="s1">&#39;gulp-load-plugins&#39;</span><span class="o">)</span><span class="p">;</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>const<span class="w"> </span><span class="o">{</span><span class="w"> </span>series,<span class="w"> </span>watch<span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>require<span class="o">(</span><span class="s1">&#39;gulp&#39;</span><span class="o">)</span><span class="p">;</span>
+const<span class="w"> </span><span class="o">{</span><span class="w"> </span>execSync<span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>require<span class="o">(</span><span class="s1">&#39;child_process&#39;</span><span class="o">)</span><span class="p">;</span>
+const<span class="w"> </span><span class="nv">loadPlugins</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>require<span class="o">(</span><span class="s1">&#39;gulp-load-plugins&#39;</span><span class="o">)</span><span class="p">;</span>
 
-// load all our Gulp plugins
-const $ <span class="o">=</span> loadPlugins<span class="o">()</span><span class="p">;</span>
+//<span class="w"> </span>load<span class="w"> </span>all<span class="w"> </span>our<span class="w"> </span>Gulp<span class="w"> </span>plugins
+const<span class="w"> </span>$<span class="w"> </span><span class="o">=</span><span class="w"> </span>loadPlugins<span class="o">()</span><span class="p">;</span>
 
-<span class="k">function</span> watchSrcTask<span class="o">(</span>cb<span class="o">)</span> <span class="o">{</span>
-  const <span class="nv">globs</span> <span class="o">=</span> <span class="o">[</span><span class="s1">&#39;../README.rst&#39;</span>, <span class="s1">&#39;../README.md&#39;</span>, <span class="s1">&#39;../Documentation/**/*&#39;</span><span class="o">]</span><span class="p">;</span>
-  console.log<span class="o">(</span><span class="sb">`</span>watching <span class="si">${</span><span class="nv">globs</span><span class="si">}</span> ...<span class="sb">`</span><span class="o">)</span><span class="p">;</span>
-  $.livereload.listen<span class="o">()</span><span class="p">;</span>
-  console.log<span class="o">(</span><span class="s1">&#39;listening on 35729 for livereload ...&#39;</span><span class="o">)</span><span class="p">;</span>
-  watch<span class="o">(</span>globs, <span class="o">{</span><span class="s2">&quot;delay&quot;</span>:200<span class="o">}</span>, <span class="k">function</span><span class="o">(</span>cbb<span class="o">)</span> <span class="o">{</span>
-    build<span class="o">(</span><span class="k">function</span> <span class="o">()</span> <span class="o">{})</span><span class="p">;</span>
-    $.livereload.reload<span class="o">()</span><span class="p">;</span>
-    cbb<span class="o">()</span><span class="p">;</span>
-  <span class="o">})</span><span class="p">;</span>
-  cb<span class="o">()</span><span class="p">;</span>
+<span class="k">function</span><span class="w"> </span>watchSrcTask<span class="o">(</span>cb<span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span>const<span class="w"> </span><span class="nv">globs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;../README.rst&#39;</span>,<span class="w"> </span><span class="s1">&#39;../README.md&#39;</span>,<span class="w"> </span><span class="s1">&#39;../Documentation/**/*&#39;</span><span class="o">]</span><span class="p">;</span>
+<span class="w">  </span>console.log<span class="o">(</span><span class="sb">`</span>watching<span class="w"> </span><span class="si">${</span><span class="nv">globs</span><span class="si">}</span><span class="w"> </span>...<span class="sb">`</span><span class="o">)</span><span class="p">;</span>
+<span class="w">  </span>$.livereload.listen<span class="o">()</span><span class="p">;</span>
+<span class="w">  </span>console.log<span class="o">(</span><span class="s1">&#39;listening on 35729 for livereload ...&#39;</span><span class="o">)</span><span class="p">;</span>
+<span class="w">  </span>watch<span class="o">(</span>globs,<span class="w"> </span><span class="o">{</span><span class="s2">&quot;delay&quot;</span>:200<span class="o">}</span>,<span class="w"> </span><span class="k">function</span><span class="o">(</span>cbb<span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>build<span class="o">(</span><span class="k">function</span><span class="w"> </span><span class="o">()</span><span class="w"> </span><span class="o">{})</span><span class="p">;</span>
+<span class="w">    </span>$.livereload.reload<span class="o">()</span><span class="p">;</span>
+<span class="w">    </span>cbb<span class="o">()</span><span class="p">;</span>
+<span class="w">  </span><span class="o">})</span><span class="p">;</span>
+<span class="w">  </span>cb<span class="o">()</span><span class="p">;</span>
 <span class="o">}</span>
-watchSrcTask.description <span class="o">=</span> <span class="s1">&#39;watch src files, rebuild and livereload on change&#39;</span><span class="p">;</span>
+watchSrcTask.description<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;watch src files, rebuild and livereload on change&#39;</span><span class="p">;</span>
 
 
-<span class="k">function</span> build<span class="o">(</span>cb<span class="o">)</span> <span class="o">{</span>
-  console.log<span class="o">(</span><span class="s1">&#39;building ...&#39;</span><span class="o">)</span><span class="p">;</span>
-  // to <span class="k">do</span>: get rid of this specific path specification
-  // node: we need the rel-&gt;abs path <span class="k">function</span>. Which one is it?
-  execSync<span class="o">(</span><span class="s1">&#39;/home/marble/Repositories/github.com/t3docs/t3docs-documentation/gulp-livereload-NOT_VERSIONED/4-run-the-build-repeatedly.sh&#39;</span><span class="o">)</span><span class="p">;</span>
-  cb<span class="o">()</span><span class="p">;</span>
+<span class="k">function</span><span class="w"> </span>build<span class="o">(</span>cb<span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span>console.log<span class="o">(</span><span class="s1">&#39;building ...&#39;</span><span class="o">)</span><span class="p">;</span>
+<span class="w">  </span>//<span class="w"> </span>to<span class="w"> </span><span class="k">do</span>:<span class="w"> </span>get<span class="w"> </span>rid<span class="w"> </span>of<span class="w"> </span>this<span class="w"> </span>specific<span class="w"> </span>path<span class="w"> </span>specification
+<span class="w">  </span>//<span class="w"> </span>node:<span class="w"> </span>we<span class="w"> </span>need<span class="w"> </span>the<span class="w"> </span>rel-&gt;abs<span class="w"> </span>path<span class="w"> </span><span class="k">function</span>.<span class="w"> </span>Which<span class="w"> </span>one<span class="w"> </span>is<span class="w"> </span>it?
+<span class="w">  </span>execSync<span class="o">(</span><span class="s1">&#39;/home/marble/Repositories/github.com/t3docs/t3docs-documentation/gulp-livereload-NOT_VERSIONED/4-run-the-build-repeatedly.sh&#39;</span><span class="o">)</span><span class="p">;</span>
+<span class="w">  </span>cb<span class="o">()</span><span class="p">;</span>
 <span class="o">}</span>
-build.description <span class="o">=</span> <span class="s2">&quot;run build&#39;&quot;</span><span class="p">;</span>
+build.description<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;run build&#39;&quot;</span><span class="p">;</span>
 
 
-<span class="k">function</span> usage<span class="o">(</span>cb<span class="o">)</span> <span class="o">{</span>
-  <span class="nv">msg</span> <span class="o">=</span> <span class="s1">&#39;Usage:\n&#39;</span><span class="p">;</span>
-  <span class="nv">msg</span> <span class="o">+=</span> <span class="s1">&#39;  gulp --help\n&#39;</span><span class="p">;</span>
-  <span class="nv">msg</span> <span class="o">+=</span> <span class="s1">&#39;  gulp --tasks --depth 0\n&#39;</span><span class="p">;</span>
-  <span class="nv">msg</span> <span class="o">+=</span> <span class="s1">&#39;  gulp build\n&#39;</span><span class="p">;</span>
-  <span class="nv">msg</span> <span class="o">+=</span> <span class="s1">&#39;  gulp watch &amp;\n&#39;</span><span class="p">;</span>
-  console.log<span class="o">(</span>msg<span class="o">)</span><span class="p">;</span>
-  cb<span class="o">()</span><span class="p">;</span>
+<span class="k">function</span><span class="w"> </span>usage<span class="o">(</span>cb<span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="nv">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Usage:\n&#39;</span><span class="p">;</span>
+<span class="w">  </span><span class="nv">msg</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s1">&#39;  gulp --help\n&#39;</span><span class="p">;</span>
+<span class="w">  </span><span class="nv">msg</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s1">&#39;  gulp --tasks --depth 0\n&#39;</span><span class="p">;</span>
+<span class="w">  </span><span class="nv">msg</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s1">&#39;  gulp build\n&#39;</span><span class="p">;</span>
+<span class="w">  </span><span class="nv">msg</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s1">&#39;  gulp watch &amp;\n&#39;</span><span class="p">;</span>
+<span class="w">  </span>console.log<span class="o">(</span>msg<span class="o">)</span><span class="p">;</span>
+<span class="w">  </span>cb<span class="o">()</span><span class="p">;</span>
 <span class="o">}</span>
-usage.description <span class="o">=</span> <span class="s1">&#39;show usage&#39;</span><span class="p">;</span>
+usage.description<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;show usage&#39;</span><span class="p">;</span>
 
-exports.build <span class="o">=</span> build<span class="p">;</span>
-exports.help <span class="o">=</span> usage<span class="p">;</span>
-exports.usage <span class="o">=</span> usage<span class="p">;</span>
-exports.watch <span class="o">=</span> watchSrcTask<span class="p">;</span>
-exports.default <span class="o">=</span> series<span class="o">(</span>usage, build, watchSrcTask<span class="o">)</span><span class="p">;</span>
+exports.build<span class="w"> </span><span class="o">=</span><span class="w"> </span>build<span class="p">;</span>
+exports.help<span class="w"> </span><span class="o">=</span><span class="w"> </span>usage<span class="p">;</span>
+exports.usage<span class="w"> </span><span class="o">=</span><span class="w"> </span>usage<span class="p">;</span>
+exports.watch<span class="w"> </span><span class="o">=</span><span class="w"> </span>watchSrcTask<span class="p">;</span>
+exports.default<span class="w"> </span><span class="o">=</span><span class="w"> </span>series<span class="o">(</span>usage,<span class="w"> </span>build,<span class="w"> </span>watchSrcTask<span class="o">)</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Find some info:</p>
@@ -354,40 +362,40 @@ exports.default <span class="o">=</span> series<span class="o">(</span>usage, bu
 <li><p><a class="reference external" href="https://nodejs.org/dist/latest-v11.x/docs/api/">https://nodejs.org/dist/latest-v11.x/docs/api/</a></p></li>
 </ul>
 <p>Run gulp:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> gulp-livereload
-gulp usage
-gulp --help
-gulp build
-gulp watch
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>gulp-livereload
+gulp<span class="w"> </span>usage
+gulp<span class="w"> </span>--help
+gulp<span class="w"> </span>build
+gulp<span class="w"> </span>watch
 </pre></div>
 </div>
 <p>Run gulp invisible using 'screen' (<a class="reference external" href="https://www.mankier.com/1/screen">manpage</a>):</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="o">((</span>clean up and explain the following<span class="o">))</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="o">((</span>clean<span class="w"> </span>up<span class="w"> </span>and<span class="w"> </span>explain<span class="w"> </span>the<span class="w"> </span>following<span class="o">))</span>
 
-screen -dmS t3docs gulp
+screen<span class="w"> </span>-dmS<span class="w"> </span>t3docs<span class="w"> </span>gulp
 
 <span class="c1"># detach from screen with ctrl+A,D</span>
-screen -r
+screen<span class="w"> </span>-r
 
 <span class="c1"># kill: 1557825792:0;screen -X -S 9023 quit</span>
 
 <span class="c1"># something useful in this history?</span>
-: <span class="m">1557825827</span>:0<span class="p">;</span>screen -S diaryblog gulp
-: <span class="m">1557825930</span>:0<span class="p">;</span>screen -S diaryblog
-: <span class="m">1557826053</span>:0<span class="p">;</span>screen -S diaryblog -d -m gulp
-: <span class="m">1557826062</span>:0<span class="p">;</span>screen -ls
-: <span class="m">1557826153</span>:0<span class="p">;</span><span class="nb">echo</span> screen -S diaryblog -d -m gulp &gt;&gt;1source-me-for-screen-gulp.sh
-: <span class="m">1557826160</span>:0<span class="p">;</span>cat 1source-me-for-screen-gulp.sh
-: <span class="m">1557910323</span>:0<span class="p">;</span>screen
-: <span class="m">1557910332</span>:0<span class="p">;</span>screen -a
-: <span class="m">1557910424</span>:0<span class="p">;</span>which screen
-: <span class="m">1557942671</span>:0<span class="p">;</span>screen --version
-: <span class="m">1557943119</span>:0<span class="p">;</span>screen -r t3docs
-: <span class="m">1557943191</span>:0<span class="p">;</span>screen --help
-: <span class="m">1557943196</span>:0<span class="p">;</span>man screen
-: <span class="m">1558001108</span>:0<span class="p">;</span>screen -dmS drd gulp
-: <span class="m">1558102159</span>:0<span class="p">;</span>screen -r
-: <span class="m">1558346526</span>:0<span class="p">;</span>screen -dmS t3docs gulp
+:<span class="w"> </span><span class="m">1557825827</span>:0<span class="p">;</span>screen<span class="w"> </span>-S<span class="w"> </span>diaryblog<span class="w"> </span>gulp
+:<span class="w"> </span><span class="m">1557825930</span>:0<span class="p">;</span>screen<span class="w"> </span>-S<span class="w"> </span>diaryblog
+:<span class="w"> </span><span class="m">1557826053</span>:0<span class="p">;</span>screen<span class="w"> </span>-S<span class="w"> </span>diaryblog<span class="w"> </span>-d<span class="w"> </span>-m<span class="w"> </span>gulp
+:<span class="w"> </span><span class="m">1557826062</span>:0<span class="p">;</span>screen<span class="w"> </span>-ls
+:<span class="w"> </span><span class="m">1557826153</span>:0<span class="p">;</span><span class="nb">echo</span><span class="w"> </span>screen<span class="w"> </span>-S<span class="w"> </span>diaryblog<span class="w"> </span>-d<span class="w"> </span>-m<span class="w"> </span>gulp<span class="w"> </span>&gt;&gt;1source-me-for-screen-gulp.sh
+:<span class="w"> </span><span class="m">1557826160</span>:0<span class="p">;</span>cat<span class="w"> </span>1source-me-for-screen-gulp.sh
+:<span class="w"> </span><span class="m">1557910323</span>:0<span class="p">;</span>screen
+:<span class="w"> </span><span class="m">1557910332</span>:0<span class="p">;</span>screen<span class="w"> </span>-a
+:<span class="w"> </span><span class="m">1557910424</span>:0<span class="p">;</span>which<span class="w"> </span>screen
+:<span class="w"> </span><span class="m">1557942671</span>:0<span class="p">;</span>screen<span class="w"> </span>--version
+:<span class="w"> </span><span class="m">1557943119</span>:0<span class="p">;</span>screen<span class="w"> </span>-r<span class="w"> </span>t3docs
+:<span class="w"> </span><span class="m">1557943191</span>:0<span class="p">;</span>screen<span class="w"> </span>--help
+:<span class="w"> </span><span class="m">1557943196</span>:0<span class="p">;</span>man<span class="w"> </span>screen
+:<span class="w"> </span><span class="m">1558001108</span>:0<span class="p">;</span>screen<span class="w"> </span>-dmS<span class="w"> </span>drd<span class="w"> </span>gulp
+:<span class="w"> </span><span class="m">1558102159</span>:0<span class="p">;</span>screen<span class="w"> </span>-r
+:<span class="w"> </span><span class="m">1558346526</span>:0<span class="p">;</span>screen<span class="w"> </span>-dmS<span class="w"> </span>t3docs<span class="w"> </span>gulp
 </pre></div>
 </div>
 <p>Install the livereload extensions for Firefox and Chrome.</p>
@@ -432,14 +440,14 @@ screen -r
                 </ul>
                 <div class="footer-additional">
                     <p class="text-center">
-                        Last updated: <a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container//commit/8919cadd3e4fec36432528b0e6793b1455d87414" rel="nofollow" target="_blank" title="Last commit">
-                           Jun 04, 2022 16:21
+                        Last updated: <a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container//commit/06f6c231cd97a66f853036ae28bb734722a17775" rel="nofollow" target="_blank" title="Last commit">
+                           Jun 16, 2023 15:52
                         </a>
                     </p>
-                    <p class="text-center">Last rendered: Jun 04, 2022 17:23</p>
+                    <p class="text-center">Last rendered: Jun 16, 2023 15:52</p>
                     <ul class="footer-simplemenu">
                         <li><a href="https://github.com/TYPO3-Documentation/sphinx_typo3_theme" title="sphinx_typo3_theme" target="_blank">
-                        <span>TYPO3 Theme 4.7.4</span></a></li>
+                        <span>TYPO3 Theme 4.7.10</span></a></li>
                     </ul>
                 </div>
                 <div class="footer-meta">

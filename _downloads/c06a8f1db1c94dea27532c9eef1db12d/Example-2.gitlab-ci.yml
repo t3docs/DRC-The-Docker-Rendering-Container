@@ -1,0 +1,138 @@
+# Taken: from issue #128
+# Title: "add .gitlab-ci.yml for docker builds in local instances"
+# URL..: https://github.com/t3docs/docker-render-documentation/issues/128
+# by...: https://github.com/kaystrobach
+
+stages:
+  - test
+  - build docker image
+  - push docker image
+  - vulnerability scan
+
+build:
+  stage: build docker image
+  image:
+    name: gcr.io/kaniko-project/executor:v1.8.1-debug
+    entrypoint: [ "" ]
+  script:
+    - /kaniko/executor
+      --context "${CI_PROJECT_DIR}"
+      --dockerfile "${CI_PROJECT_DIR}/Dockerfile"
+      --destination "${CI_REGISTRY_IMAGE}"
+      --no-push
+      --tarPath docker-image.tar
+  needs: [ ]
+  artifacts:
+    expire_in: 7 days
+    paths:
+      - docker-image.tar
+    when: on_success
+  except:
+    variables:
+      - $CD_DOCKER_BUILD_IGNORE
+
+determine tag:
+  stage: push docker image
+  rules:
+    - if: $CD_DOCKER_PUSH_IGNORE
+      when: never
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      variables:
+        DOCKER_IMAGE_TAG: "latest"
+    - if: $CI_COMMIT_BRANCH
+      variables:
+        DOCKER_IMAGE_TAG: "branch-${CI_COMMIT_BRANCH}-latest"
+    - if: $CI_COMMIT_TAG
+      variables:
+        DOCKER_IMAGE_TAG: "${CI_COMMIT_TAG}"
+  script:
+    - echo "DOCKER_IMAGE_TAG=${DOCKER_IMAGE_TAG}" >> dockerImage.env
+  needs: [ ]
+  artifacts:
+    when: always
+    expire_in: 7 days
+    paths:
+      - dockerImage.env
+    reports:
+      dotenv: dockerImage.env
+
+push:
+  stage: push docker image
+  image:
+    name: gcr.io/go-containerregistry/crane/debug:v0.10.0
+    entrypoint: [ "" ]
+  rules:
+    - if: $CD_DOCKER_PUSH_IGNORE
+      when: never
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: on_success
+    - if: $CI_COMMIT_TAG
+      when: on_success
+    - when: never
+  script:
+    - crane auth login -u ${CI_REGISTRY_USER} -p ${CI_REGISTRY_PASSWORD} ${CI_REGISTRY}
+    - crane push docker-image.tar ${CI_REGISTRY_IMAGE}:${DOCKER_IMAGE_TAG}
+  needs:
+    - build
+    - determine tag
+  dependencies:
+    - determine tag
+    - build
+  retry: 2
+
+push branch image:
+  stage: push docker image
+  image:
+    name: gcr.io/go-containerregistry/crane/debug:v0.10.0
+    entrypoint: [ "" ]
+  rules:
+    - if: $CD_DOCKER_PUSH_IGNORE
+      when: never
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: never
+    - if: $CI_COMMIT_BRANCH
+      when: on_success
+    - when: never
+  script:
+    - crane auth login -u ${CI_REGISTRY_USER} -p ${CI_REGISTRY_PASSWORD} ${CI_REGISTRY}
+    - crane push docker-image.tar ${CI_REGISTRY_IMAGE}:${DOCKER_IMAGE_TAG}
+  needs:
+    - build
+    - determine tag
+  dependencies:
+    - determine tag
+    - build
+  environment:
+    name: branch-docker-image/${CI_COMMIT_BRANCH}
+    on_stop: delete branch image
+  retry: 2
+
+delete branch image:
+  stage: push docker image
+  image: debian:11.4-slim
+  variables:
+    GIT_STRATEGY: none
+  rules:
+    - if: $CD_DOCKER_PUSH_IGNORE
+      when: never
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: never
+    - if: $CI_COMMIT_BRANCH
+      when: manual
+      allow_failure: true
+    - when: never
+  before_script:
+    - apt update && apt install -y curl
+    - curl -L https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-linux-amd64 > /bin/reg
+    - chmod +x /bin/reg
+  script:
+    - /bin/reg rm -d -u ${CI_REGISTRY_USER} -p ${CI_REGISTRY_PASSWORD} ${CI_REGISTRY_IMAGE}:${DOCKER_IMAGE_TAG}
+  needs:
+    - build
+    - determine tag
+  dependencies:
+    - determine tag
+  environment:
+    name: branch-docker-image/${CI_COMMIT_BRANCH}
+    action: stop
+  retry: 2

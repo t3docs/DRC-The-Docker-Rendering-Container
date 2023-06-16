@@ -13,13 +13,6 @@ DRC - The Docker Rendering Container
 :Rendered:        |today|
 
 
-.. attention:: Under construction!
-
-   This is WIP, work in progress.
-
-   Check the repository for activity.
-
-
 .. toctree::
    :caption: INTRODUCTION
    :glob:
@@ -36,4 +29,3 @@ DRC - The Docker Rendering Container
    :hidden:
 
    */Index
-

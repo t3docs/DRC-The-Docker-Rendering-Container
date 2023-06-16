@@ -192,3 +192,8 @@ Of interest for developers or outdated::
    -c talk 1
    -c themesdir "/THEMES"
    -c try_pdf_build_from_published_latex 0
+
+
+.. Todo
+ Integrate this discussion from Slack:
+   https://typo3.slack.com/archives/C028JEPJL/p1660296996521489?thread_ts=1660235832.742199&cid=C028JEPJL

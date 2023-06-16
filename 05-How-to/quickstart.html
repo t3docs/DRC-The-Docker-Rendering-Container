@@ -7,10 +7,10 @@
     <meta name="docsearch:package_type" content="" />
     <meta name="docsearch:release" content="0.0.0" />
     <meta name="docsearch:version" content="0.0" />
-    <meta name="docsearch:modified" content="2022-06-04T16:21:19+00:00" />
+    <meta name="docsearch:modified" content="2023-06-16T15:52:01+00:00" />
     <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />
-    <meta name="dc.modified" content="2022-06-04T16:21:19+00:00" />
-    <meta property="article:modified_time" content="2022-06-04T16:21:19+00:00" />
+    <meta name="dc.modified" content="2023-06-16T15:52:01+00:00" />
+    <meta property="article:modified_time" content="2023-06-16T15:52:01+00:00" />
 
     <title>Quickstart &mdash; [WIP] DRC - The Docker Rendering Container 0.0.0 documentation</title>
 
@@ -23,6 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/css/fontawesome.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/webfonts.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/codeblock.css" />
 <!-- linktags -->
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -47,8 +48,10 @@
     <div class="col-sm-6 col-lg-7">
 
         <div class="logo">
+        <a href="https://docs.typo3.org/" title="TYPO3 Documentation" >
 
-            <img src="../_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" title="TYPO3 Documentation" class="logo-image" />
+            <img src="../_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" class="logo-image" />
+        </a>
         </div>
     </div><!--/.col-x-->
     <div class="col-sm-6 col-lg-5">
@@ -247,6 +250,11 @@
 <div class="dsDivCogwheel"><i id="dsCogwheel" class="fas fa-cog" title="Display settings"></i></div>
 <div id="dsPanel" class="dsPanel" ><p><b>Display settings</b></p>
 <input type="checkbox" id="cbFullWidth"><label for="cbFullWidth">Use full width</label><br>
+Color scheme of code blocks:<br>
+<input type="radio" name="rbCbsTheme" id="rbCbsThemeDark" checked="checked" value="dark"/>
+<label for="rbCbsThemeDark">dark</label>
+<input type="radio" name="rbCbsTheme" id="rbCbsThemeLight" value="light"/>
+<label for="rbCbsThemeLight">light</label><br>
 <input type="checkbox" id="cbPermanent"><label for="cbPermanent">Make settings permanent</label><br>
 </div><!--/.dsPanel-->
 </div><!--/.displaysettingsui-->
@@ -268,31 +276,31 @@
 <div class="section" id="preparations">
 <h2>Preparations<a class="headerlink" href="#preparations" title="Permalink to this headline">¶</a></h2>
 <p>Verify you have Docker installed:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>➜  ~ docker --version
-Docker version <span class="m">19</span>.03.4, build 9013bf583a
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>➜<span class="w">  </span>~<span class="w"> </span>docker<span class="w"> </span>--version
+Docker<span class="w"> </span>version<span class="w"> </span><span class="m">19</span>.03.4,<span class="w"> </span>build<span class="w"> </span>9013bf583a
 
-➜  ~
+➜<span class="w">  </span>~
 </pre></div>
 </div>
 <p>Go to a project. Go to the top folder <code class="file docutils literal notranslate"><span class="pre">project/</span></code>
 of your project, DO NOT go to <code class="file docutils literal notranslate"><span class="pre">project/Documentation/</span></code>,
 if you have that:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/project
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/project
 </pre></div>
 </div>
 <p>You don't have a project at hand? Create a minimal one with just one
 file named <code class="file docutils literal notranslate"><span class="pre">README.rst</span></code>:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># create project folder</span>
-mkdir ~/project
+mkdir<span class="w"> </span>~/project
 
 <span class="c1"># go to there</span>
-<span class="nb">cd</span> ~/project
+<span class="nb">cd</span><span class="w"> </span>~/project
 
 <span class="c1"># Type a headline and a sentence to that file</span>
-<span class="nb">echo</span> <span class="s1">&#39;My dummy project&#39;</span>  &gt; README.rst
-<span class="nb">echo</span> <span class="s1">&#39;================&#39;</span> &gt;&gt; README.rst
-<span class="nb">echo</span>                    &gt;&gt; README.rst
-<span class="nb">echo</span> <span class="s1">&#39;Hello world, this is my splendid documentation.&#39;</span> &gt;&gt; README.rst
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;My dummy project&#39;</span><span class="w">  </span>&gt;<span class="w"> </span>README.rst
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;================&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.rst
+<span class="nb">echo</span><span class="w">                    </span>&gt;&gt;<span class="w"> </span>README.rst
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;Hello world, this is my splendid documentation.&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.rst
 </pre></div>
 </div>
 </div>
@@ -310,56 +318,56 @@ import that file in a shell session by means of the <code class="code docutils l
 To always do that automatically, add an appropriate line to your BASH
 or ZSH startup file. How it can be done:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a folder to keep things</span>
-mkdir -p ~/.dockrun/dockrun_t3rd
+mkdir<span class="w"> </span>-p<span class="w"> </span>~/.dockrun/dockrun_t3rd
 
 <span class="c1"># create the file with shell commands there</span>
-docker run --rm t3docs/render-documentation:v2.3.0 <span class="se">\</span>
-   show-shell-commands   &gt; ~/.dockrun/dockrun_t3rd/shell-commands.sh
+docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>t3docs/render-documentation:v2.3.0<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>show-shell-commands<span class="w">   </span>&gt;<span class="w"> </span>~/.dockrun/dockrun_t3rd/shell-commands.sh
 
 <span class="c1"># import the commands in a shell session</span>
-<span class="nb">source</span> ~/.dockrun/dockrun_t3rd/shell-commands.sh
+<span class="nb">source</span><span class="w"> </span>~/.dockrun/dockrun_t3rd/shell-commands.sh
 
 <span class="c1"># optional: add the command to your startup file</span>
-<span class="nb">echo</span> <span class="s1">&#39;source ~/.dockrun/dockrun_t3rd/shell-commands.sh&#39;</span> &gt;&gt; ~/.bashrc
-<span class="nb">echo</span> <span class="s1">&#39;source ~/.dockrun/dockrun_t3rd/shell-commands.sh&#39;</span> &gt;&gt; ~/.zshrc
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;source ~/.dockrun/dockrun_t3rd/shell-commands.sh&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;source ~/.dockrun/dockrun_t3rd/shell-commands.sh&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
 </pre></div>
 </div>
 <p><em>Tip:</em> On most Linuxes you can source the shell commands directly
 without and intermediate file like so. This has been reported to
 not work on Macs:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> &lt;<span class="o">(</span>docker run --rm t3docs/render-documentation:v2.3.0-local show-shell-commands<span class="o">)</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>&lt;<span class="o">(</span>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>t3docs/render-documentation:v2.3.0-local<span class="w"> </span>show-shell-commands<span class="o">)</span>
 </pre></div>
 </div>
 </li>
 <li><p>Go to the project and run the rendering:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/project
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/project
 
-dockrun_t3rd  makehtml
+dockrun_t3rd<span class="w">  </span>makehtml
 
 <span class="c1"># or</span>
 
-dockrun_t3rd  makeall
+dockrun_t3rd<span class="w">  </span>makeall
 </pre></div>
 </div>
 <p>Ask the container for help:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>➜  ~ dockrun_t3rd
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>➜<span class="w">  </span>~<span class="w"> </span>dockrun_t3rd
 
-t3rd - TYPO3 render documentation <span class="o">(</span>v2.4.0-dev<span class="o">)</span>
-For help:
-   docker run --rm t3docs/render-documentation:v2.4.0-dev --help
-   dockrun_t3rd --help
+t3rd<span class="w"> </span>-<span class="w"> </span>TYPO3<span class="w"> </span>render<span class="w"> </span>documentation<span class="w"> </span><span class="o">(</span>v2.4.0-dev<span class="o">)</span>
+For<span class="w"> </span>help:
+<span class="w">   </span>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>t3docs/render-documentation:v2.4.0-dev<span class="w"> </span>--help
+<span class="w">   </span>dockrun_t3rd<span class="w"> </span>--help
 
-... did you mean <span class="s1">&#39;dockrun_t3rd makehtml&#39;</span>?
+...<span class="w"> </span>did<span class="w"> </span>you<span class="w"> </span>mean<span class="w"> </span><span class="s1">&#39;dockrun_t3rd makehtml&#39;</span>?
 
-See manual <span class="o">(</span>draft<span class="o">)</span> at
+See<span class="w"> </span>manual<span class="w"> </span><span class="o">(</span>draft<span class="o">)</span><span class="w"> </span>at
 https://docs.typo3.org/m/typo3/t3docs-docker-render-documentation/draft/en-us/
 
 
-➜  ~ dockrun_t3rd --help
-   <span class="c1"># lots of lines ...</span>
+➜<span class="w">  </span>~<span class="w"> </span>dockrun_t3rd<span class="w"> </span>--help
+<span class="w">   </span><span class="c1"># lots of lines ...</span>
 
 
-➜  ~
+➜<span class="w">  </span>~
 </pre></div>
 </div>
 </li>
@@ -370,18 +378,18 @@ https://docs.typo3.org/m/typo3/t3docs-docker-render-documentation/draft/en-us/
 <p><em>Attention:</em> You need to replace the project path <code class="file docutils literal notranslate"><span class="pre">/home/marble/project</span></code> with
 whatever is valid in your case:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># Go to the project</span>
-<span class="nb">cd</span> ~/project
+<span class="nb">cd</span><span class="w"> </span>~/project
 
 <span class="c1"># Create result folder</span>
-mkdir Documentation-GENERATED-temp
+mkdir<span class="w"> </span>Documentation-GENERATED-temp
 
 <span class="c1"># Run the rendering</span>
-docker <span class="se">\</span>
-   run --rm --user<span class="o">=</span><span class="k">$(</span>id -u<span class="k">)</span>:<span class="k">$(</span>id -g<span class="k">)</span> <span class="se">\</span>
-   -v /home/marble/project:/PROJECT:ro <span class="se">\</span>
-   -v /home/marble/project/Documentation-GENERATED-temp:/RESULT <span class="se">\</span>
-   t3docs/render-documentation:v2.3.0 <span class="se">\</span>
-   makehtml
+docker<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>run<span class="w"> </span>--rm<span class="w"> </span>--user<span class="o">=</span><span class="k">$(</span>id<span class="w"> </span>-u<span class="k">)</span>:<span class="k">$(</span>id<span class="w"> </span>-g<span class="k">)</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-v<span class="w"> </span>/home/marble/project:/PROJECT:ro<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-v<span class="w"> </span>/home/marble/project/Documentation-GENERATED-temp:/RESULT<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>t3docs/render-documentation:v2.3.0<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>makehtml
 </pre></div>
 </div>
 <div class="admonition attention">
@@ -439,14 +447,14 @@ output files do belong to the actual user and not to the super user.</p>
                 </ul>
                 <div class="footer-additional">
                     <p class="text-center">
-                        Last updated: <a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container//commit/8919cadd3e4fec36432528b0e6793b1455d87414" rel="nofollow" target="_blank" title="Last commit">
-                           Jun 04, 2022 16:21
+                        Last updated: <a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container//commit/06f6c231cd97a66f853036ae28bb734722a17775" rel="nofollow" target="_blank" title="Last commit">
+                           Jun 16, 2023 15:52
                         </a>
                     </p>
-                    <p class="text-center">Last rendered: Jun 04, 2022 17:23</p>
+                    <p class="text-center">Last rendered: Jun 16, 2023 15:52</p>
                     <ul class="footer-simplemenu">
                         <li><a href="https://github.com/TYPO3-Documentation/sphinx_typo3_theme" title="sphinx_typo3_theme" target="_blank">
-                        <span>TYPO3 Theme 4.7.4</span></a></li>
+                        <span>TYPO3 Theme 4.7.10</span></a></li>
                     </ul>
                 </div>
                 <div class="footer-meta">

@@ -7,10 +7,10 @@
     <meta name="docsearch:package_type" content="" />
     <meta name="docsearch:release" content="0.0.0" />
     <meta name="docsearch:version" content="0.0" />
-    <meta name="docsearch:modified" content="2022-06-04T16:21:19+00:00" />
+    <meta name="docsearch:modified" content="2023-06-16T15:52:01+00:00" />
     <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />
-    <meta name="dc.modified" content="2022-06-04T16:21:19+00:00" />
-    <meta property="article:modified_time" content="2022-06-04T16:21:19+00:00" />
+    <meta name="dc.modified" content="2023-06-16T15:52:01+00:00" />
+    <meta property="article:modified_time" content="2023-06-16T15:52:01+00:00" />
 
     <title>Usage at the build server &mdash; [WIP] DRC - The Docker Rendering Container 0.0.0 documentation</title>
 
@@ -23,6 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/css/fontawesome.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/webfonts.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/codeblock.css" />
 <!-- linktags -->
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -47,8 +48,10 @@
     <div class="col-sm-6 col-lg-7">
 
         <div class="logo">
+        <a href="https://docs.typo3.org/" title="TYPO3 Documentation" >
 
-            <img src="../_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" title="TYPO3 Documentation" class="logo-image" />
+            <img src="../_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" class="logo-image" />
+        </a>
         </div>
     </div><!--/.col-x-->
     <div class="col-sm-6 col-lg-5">
@@ -261,6 +264,11 @@
 <div class="dsDivCogwheel"><i id="dsCogwheel" class="fas fa-cog" title="Display settings"></i></div>
 <div id="dsPanel" class="dsPanel" ><p><b>Display settings</b></p>
 <input type="checkbox" id="cbFullWidth"><label for="cbFullWidth">Use full width</label><br>
+Color scheme of code blocks:<br>
+<input type="radio" name="rbCbsTheme" id="rbCbsThemeDark" checked="checked" value="dark"/>
+<label for="rbCbsThemeDark">dark</label>
+<input type="radio" name="rbCbsTheme" id="rbCbsThemeLight" value="light"/>
+<label for="rbCbsThemeLight">light</label><br>
 <input type="checkbox" id="cbPermanent"><label for="cbPermanent">Make settings permanent</label><br>
 </div><!--/.dsPanel-->
 </div><!--/.displaysettingsui-->
@@ -342,10 +350,10 @@ has to be done:</p>
 <li><p>Make this script available: <a class="reference external" href="https://github.com/marble/Toolchain_RenderDocumentation/blob/master/16-Convert-and-fix-and-check/git-restore-mtime/git-restore-mtime-modified.py">git-restore-mtime-modified.py</a></p></li>
 <li><p>Insert code BEFORE the line with the <code class="code docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">...</span></code> call:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># go to the project</span>
-<span class="nb">cd</span> PROJECT
+<span class="nb">cd</span><span class="w"> </span>PROJECT
 
 <span class="c1"># run the script</span>
-python git-restore-mtime-modified.py --test --destfile-gitloginfo<span class="o">=</span>.gitloginfo-GENERATED.json .
+python<span class="w"> </span>git-restore-mtime-modified.py<span class="w"> </span>--test<span class="w"> </span>--destfile-gitloginfo<span class="o">=</span>.gitloginfo-GENERATED.json<span class="w"> </span>.
 </pre></div>
 </div>
 <p>Note the single dot at the end which denotes the current directory!</p>
@@ -412,54 +420,54 @@ succeeded.</p></li>
 <p>v2.3.0 leaves more info there than the versions before. You may especially want
 to watch to have a look at the &quot;environ&quot; section.</p>
 <p>Here is an example <code class="code docutils literal notranslate"><span class="pre">results.json</span></code> file:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;build_time&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2019-08-26 14:39:11&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;checksum&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;7a3807bc4d86e9227bb20d555d62fbce&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;checksum_ttl_seconds&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">604800</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;copyright&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TYPO3 Documentation Team&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;created&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;html&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;singlehtml&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<span class="w">  </span><span class="p">},</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;\nEverything about the container: How it works, how it&#39;s developed and build\nand way to use it.&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;email_notify_about_new_build&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;emails_user_from_project&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;martin.bless@typo3.org&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="p">],</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;environ&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;OUR_IMAGE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;t3docs/render-documentation:v2.3.0&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;OUR_IMAGE_SHORT&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;t3rd&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;OUR_IMAGE_VERSION&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;v2.3.0&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;THEME_MTIME&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1530870718&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;THEME_VERSION&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3.6.16&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;TOOLCHAIN_VERSION&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2.8-dev&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;TYPOSCRIPT_PY_VERSION&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;v2.2.4&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="p">},</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;gitdir&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/PROJECT&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;has_neutralized_images&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;has_neutralized_links&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;known_versions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;t3SphinxThemeRtd.VERSION&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">      </span><span class="mi">3</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="mi">6</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="mi">16</span><span class="w"></span>
-<span class="w">    </span><span class="p">],</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;t3SphinxThemeRtd.__version__&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3.6.16&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="p">},</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;localization&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;postprocessed_html_files&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;project&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TYPO3 Docker Container v2.3.0 for Documentation Rendering\nand more&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;publish_dir&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;project/0.0.0&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;release&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.1.9-draft&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;sitemap_files_html_count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;sitemap_files_singlehtml_count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;ter_extension&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;build_time&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2019-08-26 14:39:11&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;checksum&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;7a3807bc4d86e9227bb20d555d62fbce&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;checksum_ttl_seconds&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">604800</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;copyright&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TYPO3 Documentation Team&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;created&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;html&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;singlehtml&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;\nEverything about the container: How it works, how it&#39;s developed and build\nand way to use it.&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;email_notify_about_new_build&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">  </span><span class="nt">&quot;emails_user_from_project&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;martin.bless@typo3.org&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;environ&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;OUR_IMAGE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;t3docs/render-documentation:v2.3.0&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;OUR_IMAGE_SHORT&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;t3rd&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;OUR_IMAGE_VERSION&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;v2.3.0&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;THEME_MTIME&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1530870718&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;THEME_VERSION&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3.6.16&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;TOOLCHAIN_VERSION&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2.8-dev&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;TYPOSCRIPT_PY_VERSION&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;v2.2.4&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;gitdir&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/PROJECT&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;has_neutralized_images&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;has_neutralized_links&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;known_versions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;t3SphinxThemeRtd.VERSION&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">      </span><span class="mi">6</span><span class="p">,</span>
+<span class="w">      </span><span class="mi">16</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;t3SphinxThemeRtd.__version__&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3.6.16&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;localization&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;postprocessed_html_files&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;project&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TYPO3 Docker Container v2.3.0 for Documentation Rendering\nand more&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;publish_dir&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;project/0.0.0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;release&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.1.9-draft&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;sitemap_files_html_count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;sitemap_files_singlehtml_count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;ter_extension&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>Check specifics of all rendered manuals:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># command</span>
-find -name results.json -exec grep -i <span class="s1">&#39;has_neutralized_links&quot;: [^0]&#39;</span> <span class="o">{}</span> +
+find<span class="w"> </span>-name<span class="w"> </span>results.json<span class="w"> </span>-exec<span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;has_neutralized_links&quot;: [^0]&#39;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span>+
 
 <span class="c1"># findings</span>
 <span class="c1">#01 ./m/typo3/reference-typoscript/6.2/en-us/_buildinfo/results.json:  &quot;has_neutralized_links&quot;: 1,</span>
@@ -546,14 +554,14 @@ due to a wrong environment variable in the script.</p>
                 </ul>
                 <div class="footer-additional">
                     <p class="text-center">
-                        Last updated: <a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container//commit/8919cadd3e4fec36432528b0e6793b1455d87414" rel="nofollow" target="_blank" title="Last commit">
-                           Jun 04, 2022 16:21
+                        Last updated: <a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container//commit/06f6c231cd97a66f853036ae28bb734722a17775" rel="nofollow" target="_blank" title="Last commit">
+                           Jun 16, 2023 15:52
                         </a>
                     </p>
-                    <p class="text-center">Last rendered: Jun 04, 2022 17:23</p>
+                    <p class="text-center">Last rendered: Jun 16, 2023 15:52</p>
                     <ul class="footer-simplemenu">
                         <li><a href="https://github.com/TYPO3-Documentation/sphinx_typo3_theme" title="sphinx_typo3_theme" target="_blank">
-                        <span>TYPO3 Theme 4.7.4</span></a></li>
+                        <span>TYPO3 Theme 4.7.10</span></a></li>
                     </ul>
                 </div>
                 <div class="footer-meta">

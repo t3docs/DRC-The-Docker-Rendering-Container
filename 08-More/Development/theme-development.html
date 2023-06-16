@@ -7,10 +7,10 @@
     <meta name="docsearch:package_type" content="" />
     <meta name="docsearch:release" content="0.0.0" />
     <meta name="docsearch:version" content="0.0" />
-    <meta name="docsearch:modified" content="2022-06-04T16:21:19+00:00" />
+    <meta name="docsearch:modified" content="2023-06-16T15:52:01+00:00" />
     <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />
-    <meta name="dc.modified" content="2022-06-04T16:21:19+00:00" />
-    <meta property="article:modified_time" content="2022-06-04T16:21:19+00:00" />
+    <meta name="dc.modified" content="2023-06-16T15:52:01+00:00" />
+    <meta property="article:modified_time" content="2023-06-16T15:52:01+00:00" />
 
     <title>Theme development &mdash; [WIP] DRC - The Docker Rendering Container 0.0.0 documentation</title>
 
@@ -23,6 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/css/fontawesome.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/webfonts.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/codeblock.css" />
 <!-- linktags -->
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -47,8 +48,10 @@
     <div class="col-sm-6 col-lg-7">
 
         <div class="logo">
+        <a href="https://docs.typo3.org/" title="TYPO3 Documentation" >
 
-            <img src="../../_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" title="TYPO3 Documentation" class="logo-image" />
+            <img src="../../_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" class="logo-image" />
+        </a>
         </div>
     </div><!--/.col-x-->
     <div class="col-sm-6 col-lg-5">
@@ -252,6 +255,11 @@
 <div class="dsDivCogwheel"><i id="dsCogwheel" class="fas fa-cog" title="Display settings"></i></div>
 <div id="dsPanel" class="dsPanel" ><p><b>Display settings</b></p>
 <input type="checkbox" id="cbFullWidth"><label for="cbFullWidth">Use full width</label><br>
+Color scheme of code blocks:<br>
+<input type="radio" name="rbCbsTheme" id="rbCbsThemeDark" checked="checked" value="dark"/>
+<label for="rbCbsThemeDark">dark</label>
+<input type="radio" name="rbCbsTheme" id="rbCbsThemeLight" value="light"/>
+<label for="rbCbsThemeLight">light</label><br>
 <input type="checkbox" id="cbPermanent"><label for="cbPermanent">Make settings permanent</label><br>
 </div><!--/.dsPanel-->
 </div><!--/.displaysettingsui-->
@@ -288,22 +296,22 @@ the new theme.</p>
 <div class="section" id="prepare-theme-for-development">
 <h2><a class="toc-backref" href="#this-page">Prepare theme for development</a><a class="headerlink" href="#prepare-theme-for-development" title="Permalink to this headline">¶</a></h2>
 <p>Create a local folder to hold themes. Let's name that folder <code class="file docutils literal notranslate"><span class="pre">~/THEMES</span></code>:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir ~/THEMES
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>~/THEMES
 </pre></div>
 </div>
 <p>Clone theme for development:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># garantee folder</span>
-mkdir -p ~/Repositories/github.com/TYPO3-Documentation
+mkdir<span class="w"> </span>-p<span class="w"> </span>~/Repositories/github.com/TYPO3-Documentation
 
 <span class="c1"># go there</span>
-<span class="nb">cd</span> ~/Repositories/github.com/TYPO3-Documentation
+<span class="nb">cd</span><span class="w"> </span>~/Repositories/github.com/TYPO3-Documentation
 
 <span class="c1"># clone</span>
-git clone https://github.com/typo3-documentation/t3SphinxThemeRtd
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/typo3-documentation/t3SphinxThemeRtd
 </pre></div>
 </div>
 <p>Use npm, yarn, grunt, … to provide all resources and to run a build. For example:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/Repositories/github.com/typo3-documentation/t3SphinxThemeRtd
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/Repositories/github.com/typo3-documentation/t3SphinxThemeRtd
 
 <span class="c1"># install packages</span>
 yarn
@@ -315,18 +323,18 @@ grunt
 </pre></div>
 </div>
 <p>Example:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>➜  t3SphinxThemeRtd git:<span class="o">(</span>feature/abc<span class="o">)</span> ✗ grunt
-Running <span class="s2">&quot;clean:build&quot;</span> <span class="o">(</span>clean<span class="o">)</span> task
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>➜<span class="w">  </span>t3SphinxThemeRtd<span class="w"> </span>git:<span class="o">(</span>feature/abc<span class="o">)</span><span class="w"> </span>✗<span class="w"> </span>grunt
+Running<span class="w"> </span><span class="s2">&quot;clean:build&quot;</span><span class="w"> </span><span class="o">(</span>clean<span class="o">)</span><span class="w"> </span>task
 
-Running <span class="s2">&quot;clean:fonts&quot;</span> <span class="o">(</span>clean<span class="o">)</span> task
-Cleaning t3SphinxThemeRtd/static/fonts...OK
+Running<span class="w"> </span><span class="s2">&quot;clean:fonts&quot;</span><span class="w"> </span><span class="o">(</span>clean<span class="o">)</span><span class="w"> </span>task
+Cleaning<span class="w"> </span>t3SphinxThemeRtd/static/fonts...OK
 
-Running <span class="s2">&quot;copy:fonts&quot;</span> <span class="o">(</span>copy<span class="o">)</span> task
-Copied <span class="m">40</span> files
+Running<span class="w"> </span><span class="s2">&quot;copy:fonts&quot;</span><span class="w"> </span><span class="o">(</span>copy<span class="o">)</span><span class="w"> </span>task
+Copied<span class="w"> </span><span class="m">40</span><span class="w"> </span>files
 
-Running <span class="s2">&quot;sass:build&quot;</span> <span class="o">(</span>sass<span class="o">)</span> task
+Running<span class="w"> </span><span class="s2">&quot;sass:build&quot;</span><span class="w"> </span><span class="o">(</span>sass<span class="o">)</span><span class="w"> </span>task
 
-Done, without errors.
+Done,<span class="w"> </span>without<span class="w"> </span>errors.
 </pre></div>
 </div>
 <p>Copy the new build to the THEMES folder, thereby giving it a name that is not
@@ -337,7 +345,7 @@ in the list of available themes so far:</p>
 <span class="c1"># WITH slash at the end of dest!</span>
 <span class="nv">dest</span><span class="o">=</span>~/THEMES/t3SphinxThemeRtdDevelop/
 
-rsync -avii -delete <span class="nv">$source</span> <span class="nv">$dest</span>
+rsync<span class="w"> </span>-avii<span class="w"> </span>-delete<span class="w"> </span><span class="nv">$source</span><span class="w"> </span><span class="nv">$dest</span>
 
 <span class="c1">#</span>
 </pre></div>
@@ -362,7 +370,7 @@ In a terminal window:</p>
 <span class="nv">T3DOCS_THEMES</span><span class="o">=</span>~/THEMES
 
 <span class="c1"># go to you project</span>
-<span class="nb">cd</span> ~/project
+<span class="nb">cd</span><span class="w"> </span>~/project
 
 <span class="c1"># use the container like normal</span>
 dockrun_t3rd
@@ -395,38 +403,38 @@ For help:
 overriden and will always be 't3SphinxThemeRtd' in the end.</p>
 <p>You <em>can</em> set the theme in <code class="file docutils literal notranslate"><span class="pre">./Documentation/jobfile.json</span></code> however like
 so:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;Overrides_cfg&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;general&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;html_theme&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;t3SphinxThemeRtdDevelop&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;Overrides_cfg&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;general&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;html_theme&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;t3SphinxThemeRtdDevelop&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>Additionally theme options may be of special interest.</p>
 <p><em>Attention:</em> ANY non empty string is considered to be TRUE.</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;Overrides_cfg&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;html_theme_options&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;docstypo3org&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yes&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;add_piwik&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yes&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;show_legalinfo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yes&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="p">},</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;Overrides_cfg&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;html_theme_options&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;docstypo3org&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yes&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;add_piwik&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yes&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;show_legalinfo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yes&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p><em>Attention:</em> Use the empty string to specify FALSE.</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;Overrides_cfg&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;html_theme_options&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;docstypo3org&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;add_piwik&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;show_legalinfo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="p">},</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;Overrides_cfg&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;html_theme_options&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;docstypo3org&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;add_piwik&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;show_legalinfo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -434,7 +442,7 @@ so:</p>
 <div class="section" id="finally-use-it-like-hell">
 <h2><a class="toc-backref" href="#this-page">Finally - use it like hell :-)</a><a class="headerlink" href="#finally-use-it-like-hell" title="Permalink to this headline">¶</a></h2>
 <p>Start rendering and developing using normal procedures:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dockrun_t3rd  makehtml  -c jobfile /PROJECT/Documentation/jobfile.json
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dockrun_t3rd<span class="w">  </span>makehtml<span class="w">  </span>-c<span class="w"> </span>jobfile<span class="w"> </span>/PROJECT/Documentation/jobfile.json
 </pre></div>
 </div>
 </div>
@@ -479,14 +487,14 @@ so:</p>
                 </ul>
                 <div class="footer-additional">
                     <p class="text-center">
-                        Last updated: <a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container//commit/8919cadd3e4fec36432528b0e6793b1455d87414" rel="nofollow" target="_blank" title="Last commit">
-                           Jun 04, 2022 16:21
+                        Last updated: <a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container//commit/06f6c231cd97a66f853036ae28bb734722a17775" rel="nofollow" target="_blank" title="Last commit">
+                           Jun 16, 2023 15:52
                         </a>
                     </p>
-                    <p class="text-center">Last rendered: Jun 04, 2022 17:23</p>
+                    <p class="text-center">Last rendered: Jun 16, 2023 15:52</p>
                     <ul class="footer-simplemenu">
                         <li><a href="https://github.com/TYPO3-Documentation/sphinx_typo3_theme" title="sphinx_typo3_theme" target="_blank">
-                        <span>TYPO3 Theme 4.7.4</span></a></li>
+                        <span>TYPO3 Theme 4.7.10</span></a></li>
                     </ul>
                 </div>
                 <div class="footer-meta">

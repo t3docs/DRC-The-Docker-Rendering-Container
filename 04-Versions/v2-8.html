@@ -7,10 +7,10 @@
     <meta name="docsearch:package_type" content="" />
     <meta name="docsearch:release" content="0.0.0" />
     <meta name="docsearch:version" content="0.0" />
-    <meta name="docsearch:modified" content="2022-06-04T16:21:19+00:00" />
+    <meta name="docsearch:modified" content="2023-06-16T15:52:01+00:00" />
     <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />
-    <meta name="dc.modified" content="2022-06-04T16:21:19+00:00" />
-    <meta property="article:modified_time" content="2022-06-04T16:21:19+00:00" />
+    <meta name="dc.modified" content="2023-06-16T15:52:01+00:00" />
+    <meta property="article:modified_time" content="2023-06-16T15:52:01+00:00" />
 
     <title>Releases v2.8 (2021-03-29) &mdash; [WIP] DRC - The Docker Rendering Container 0.0.0 documentation</title>
 
@@ -23,6 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/css/fontawesome.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/webfonts.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/codeblock.css" />
 <!-- linktags -->
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -47,8 +48,10 @@
     <div class="col-sm-6 col-lg-7">
 
         <div class="logo">
+        <a href="https://docs.typo3.org/" title="TYPO3 Documentation" >
 
-            <img src="../_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" title="TYPO3 Documentation" class="logo-image" />
+            <img src="../_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" class="logo-image" />
+        </a>
         </div>
     </div><!--/.col-x-->
     <div class="col-sm-6 col-lg-5">
@@ -266,6 +269,11 @@
 <div class="dsDivCogwheel"><i id="dsCogwheel" class="fas fa-cog" title="Display settings"></i></div>
 <div id="dsPanel" class="dsPanel" ><p><b>Display settings</b></p>
 <input type="checkbox" id="cbFullWidth"><label for="cbFullWidth">Use full width</label><br>
+Color scheme of code blocks:<br>
+<input type="radio" name="rbCbsTheme" id="rbCbsThemeDark" checked="checked" value="dark"/>
+<label for="rbCbsThemeDark">dark</label>
+<input type="radio" name="rbCbsTheme" id="rbCbsThemeLight" value="light"/>
+<label for="rbCbsThemeLight">light</label><br>
 <input type="checkbox" id="cbPermanent"><label for="cbPermanent">Make settings permanent</label><br>
 </div><!--/.dsPanel-->
 </div><!--/.displaysettingsui-->
@@ -331,27 +339,27 @@ file <code class="file docutils literal notranslate"><span class="pre">./Documen
 command within the container and skip all the steps of the rendering tool chain.
 When you start thinking in fractions of a second of rendering time this makes
 a difference. You can now do that:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dockrun_t3rd  just1sphinxbuild
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dockrun_t3rd<span class="w">  </span>just1sphinxbuild
 </pre></div>
 </div>
 <p>This will trigger one <code class="code docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code> with all the necessary parameters for your
 situation and then run a <code class="code docutils literal notranslate"><span class="pre">sphinx-build</span></code> command within the container:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>/ALL/venv/.venv/bin/sphinx-build -v -v -v -b html -c /ALL/Makedir  -j auto <span class="se">\</span>
--T -q -w /RESULT/sphinx-build/warnings.txt -d /RESULT/Cache <span class="se">\</span>
-/PROJECT/Documentation  /RESULT/Result/project/0.0.0/
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>/ALL/venv/.venv/bin/sphinx-build<span class="w"> </span>-v<span class="w"> </span>-v<span class="w"> </span>-v<span class="w"> </span>-b<span class="w"> </span>html<span class="w"> </span>-c<span class="w"> </span>/ALL/Makedir<span class="w">  </span>-j<span class="w"> </span>auto<span class="w"> </span><span class="se">\</span>
+-T<span class="w"> </span>-q<span class="w"> </span>-w<span class="w"> </span>/RESULT/sphinx-build/warnings.txt<span class="w"> </span>-d<span class="w"> </span>/RESULT/Cache<span class="w"> </span><span class="se">\</span>
+/PROJECT/Documentation<span class="w">  </span>/RESULT/Result/project/0.0.0/
 </pre></div>
 </div>
 <p>If you are wondering what all those parameters mean have a look at the help that
 <code class="code docutils literal notranslate"><span class="pre">sphinx-build</span></code> offers:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dockrun_t3rd  bashcmd  <span class="s1">&#39;sphinx-build --help&#39;</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dockrun_t3rd<span class="w">  </span>bashcmd<span class="w">  </span><span class="s1">&#39;sphinx-build --help&#39;</span>
 </pre></div>
 </div>
 <p>An alternate, equivalent call to the <code class="code docutils literal notranslate"><span class="pre">just1sphinxbuild</span></code> functionality would be:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dockrun_t3rd  bashcmd  <span class="s1">&#39;python2 /ALL/Scripts/just1sphinxbuild.py&#39;</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dockrun_t3rd<span class="w">  </span>bashcmd<span class="w">  </span><span class="s1">&#39;python2 /ALL/Scripts/just1sphinxbuild.py&#39;</span>
 </pre></div>
 </div>
 <p>To inspect what script that is you can run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dockrun_t3rd  export-ALL
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dockrun_t3rd<span class="w">  </span>export-ALL
 </pre></div>
 </div>
 <p>Of course, you can then take that script from
@@ -359,13 +367,13 @@ situation and then run a <code class="code docutils literal notranslate"><span c
 dig down deeper into the rabbit hole as you like.</p>
 <p>Another way to use individual parameters would be this.</p>
 <p>Run <code class="code docutils literal notranslate"><span class="pre">makehtml</span></code> once to garantee that folders exist:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dockrun_t3rd  makehtml
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dockrun_t3rd<span class="w">  </span>makehtml
 </pre></div>
 </div>
 <p>Then directly run docker and the <code class="code docutils literal notranslate"><span class="pre">sphinx-build</span></code> command - again and again:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dockrun_t3rd <span class="se">\</span>
-   bashcmd <span class="se">\</span>
-      <span class="s1">&#39;\</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dockrun_t3rd<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>bashcmd<span class="w"> </span><span class="se">\</span>
+<span class="w">      </span><span class="s1">&#39;\</span>
 <span class="s1">      sphinx-build -v -v -v  \</span>
 <span class="s1">      -b html \</span>
 <span class="s1">      -c /ALL/Makedir \</span>
@@ -395,7 +403,7 @@ request. Some more actions are also available.</p>
 <ol class="arabic">
 <li><p>START SERVER</p>
 <p>Start the <a class="reference internal" href="../Glossary.html#term-DRC"><span class="xref std std-term">DRC</span></a> as build server:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dockrun_t3rd serve4build
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dockrun_t3rd<span class="w"> </span>serve4build
 </pre></div>
 </div>
 <p>Looks like:</p>
@@ -404,7 +412,7 @@ request. Some more actions are also available.</p>
 <div class="line"><br /></div>
 </div>
 <p>To use a port of your choice, for example 8989, do:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dockrun_t3rd serve4build <span class="m">8989</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dockrun_t3rd<span class="w"> </span>serve4build<span class="w"> </span><span class="m">8989</span>
 </pre></div>
 </div>
 <div class="line-block">
@@ -422,7 +430,7 @@ request. Some more actions are also available.</p>
 </li>
 <li><p>HTTP-REQUEST</p>
 <p>Or, just issue a HTTP request by some tool like <em>wget</em> or <em>curl</em>:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>wget --no-cache -q -O /dev/null http://127.0.0.1:9999/makehtml
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>--no-cache<span class="w"> </span>-q<span class="w"> </span>-O<span class="w"> </span>/dev/null<span class="w"> </span>http://127.0.0.1:9999/makehtml
 </pre></div>
 </div>
 <p>For example, you could create a file <code class="code docutils literal notranslate"><span class="pre">run_sphinx_build.sh</span></code> having this
@@ -443,11 +451,11 @@ a very quick re-rendering.</p>
 request.</p>
 <p>Or, if you find out later that port 9999 is still in use and the docker
 container is still running, look for running containers:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>docker ps
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>ps
 </pre></div>
 </div>
 <p>To stop a container immediately:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>docker stop -t0 95d43292f285   <span class="c1"># &lt;- fill in correct name or id</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>stop<span class="w"> </span>-t0<span class="w"> </span>95d43292f285<span class="w">   </span><span class="c1"># &lt;- fill in correct name or id</span>
 </pre></div>
 </div>
 <div class="line-block">
@@ -615,14 +623,14 @@ Instead, a better solution will be introduced in one of the next versions.</p>
                 </ul>
                 <div class="footer-additional">
                     <p class="text-center">
-                        Last updated: <a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container//commit/8919cadd3e4fec36432528b0e6793b1455d87414" rel="nofollow" target="_blank" title="Last commit">
-                           Jun 04, 2022 16:21
+                        Last updated: <a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container//commit/06f6c231cd97a66f853036ae28bb734722a17775" rel="nofollow" target="_blank" title="Last commit">
+                           Jun 16, 2023 15:52
                         </a>
                     </p>
-                    <p class="text-center">Last rendered: Jun 04, 2022 17:23</p>
+                    <p class="text-center">Last rendered: Jun 16, 2023 15:52</p>
                     <ul class="footer-simplemenu">
                         <li><a href="https://github.com/TYPO3-Documentation/sphinx_typo3_theme" title="sphinx_typo3_theme" target="_blank">
-                        <span>TYPO3 Theme 4.7.4</span></a></li>
+                        <span>TYPO3 Theme 4.7.10</span></a></li>
                     </ul>
                 </div>
                 <div class="footer-meta">

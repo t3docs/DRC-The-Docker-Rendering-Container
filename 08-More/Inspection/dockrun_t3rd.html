@@ -7,10 +7,10 @@
     <meta name="docsearch:package_type" content="" />
     <meta name="docsearch:release" content="0.0.0" />
     <meta name="docsearch:version" content="0.0" />
-    <meta name="docsearch:modified" content="2022-06-04T16:21:19+00:00" />
+    <meta name="docsearch:modified" content="2023-06-16T15:52:01+00:00" />
     <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />
-    <meta name="dc.modified" content="2022-06-04T16:21:19+00:00" />
-    <meta property="article:modified_time" content="2022-06-04T16:21:19+00:00" />
+    <meta name="dc.modified" content="2023-06-16T15:52:01+00:00" />
+    <meta property="article:modified_time" content="2023-06-16T15:52:01+00:00" />
 
     <title>The &#39;dockrun&#39; function &mdash; [WIP] DRC - The Docker Rendering Container 0.0.0 documentation</title>
 
@@ -23,6 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/css/fontawesome.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/webfonts.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/codeblock.css" />
 <!-- linktags -->
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -47,8 +48,10 @@
     <div class="col-sm-6 col-lg-7">
 
         <div class="logo">
+        <a href="https://docs.typo3.org/" title="TYPO3 Documentation" >
 
-            <img src="../../_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" title="TYPO3 Documentation" class="logo-image" />
+            <img src="../../_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" class="logo-image" />
+        </a>
         </div>
     </div><!--/.col-x-->
     <div class="col-sm-6 col-lg-5">
@@ -222,7 +225,7 @@
         <li class="breadcrumb-item"><a href="../../Index.html">Start</a></li>
             <li class="breadcrumb-item"><a href="../Index.html">More</a></li>
             <li class="breadcrumb-item"><a href="Index.html">Inspection</a></li>
-        <li class="breadcrumb-item active" aria-current="page">The &#39;dockrun&#39; function</li>
+        <li class="breadcrumb-item active" aria-current="page">The 'dockrun' function</li>
     </ol>
     <div class="breadcrumb-additions">
         <a class="btn btn-sm btn-light" href="../../_sources/08-More/Inspection/dockrun_t3rd.rst.txt" rel="nofollow">
@@ -247,6 +250,11 @@
 <div class="dsDivCogwheel"><i id="dsCogwheel" class="fas fa-cog" title="Display settings"></i></div>
 <div id="dsPanel" class="dsPanel" ><p><b>Display settings</b></p>
 <input type="checkbox" id="cbFullWidth"><label for="cbFullWidth">Use full width</label><br>
+Color scheme of code blocks:<br>
+<input type="radio" name="rbCbsTheme" id="rbCbsThemeDark" checked="checked" value="dark"/>
+<label for="rbCbsThemeDark">dark</label>
+<input type="radio" name="rbCbsTheme" id="rbCbsThemeLight" value="light"/>
+<label for="rbCbsThemeLight">light</label><br>
 <input type="checkbox" id="cbPermanent"><label for="cbPermanent">Make settings permanent</label><br>
 </div><!--/.dsPanel-->
 </div><!--/.displaysettingsui-->
@@ -268,7 +276,7 @@
 <h2>Show function definition<a class="headerlink" href="#show-function-definition" title="Permalink to this headline">¶</a></h2>
 <p>① For example, Ubuntu 18.04:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the function</span>
-<span class="nb">source</span> &lt;<span class="o">(</span>docker run --rm t3docs/render-documentation:v2.3.0 show-shell-commands<span class="o">)</span>
+<span class="nb">source</span><span class="w"> </span>&lt;<span class="o">(</span>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>t3docs/render-documentation:v2.3.0<span class="w"> </span>show-shell-commands<span class="o">)</span>
 </pre></div>
 </div>
 <p>Looks like:</p>
@@ -280,68 +288,68 @@ This function is now defined FOR THIS terminal window to run v2.3.0:
 </pre></div>
 </div>
 <p>② Show the function definition:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">declare</span> -f dockrun_t3rd
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">declare</span><span class="w"> </span>-f<span class="w"> </span>dockrun_t3rd
 </pre></div>
 </div>
 <p>Looks like:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>➜  ~ <span class="nb">declare</span> -f dockrun_t3rd
-dockrun_t3rd <span class="o">()</span> <span class="o">{</span>
-   <span class="nb">local</span> <span class="nv">DEBUG</span><span class="o">=</span><span class="si">${</span><span class="nv">T3DOCS_DEBUG</span><span class="k">:-</span><span class="nv">0</span><span class="si">}</span>
-   <span class="nb">local</span> <span class="nv">DRY_RUN</span><span class="o">=</span><span class="si">${</span><span class="nv">T3DOCS_DRY_RUN</span><span class="k">:-</span><span class="nv">0</span><span class="si">}</span>
-   <span class="nb">local</span> <span class="nv">git_restore_mtime</span><span class="o">=</span><span class="k">$(</span>which git-restore-mtime<span class="k">)</span>
-   <span class="nb">local</span> <span class="nv">exitcode</span><span class="o">=</span><span class="nv">$?</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>➜<span class="w">  </span>~<span class="w"> </span><span class="nb">declare</span><span class="w"> </span>-f<span class="w"> </span>dockrun_t3rd
+dockrun_t3rd<span class="w"> </span><span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">   </span><span class="nb">local</span><span class="w"> </span><span class="nv">DEBUG</span><span class="o">=</span><span class="si">${</span><span class="nv">T3DOCS_DEBUG</span><span class="k">:-</span><span class="nv">0</span><span class="si">}</span>
+<span class="w">   </span><span class="nb">local</span><span class="w"> </span><span class="nv">DRY_RUN</span><span class="o">=</span><span class="si">${</span><span class="nv">T3DOCS_DRY_RUN</span><span class="k">:-</span><span class="nv">0</span><span class="si">}</span>
+<span class="w">   </span><span class="nb">local</span><span class="w"> </span><span class="nv">git_restore_mtime</span><span class="o">=</span><span class="k">$(</span>which<span class="w"> </span>git-restore-mtime<span class="k">)</span>
+<span class="w">   </span><span class="nb">local</span><span class="w"> </span><span class="nv">exitcode</span><span class="o">=</span><span class="nv">$?</span>
 
 <span class="c1"># [... much more ...]</span>
 
-   <span class="k">if</span> <span class="o">((</span><span class="nv">$DEBUG</span> <span class="o">||</span> <span class="nv">$DRY_RUN</span><span class="o">))</span>
-   <span class="k">then</span>
-      <span class="nb">echo</span> <span class="nv">$cmd</span> <span class="p">|</span> sed <span class="s2">&quot;s/-v /\\\\\\n   -v /g&quot;</span>
-   <span class="k">fi</span>
-   <span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;</span><span class="nv">$DRY_RUN</span><span class="s2">&quot;</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span> <span class="o">]]</span>
-   <span class="k">then</span>
-      <span class="nb">eval</span> <span class="s2">&quot;</span><span class="nv">$cmd</span><span class="s2">&quot;</span>
-   <span class="k">fi</span>
+<span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="o">((</span><span class="nv">$DEBUG</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nv">$DRY_RUN</span><span class="o">))</span>
+<span class="w">   </span><span class="k">then</span>
+<span class="w">      </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$cmd</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span><span class="s2">&quot;s/-v /\\\\\\n   -v /g&quot;</span>
+<span class="w">   </span><span class="k">fi</span>
+<span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DRY_RUN</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="w"> </span><span class="o">]]</span>
+<span class="w">   </span><span class="k">then</span>
+<span class="w">      </span><span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$cmd</span><span class="s2">&quot;</span>
+<span class="w">   </span><span class="k">fi</span>
 <span class="o">}</span>
 
-➜  ~
+➜<span class="w">  </span>~
 </pre></div>
 </div>
 </div>
 <div class="section" id="show-constructed-docker-command">
 <h2>Show constructed Docker command<a class="headerlink" href="#show-constructed-docker-command" title="Permalink to this headline">¶</a></h2>
 <p><code class="code docutils literal notranslate"><span class="pre">T3DOCS_DEBUG=0</span></code> is the default:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>➜  ~ dockrun_t3rd
-t3rd - TYPO3 render documentation <span class="o">(</span>v2.3.0<span class="o">)</span>
-For help:
-   docker run --rm t3docs/render-documentation:v2.3.0 --help
-   dockrun_t3rd --help
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>➜<span class="w">  </span>~<span class="w"> </span>dockrun_t3rd
+t3rd<span class="w"> </span>-<span class="w"> </span>TYPO3<span class="w"> </span>render<span class="w"> </span>documentation<span class="w"> </span><span class="o">(</span>v2.3.0<span class="o">)</span>
+For<span class="w"> </span>help:
+<span class="w">   </span>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>t3docs/render-documentation:v2.3.0<span class="w"> </span>--help
+<span class="w">   </span>dockrun_t3rd<span class="w"> </span>--help
 
-... did you mean <span class="s1">&#39;dockrun_t3rd makehtml&#39;</span>?
+...<span class="w"> </span>did<span class="w"> </span>you<span class="w"> </span>mean<span class="w"> </span><span class="s1">&#39;dockrun_t3rd makehtml&#39;</span>?
 
-See manual <span class="o">(</span>draft<span class="o">)</span> at
+See<span class="w"> </span>manual<span class="w"> </span><span class="o">(</span>draft<span class="o">)</span><span class="w"> </span>at
 https://docs.typo3.org/m/typo3/t3docs-docker-render-documentation/draft/en-us/
 </pre></div>
 </div>
 <p><code class="code docutils literal notranslate"><span class="pre">T3DOCS_DEBUG=1</span></code> displays what values are being used:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>➜  ~ <span class="nv">T3DOCS_DEBUG</span><span class="o">=</span><span class="m">1</span>  dockrun_t3rd
-PROJECT......: /home/marble
-creating: mkdir -p /home/marble/Documentation-GENERATED-temp
-RESULT.......: /home/marble/Documentation-GENERATED-temp
-OUR_IMAGE....: t3docs/render-documentation:v2.3.0
-docker run --rm --user<span class="o">=</span><span class="m">1000</span>:1000 <span class="se">\</span>
-   -v /home/marble:/PROJECT:ro <span class="se">\</span>
-   -v /home/marble/Documentation-GENERATED-temp:/RESULT t3docs/render-documentation:v2.3.0
-t3rd - TYPO3 render documentation <span class="o">(</span>v2.3.0<span class="o">)</span>
-For help:
-   docker run --rm t3docs/render-documentation:v2.3.0 --help
-   dockrun_t3rd --help
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>➜<span class="w">  </span>~<span class="w"> </span><span class="nv">T3DOCS_DEBUG</span><span class="o">=</span><span class="m">1</span><span class="w">  </span>dockrun_t3rd
+PROJECT......:<span class="w"> </span>/home/marble
+creating:<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/home/marble/Documentation-GENERATED-temp
+RESULT.......:<span class="w"> </span>/home/marble/Documentation-GENERATED-temp
+OUR_IMAGE....:<span class="w"> </span>t3docs/render-documentation:v2.3.0
+docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>--user<span class="o">=</span><span class="m">1000</span>:1000<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-v<span class="w"> </span>/home/marble:/PROJECT:ro<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-v<span class="w"> </span>/home/marble/Documentation-GENERATED-temp:/RESULT<span class="w"> </span>t3docs/render-documentation:v2.3.0
+t3rd<span class="w"> </span>-<span class="w"> </span>TYPO3<span class="w"> </span>render<span class="w"> </span>documentation<span class="w"> </span><span class="o">(</span>v2.3.0<span class="o">)</span>
+For<span class="w"> </span>help:
+<span class="w">   </span>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>t3docs/render-documentation:v2.3.0<span class="w"> </span>--help
+<span class="w">   </span>dockrun_t3rd<span class="w"> </span>--help
 
-... did you mean <span class="s1">&#39;dockrun_t3rd makehtml&#39;</span>?
+...<span class="w"> </span>did<span class="w"> </span>you<span class="w"> </span>mean<span class="w"> </span><span class="s1">&#39;dockrun_t3rd makehtml&#39;</span>?
 
-See manual <span class="o">(</span>draft<span class="o">)</span> at
+See<span class="w"> </span>manual<span class="w"> </span><span class="o">(</span>draft<span class="o">)</span><span class="w"> </span>at
 https://docs.typo3.org/m/typo3/t3docs-docker-render-documentation/draft/en-us/
 
-➜  ~
+➜<span class="w">  </span>~
 </pre></div>
 </div>
 </div>
@@ -386,14 +394,14 @@ https://docs.typo3.org/m/typo3/t3docs-docker-render-documentation/draft/en-us/
                 </ul>
                 <div class="footer-additional">
                     <p class="text-center">
-                        Last updated: <a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container//commit/8919cadd3e4fec36432528b0e6793b1455d87414" rel="nofollow" target="_blank" title="Last commit">
-                           Jun 04, 2022 16:21
+                        Last updated: <a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container//commit/06f6c231cd97a66f853036ae28bb734722a17775" rel="nofollow" target="_blank" title="Last commit">
+                           Jun 16, 2023 15:52
                         </a>
                     </p>
-                    <p class="text-center">Last rendered: Jun 04, 2022 17:23</p>
+                    <p class="text-center">Last rendered: Jun 16, 2023 15:52</p>
                     <ul class="footer-simplemenu">
                         <li><a href="https://github.com/TYPO3-Documentation/sphinx_typo3_theme" title="sphinx_typo3_theme" target="_blank">
-                        <span>TYPO3 Theme 4.7.4</span></a></li>
+                        <span>TYPO3 Theme 4.7.10</span></a></li>
                     </ul>
                 </div>
                 <div class="footer-meta">

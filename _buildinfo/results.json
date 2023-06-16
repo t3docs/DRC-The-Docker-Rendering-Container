@@ -1,5 +1,5 @@
 {
-  "checksum": "d87db972b78c271730052376ec8b3857",
+  "checksum": "48e5a9a51bcb360e7299495911ad9000",
   "checksum_ttl_seconds": 604800,
   "copyright": "TYPO3 Documentation Team",
   "created": {
@@ -8,12 +8,12 @@
   "description": "\nEverything about the TYPO3 Docker Rendering Container (DRC):\nHow it works, how to build the image, how to use the container,\nhow to contribute and more.",
   "environ": {
     "OUR_IMAGE": "t3docs/render-documentation:develop",
-    "OUR_IMAGE_SHORT": "t3rd",
-    "OUR_IMAGE_VERSION": "v3.0.dev24",
-    "THEME_MTIME": "1652047200",
+    "OUR_IMAGE_SHORT": "develop",
+    "OUR_IMAGE_VERSION": "v3.1.dev3",
+    "THEME_MTIME": "1683583200",
     "THEME_NAME": "unknown",
     "THEME_VERSION": "unknown",
-    "TOOLCHAIN_VERSION": "3.1.0",
+    "TOOLCHAIN_VERSION": "3.2.0",
     "TYPOSCRIPT_PY_VERSION": "v2.2.4"
   },
   "gitdir": "/PROJECT",
@@ -25,41 +25,41 @@
   "publish_dir": "project/0.0.0",
   "scm_version_info": {
     "00info": "Showing what the Python module 'setuptools_scm' can tell us about the input repository and its version.",
-    "guessed_version": "0.1.dev1+g8919cad",
+    "guessed_version": "0.1.dev1+g06f6c23",
     "is_shallow": true,
     "json": {
       "_extra": {},
-      "branch": "main",
+      "branch": "develop",
       "dirty": false,
       "distance": 1,
-      "node": "g8919cad",
+      "node": "g06f6c23",
       "preformatted": false
     },
     "pprint": {
       "_extra": {},
-      "branch": "main",
-      "config": "<setuptools_scm.config.Configuration object at 0x7faddb1ef760>",
+      "branch": "develop",
+      "config": "<setuptools_scm.config.Configuration object at 0x7ff4a589a790>",
       "dirty": false,
       "distance": 1,
-      "node": "g8919cad",
-      "node_date": "datetime.date(2022, 6, 4)",
+      "node": "g06f6c23",
+      "node_date": "datetime.date(2023, 6, 16)",
       "preformatted": false,
       "tag": "<Version('0.0')>",
-      "time": "datetime.datetime(2022, 6, 4, 17, 23, 52, 104804, tzinfo=datetime.timezone.utc)"
+      "time": "datetime.datetime(2023, 6, 16, 15, 52, 46, 87419, tzinfo=datetime.timezone.utc)"
     },
     "project": "/PROJECT",
     "warnings": [
-      "message=UserWarning('\"/PROJECT\" is shallow and may cause errors') category=<class 'UserWarning'> filename='/ALL/venv/.venv/lib/python3.8/site-packages/setuptools_scm/git.py' lineno=105"
+      "message=UserWarning('\"/PROJECT\" is shallow and may cause errors') category=<class 'UserWarning'> filename='/ALL/venv/.venv/lib/python3.8/site-packages/setuptools_scm/git.py' lineno=135"
     ]
   },
   "sitemap_files_html_count": 71,
   "ter_extension": "0",
   "theme_info": {
-    "build_mtime": "1652795973",
+    "build_mtime": "1686860179",
     "module_name": "sphinx_typo3_theme",
-    "version_scm": "4.7.4",
+    "version_scm": "4.7.10",
     "version_scm_build": "",
-    "version_scm_core": "4.7.4",
+    "version_scm_core": "4.7.10",
     "version_scm_pre_release": ""
   }
 }

@@ -7,10 +7,10 @@
     <meta name="docsearch:package_type" content="" />
     <meta name="docsearch:release" content="0.0.0" />
     <meta name="docsearch:version" content="0.0" />
-    <meta name="docsearch:modified" content="2022-06-04T16:21:19+00:00" />
+    <meta name="docsearch:modified" content="2023-06-16T15:52:01+00:00" />
     <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />
-    <meta name="dc.modified" content="2022-06-04T16:21:19+00:00" />
-    <meta property="article:modified_time" content="2022-06-04T16:21:19+00:00" />
+    <meta name="dc.modified" content="2023-06-16T15:52:01+00:00" />
+    <meta property="article:modified_time" content="2023-06-16T15:52:01+00:00" />
 
     <title>Syntax highlighting &mdash; [WIP] DRC - The Docker Rendering Container 0.0.0 documentation</title>
 
@@ -23,6 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/css/fontawesome.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/webfonts.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/codeblock.css" />
 <!-- linktags -->
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -47,8 +48,10 @@
     <div class="col-sm-6 col-lg-7">
 
         <div class="logo">
+        <a href="https://docs.typo3.org/" title="TYPO3 Documentation" >
 
-            <img src="../../_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" title="TYPO3 Documentation" class="logo-image" />
+            <img src="../../_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" class="logo-image" />
+        </a>
         </div>
     </div><!--/.col-x-->
     <div class="col-sm-6 col-lg-5">
@@ -246,6 +249,11 @@
 <div class="dsDivCogwheel"><i id="dsCogwheel" class="fas fa-cog" title="Display settings"></i></div>
 <div id="dsPanel" class="dsPanel" ><p><b>Display settings</b></p>
 <input type="checkbox" id="cbFullWidth"><label for="cbFullWidth">Use full width</label><br>
+Color scheme of code blocks:<br>
+<input type="radio" name="rbCbsTheme" id="rbCbsThemeDark" checked="checked" value="dark"/>
+<label for="rbCbsThemeDark">dark</label>
+<input type="radio" name="rbCbsTheme" id="rbCbsThemeLight" value="light"/>
+<label for="rbCbsThemeLight">light</label><br>
 <input type="checkbox" id="cbPermanent"><label for="cbPermanent">Make settings permanent</label><br>
 </div><!--/.dsPanel-->
 </div><!--/.displaysettingsui-->
@@ -273,51 +281,51 @@ that name in the <code class="code docutils literal notranslate"><span class="pr
 have syntax highlighting. Instead, it may have a specific style dependent on
 type (textrole) and our css.</p>
 <p>Show help:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dockrun_t3rd bashcmd <span class="s2">&quot;pygmentize -h&quot;</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dockrun_t3rd<span class="w"> </span>bashcmd<span class="w"> </span><span class="s2">&quot;pygmentize -h&quot;</span>
 </pre></div>
 </div>
 <p>Show package version:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>➜  ~ dockrun_t3rd bashcmd <span class="s2">&quot;pygmentize -V&quot;</span>
-Pygments version <span class="m">2</span>.4.2, <span class="o">(</span>c<span class="o">)</span> <span class="m">2006</span>-2019 by Georg Brandl.
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>➜<span class="w">  </span>~<span class="w"> </span>dockrun_t3rd<span class="w"> </span>bashcmd<span class="w"> </span><span class="s2">&quot;pygmentize -V&quot;</span>
+Pygments<span class="w"> </span>version<span class="w"> </span><span class="m">2</span>.4.2,<span class="w"> </span><span class="o">(</span>c<span class="o">)</span><span class="w"> </span><span class="m">2006</span>-2019<span class="w"> </span>by<span class="w"> </span>Georg<span class="w"> </span>Brandl.
 
-Final <span class="nb">exit</span> status: <span class="m">0</span> <span class="o">(</span>completed<span class="o">)</span>
+Final<span class="w"> </span><span class="nb">exit</span><span class="w"> </span>status:<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">(</span>completed<span class="o">)</span>
 
-➜  ~
+➜<span class="w">  </span>~
 </pre></div>
 </div>
 <p>Show lexers:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dockrun_t3rd  bashcmd  <span class="s2">&quot;pygmentize -L lexers&quot;</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dockrun_t3rd<span class="w">  </span>bashcmd<span class="w">  </span><span class="s2">&quot;pygmentize -L lexers&quot;</span>
 </pre></div>
 </div>
 <p>TypoScript lexer available?</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>➜  ~ dockrun_t3rd  bashcmd  <span class="s2">&quot;pygmentize -L lexers | grep -i typoscript&quot;</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>➜<span class="w">  </span>~<span class="w"> </span>dockrun_t3rd<span class="w">  </span>bashcmd<span class="w">  </span><span class="s2">&quot;pygmentize -L lexers | grep -i typoscript&quot;</span>
 
-* typoscript:
-    TypoScript <span class="o">(</span>filenames *.ts, *.txt<span class="o">)</span>
+*<span class="w"> </span>typoscript:
+<span class="w">    </span>TypoScript<span class="w"> </span><span class="o">(</span>filenames<span class="w"> </span>*.ts,<span class="w"> </span>*.txt<span class="o">)</span>
 
-➜  ~
+➜<span class="w">  </span>~
 </pre></div>
 </div>
 <p><strong>List more:</strong>
 The -L option lists lexers, formatters, styles or filters - set
 <code class="code docutils literal notranslate"><span class="pre">which</span></code> to the thing you want to list (for example &quot;styles&quot;), or omit it to
 list everything:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dockrun_t3rd  bashcmd  <span class="s2">&quot;pygmentize -L lexers&quot;</span>
-dockrun_t3rd  bashcmd  <span class="s2">&quot;pygmentize -L formatters&quot;</span>
-dockrun_t3rd  bashcmd  <span class="s2">&quot;pygmentize -L styles&quot;</span>
-dockrun_t3rd  bashcmd  <span class="s2">&quot;pygmentize -L filters&quot;</span>
-dockrun_t3rd  bashcmd  <span class="s2">&quot;pygmentize -L&quot;</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>dockrun_t3rd<span class="w">  </span>bashcmd<span class="w">  </span><span class="s2">&quot;pygmentize -L lexers&quot;</span>
+dockrun_t3rd<span class="w">  </span>bashcmd<span class="w">  </span><span class="s2">&quot;pygmentize -L formatters&quot;</span>
+dockrun_t3rd<span class="w">  </span>bashcmd<span class="w">  </span><span class="s2">&quot;pygmentize -L styles&quot;</span>
+dockrun_t3rd<span class="w">  </span>bashcmd<span class="w">  </span><span class="s2">&quot;pygmentize -L filters&quot;</span>
+dockrun_t3rd<span class="w">  </span>bashcmd<span class="w">  </span><span class="s2">&quot;pygmentize -L&quot;</span>
 </pre></div>
 </div>
 <div class="section" id="example-bash-lexer">
 <h2>Example: Bash lexer?<a class="headerlink" href="#example-bash-lexer" title="Permalink to this headline">¶</a></h2>
 <p>What's the name of the Bash lexer?</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>➜  ~ dockrun_t3rd bashcmd  pygmentize -L lexers <span class="p">|</span> grep -i bash
-* bash, sh, ksh, zsh, shell:
-    Bash <span class="o">(</span>filenames *.sh, *.ksh, *.bash, *.ebuild, *.eclass, *.exheres-0, *.exlib, *.zsh, .bashrc, bashrc, .bash_*, bash_*, zshrc, .zshrc, PKGBUILD<span class="o">)</span>
-    Bash Session <span class="o">(</span>filenames *.sh-session, *.shell-session<span class="o">)</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>➜<span class="w">  </span>~<span class="w"> </span>dockrun_t3rd<span class="w"> </span>bashcmd<span class="w">  </span>pygmentize<span class="w"> </span>-L<span class="w"> </span>lexers<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>bash
+*<span class="w"> </span>bash,<span class="w"> </span>sh,<span class="w"> </span>ksh,<span class="w"> </span>zsh,<span class="w"> </span>shell:
+<span class="w">    </span>Bash<span class="w"> </span><span class="o">(</span>filenames<span class="w"> </span>*.sh,<span class="w"> </span>*.ksh,<span class="w"> </span>*.bash,<span class="w"> </span>*.ebuild,<span class="w"> </span>*.eclass,<span class="w"> </span>*.exheres-0,<span class="w"> </span>*.exlib,<span class="w"> </span>*.zsh,<span class="w"> </span>.bashrc,<span class="w"> </span>bashrc,<span class="w"> </span>.bash_*,<span class="w"> </span>bash_*,<span class="w"> </span>zshrc,<span class="w"> </span>.zshrc,<span class="w"> </span>PKGBUILD<span class="o">)</span>
+<span class="w">    </span>Bash<span class="w"> </span>Session<span class="w"> </span><span class="o">(</span>filenames<span class="w"> </span>*.sh-session,<span class="w"> </span>*.shell-session<span class="o">)</span>
 
-➜  ~
+➜<span class="w">  </span>~
 </pre></div>
 </div>
 <p>This means that <code class="code docutils literal notranslate"><span class="pre">bash</span></code>, <code class="code docutils literal notranslate"><span class="pre">sh</span></code>, <code class="code docutils literal notranslate"><span class="pre">ksh</span></code>, <code class="code docutils literal notranslate"><span class="pre">zsh</span></code>, <code class="code docutils literal notranslate"><span class="pre">shell</span></code> are all synonyms for the
@@ -364,14 +372,14 @@ same lexer. So <code class="code docutils literal notranslate"><span class="pre"
                 </ul>
                 <div class="footer-additional">
                     <p class="text-center">
-                        Last updated: <a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container//commit/8919cadd3e4fec36432528b0e6793b1455d87414" rel="nofollow" target="_blank" title="Last commit">
-                           Jun 04, 2022 16:21
+                        Last updated: <a href="https://github.com/t3docs/DRC-The-Docker-Rendering-Container//commit/06f6c231cd97a66f853036ae28bb734722a17775" rel="nofollow" target="_blank" title="Last commit">
+                           Jun 16, 2023 15:52
                         </a>
                     </p>
-                    <p class="text-center">Last rendered: Jun 04, 2022 17:23</p>
+                    <p class="text-center">Last rendered: Jun 16, 2023 15:52</p>
                     <ul class="footer-simplemenu">
                         <li><a href="https://github.com/TYPO3-Documentation/sphinx_typo3_theme" title="sphinx_typo3_theme" target="_blank">
-                        <span>TYPO3 Theme 4.7.4</span></a></li>
+                        <span>TYPO3 Theme 4.7.10</span></a></li>
                     </ul>
                 </div>
                 <div class="footer-meta">
