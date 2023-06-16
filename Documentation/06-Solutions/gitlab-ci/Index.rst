@@ -25,6 +25,17 @@ File content:
    :language: yaml
 
 
+Example-2.gitlab-ci.yml
+-----------------------
+
+Download :download:`Example-2.gitlab-ci.yml <files/Example-2.gitlab-ci.yml>`
+
+File content:
+
+.. literalinclude:: files/Example-2.gitlab-ci.yml
+   :language: yaml
+
+
 
 Requirements
 ============
