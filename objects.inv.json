@@ -1,421 +1,421 @@
 {
    "std:doc": {
       "01-Introduction/1-Readme": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "01-Introduction/1-Readme.html",
          "Readme"
       ],
       "01-Introduction/2-About": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "01-Introduction/2-About.html",
          "About"
       ],
       "02-Usage/1-Installation": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "02-Usage/1-Installation.html",
          "Installation"
       ],
       "02-Usage/2-Basic-Rendering": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "02-Usage/2-Basic-Rendering.html",
          "Basic rendering"
       ],
       "02-Usage/3-Troubleshooting": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "02-Usage/3-Troubleshooting.html",
          "Troubleshooting"
       ],
       "02-Usage/4-Customized-rendering": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "02-Usage/4-Customized-rendering.html",
          "Customized rendering"
       ],
       "02-Usage/Index": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "02-Usage/Index.html",
          "Usage"
       ],
       "02-Usage/Usage-Windows/Index": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "02-Usage/Usage-Windows/Index.html",
          "Directly on Windows"
       ],
       "02-Usage/Usage-Windows/quickstart-windows": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "02-Usage/Usage-Windows/quickstart-windows.html",
          "Quickstart (Windows)"
       ],
       "02-Usage/Usage-Windows/windows-users": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "02-Usage/Usage-Windows/windows-users.html",
          "Windows users"
       ],
       "03-Knowledge/Dockerfile": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "03-Knowledge/Dockerfile.html",
          "Dockerfile"
       ],
       "03-Knowledge/Helper-function": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "03-Knowledge/Helper-function.html",
          "Helper function 'dockrun'"
       ],
       "03-Knowledge/Index": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "03-Knowledge/Index.html",
          "Knowledge"
       ],
       "03-Knowledge/ReST/About-docutils": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "03-Knowledge/ReST/About-docutils.html",
          "About Docutils: The basics of ReST"
       ],
       "03-Knowledge/ReST/About-includes": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "03-Knowledge/ReST/About-includes.html",
          "About includes"
       ],
       "03-Knowledge/ReST/Index": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "03-Knowledge/ReST/Index.html",
          "Writing ReST for Sphinx"
       ],
       "03-Knowledge/Security": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "03-Knowledge/Security.html",
          "Security"
       ],
       "03-Knowledge/Toolchain/Index": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "03-Knowledge/Toolchain/Index.html",
          "Toolchain"
       ],
       "03-Knowledge/Toolchain/define-docfiles": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "03-Knowledge/Toolchain/define-docfiles.html",
          "Specify documentation files"
       ],
       "04-Versions/Index": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "04-Versions/Index.html",
          "Versions"
       ],
       "04-Versions/v0-0": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "04-Versions/v0-0.html",
          "Releases v0.0 to v2.6.1 (2020-05-27)"
       ],
       "04-Versions/v2-7": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "04-Versions/v2-7.html",
          "Releases v2.7 (2021-01-21)"
       ],
       "04-Versions/v2-8": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "04-Versions/v2-8.html",
          "Releases v2.8 (2021-03-29)"
       ],
       "04-Versions/v3-0": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "04-Versions/v3-0.html",
          "Releases v3.0.dev1 (2021-10-03)"
       ],
       "05-How-to/Index": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "05-How-to/Index.html",
          "How to"
       ],
       "05-How-to/advanced": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "05-How-to/advanced.html",
          "Advanced usage"
       ],
       "05-How-to/quickstart": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "05-How-to/quickstart.html",
          "Quickstart"
       ],
       "06-Solutions/Index": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "06-Solutions/Index.html",
          "Solutions"
       ],
       "06-Solutions/Livereload/Index": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "06-Solutions/Livereload/Index.html",
          "Livereload"
       ],
       "06-Solutions/Livereload/Livereload-using-Gulp": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "06-Solutions/Livereload/Livereload-using-Gulp.html",
          "Livereload using Gulp (WIP)"
       ],
       "06-Solutions/Livereload/Livereload-using-Python": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "06-Solutions/Livereload/Livereload-using-Python.html",
          "Livereload using Python"
       ],
       "06-Solutions/PDF-generation": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "06-Solutions/PDF-generation.html",
          "Individual Python packages"
       ],
       "06-Solutions/decode-objects-inventory": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "06-Solutions/decode-objects-inventory.html",
          "Decode Sphinx crossreferencing inventories 'objects.inv'"
       ],
       "06-Solutions/drop-includes-txt": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "06-Solutions/drop-includes-txt.html",
          "Drop the usual Includes.rst.txt file"
       ],
       "06-Solutions/gitlab-ci/Index": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "06-Solutions/gitlab-ci/Index.html",
          "Render with Gitlab CI"
       ],
       "06-Solutions/individual-python-packages": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "06-Solutions/individual-python-packages.html",
          "PDF-generation"
       ],
       "06-Solutions/non-typo3-usage": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "06-Solutions/non-typo3-usage.html",
          "Non TYPO3 usage"
       ],
       "06-Solutions/pull-from-docker-hub": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "06-Solutions/pull-from-docker-hub.html",
          "Pull and use 'develop' from Docker hub"
       ],
       "06-Solutions/usage-at-the-build-server": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "06-Solutions/usage-at-the-build-server.html",
          "Usage at the build server"
       ],
       "07-To-be-sorted/Index": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "07-To-be-sorted/Index.html",
          "To be sorted"
       ],
       "07-To-be-sorted/docker-run": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "07-To-be-sorted/docker-run.html",
          "Using 'docker run'"
       ],
       "07-To-be-sorted/quickstart": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "07-To-be-sorted/quickstart.html",
          "Quickstart"
       ],
       "08-More/Building/Index": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "08-More/Building/Index.html",
          "Container building"
       ],
       "08-More/Building/automated-builds": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "08-More/Building/automated-builds.html",
          "Automated builds"
       ],
       "08-More/Building/building-locally": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "08-More/Building/building-locally.html",
          "Building locall"
       ],
       "08-More/Development/Index": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "08-More/Development/Index.html",
          "Development"
       ],
       "08-More/Development/menu-development": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "08-More/Development/menu-development.html",
          "Menu development"
       ],
       "08-More/Development/roadmap": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "08-More/Development/roadmap.html",
          "Container development roadmap"
       ],
       "08-More/Development/t3docs_userhome": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "08-More/Development/t3docs_userhome.html",
          "Use local 'userhome'"
       ],
       "08-More/Development/theme-development": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "08-More/Development/theme-development.html",
          "Theme development"
       ],
       "08-More/ForContributors": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "08-More/ForContributors.html",
          "For contributors"
       ],
       "08-More/Index": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "08-More/Index.html",
          "More"
       ],
       "08-More/Inspection/Index": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "08-More/Inspection/Index.html",
          "Inspection"
       ],
       "08-More/Inspection/dockrun_t3rd": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "08-More/Inspection/dockrun_t3rd.html",
          "The 'dockrun' function"
       ],
       "08-More/Inspection/pygments": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "08-More/Inspection/pygments.html",
          "Syntax highlighting"
       ],
       "08-More/Inspection/toolchain": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "08-More/Inspection/toolchain.html",
          "Toolchain inspection"
       ],
       "08-More/Inspection/what-is-installed": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "08-More/Inspection/what-is-installed.html",
          "What is installed?"
       ],
       "08-More/Rendering/Index": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "08-More/Rendering/Index.html",
          "Rendering"
       ],
       "08-More/Rendering/make-html": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "08-More/Rendering/make-html.html",
          "Creating html"
       ],
       "08-More/Rendering/make-latex": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "08-More/Rendering/make-latex.html",
          "Creating latex"
       ],
       "08-More/Rendering/make-package": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "08-More/Rendering/make-package.html",
          "Creating packages"
       ],
       "08-More/Rendering/make-pdf": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "08-More/Rendering/make-pdf.html",
          "Creating pdf"
       ],
       "08-More/Rendering/make-singlehtml": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "08-More/Rendering/make-singlehtml.html",
          "Creating singlehtml"
       ],
       "08-More/Rendering/run-parameters": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "08-More/Rendering/run-parameters.html",
          "Run parameters"
       ],
       "08-More/Structures/Index": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "08-More/Structures/Index.html",
          "File structures"
       ],
       "08-More/Structures/types": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "08-More/Structures/types.html",
          "Documentation types"
       ],
       "Glossary": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "Glossary.html",
          "-"
       ],
       "Index": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "Index.html",
          "DRC - The Docker Rendering Container"
       ],
       "Sitemap": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "Sitemap.html",
          "-"
       ],
       "genindex": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "genindex.html",
          "Index"
@@ -423,169 +423,169 @@
    },
    "std:label": {
       "about-docutils": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "03-Knowledge/ReST/About-docutils.html#about-docutils",
          "About Docutils: The basics of ReST"
       ],
       "about-includes": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "03-Knowledge/ReST/About-includes.html#about-includes",
          "About includes"
       ],
       "bash-shell-as-user": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "06-Solutions/non-typo3-usage.html#bash-shell-as-user",
          "Interactive Bash shell with user permissions"
       ],
       "for-contributors": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "08-More/ForContributors.html#for-contributors",
          "For contributors"
       ],
       "glossary": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "Glossary.html#glossary",
          "Glossary"
       ],
       "individuell-python-packages": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "06-Solutions/PDF-generation.html#individuell-python-packages",
          "Individual Python packages"
       ],
       "modindex": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "py-modindex.html",
          "Module Index"
       ],
       "my-build-watch-and-livereload-script": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "06-Solutions/Livereload/Livereload-using-Python.html#my-build-watch-and-livereload-script",
          "my-build-watch-and-livereload script"
       ],
       "new-making-use-of-extra-wide-screens": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "04-Versions/v2-7.html#new-making-use-of-extra-wide-screens",
          "NEW: Making use of extra wide screens"
       ],
       "pdf-generation": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "06-Solutions/individual-python-packages.html#pdf-generation",
          "PDF-generation"
       ],
       "php-modindex": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "php-modindex.html",
          "PHP Namespace Index"
       ],
       "php-objectsindex": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "php-objectsindex.html",
          "PHP Objects Index"
       ],
       "py-modindex": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "py-modindex.html",
          "Python Module Index"
       ],
       "quickstart": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "07-To-be-sorted/quickstart.html#quickstart",
          "Quickstart"
       ],
       "quickstart-windows": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "02-Usage/Usage-Windows/quickstart-windows.html#quickstart-windows",
          "Quickstart (Windows)"
       ],
       "readme-quickstart": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "01-Introduction/1-Readme.html#readme-quickstart",
          "Quickstart"
       ],
       "releases-v2-7": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "04-Versions/v2-7.html#releases-v2-7",
          "Releases v2.7 (2021-01-21)"
       ],
       "releases-v2-8": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "04-Versions/v2-8.html#releases-v2-8",
          "Releases v2.8 (2021-03-29)"
       ],
       "releases-v3-0-dev1": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "04-Versions/v3-0.html#releases-v3-0-dev1",
          "Releases v3.0.dev1 (2021-10-03)"
       ],
       "render_with_gitlab_ci": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "06-Solutions/gitlab-ci/Index.html#render-with-gitlab-ci",
          "Render with Gitlab CI"
       ],
       "roadmap": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "08-More/Development/roadmap.html#roadmap",
          "Container development roadmap"
       ],
       "search": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "search.html",
          "Search Page"
       ],
       "sitemap": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "Sitemap.html#sitemap",
          "Sitemap"
       ],
       "specify-documentation-files": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "03-Knowledge/Toolchain/define-docfiles.html#specify-documentation-files",
          "Specify documentation files"
       ],
       "theme-development": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "08-More/Development/theme-development.html#theme-development",
          "Theme development"
       ],
       "troubleshooting": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "02-Usage/3-Troubleshooting.html#troubleshooting",
          "Troubleshooting"
       ],
       "what-s-new": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "04-Versions/Index.html#what-s-new",
          "Versions"
       ],
       "writing rest for sphinx": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "03-Knowledge/ReST/Index.html#writing-rest-for-sphinx",
          "Writing ReST for Sphinx"
@@ -593,67 +593,67 @@
    },
    "std:term": {
       "DRC": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "Glossary.html#term-DRC",
          "-"
       ],
       "Docker": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "Glossary.html#term-Docker",
          "-"
       ],
       "Docutils": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "Glossary.html#term-Docutils",
          "-"
       ],
       "OS": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "Glossary.html#term-OS",
          "-"
       ],
       "RenderDocumentation": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "Glossary.html#term-RenderDocumentation",
          "-"
       ],
       "TCT": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "Glossary.html#term-TCT",
          "-"
       ],
       "dockrun": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "Glossary.html#term-dockrun",
          "-"
       ],
       "jobfile": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "Glossary.html#term-jobfile",
          "-"
       ],
       "reST": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "Glossary.html#term-reST",
          "-"
       ],
       "reST files": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "Glossary.html#term-reST-files",
          "-"
       ],
       "toolchain": [
-         "[WIP] DRC - The Docker Rendering Container",
+         "DRC - The Docker Rendering Container",
          "0.0",
          "Glossary.html#term-toolchain",
          "-"

@@ -1,5 +1,5 @@
 {
-  "checksum": "9adf74fd5296ce1a5d88a591568137db",
+  "checksum": "31fce52daea4ba951a115bfa306c9beb",
   "checksum_ttl_seconds": 604800,
   "copyright": "TYPO3 Documentation Team",
   "created": {
@@ -21,31 +21,31 @@
   "has_neutralized_links": 0,
   "localization": "default",
   "postprocessed_html_files": 0,
-  "project": "[WIP] DRC - The Docker Rendering Container",
+  "project": "DRC - The Docker Rendering Container",
   "publish_dir": "project/0.0.0",
   "scm_version_info": {
     "00info": "Showing what the Python module 'setuptools_scm' can tell us about the input repository and its version.",
-    "guessed_version": "0.1.dev1+gf2e3cdc",
+    "guessed_version": "0.1.dev1+g8647800",
     "is_shallow": true,
     "json": {
       "_extra": {},
       "branch": "main",
       "dirty": false,
       "distance": 1,
-      "node": "gf2e3cdc",
+      "node": "g8647800",
       "preformatted": false
     },
     "pprint": {
       "_extra": {},
       "branch": "main",
-      "config": "<setuptools_scm.config.Configuration object at 0x7feed36ee790>",
+      "config": "<setuptools_scm.config.Configuration object at 0x7f9d6522b790>",
       "dirty": false,
       "distance": 1,
-      "node": "gf2e3cdc",
+      "node": "g8647800",
       "node_date": "datetime.date(2023, 6, 16)",
       "preformatted": false,
       "tag": "<Version('0.0')>",
-      "time": "datetime.datetime(2023, 6, 16, 16, 40, 38, 413722, tzinfo=datetime.timezone.utc)"
+      "time": "datetime.datetime(2023, 6, 16, 16, 51, 54, 677831, tzinfo=datetime.timezone.utc)"
     },
     "project": "/PROJECT",
     "warnings": [
