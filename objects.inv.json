@@ -476,6 +476,12 @@
          "04-Versions/v2-7.html#new-making-use-of-extra-wide-screens",
          "NEW: Making use of extra wide screens"
       ],
+      "pdf-generation": [
+         "[WIP] DRC - The Docker Rendering Container",
+         "0.0",
+         "06-Solutions/individual-python-packages.html#pdf-generation",
+         "PDF-generation"
+      ],
       "php-modindex": [
          "[WIP] DRC - The Docker Rendering Container",
          "0.0",
